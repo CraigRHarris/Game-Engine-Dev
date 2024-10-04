@@ -88,3 +88,11 @@ Game::Game()
 		SDL_Delay(5000);     //SDL_Delay takes millisecs
 	}
 }
+
+Game::~Game()
+{
+}
+
+void Game::SetDisplayColour(void)
+{
+}

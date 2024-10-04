@@ -18,9 +18,12 @@ int main(int argc, char* argv[])
 	if (game)
 	{
 		game->SetDisplayColour();  //set and show our coloured display
-		delete game;
-		game = nullptr;
+		
 	}
+
+	delete game;
+	game = nullptr;
+
 
 	return 0;                     //exit nicely
 }

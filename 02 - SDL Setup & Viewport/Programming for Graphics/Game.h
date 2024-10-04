@@ -1,6 +1,5 @@
 #pragma once
 
-
 class SDL_Window;
 class SDL_Renderer;
 class Game
