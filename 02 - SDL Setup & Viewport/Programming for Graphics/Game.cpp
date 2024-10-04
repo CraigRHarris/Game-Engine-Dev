@@ -89,10 +89,17 @@ Game::Game()
 	}
 }
 
-Game::~Game()
+Game::~Game() //destoy with the symbol ~ in front of fuction
 {
+
 }
 
-void Game::SetDisplayColour(void)
+void Game::SetDisplayColour(int red, int green, int blue, int alpha)
 {
+
+}
+
+void Game::Update()
+{
+
 }

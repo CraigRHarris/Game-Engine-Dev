@@ -12,6 +12,6 @@ public:
 	Game();
 	~Game();
 
-	void SetDisplayColour(void);
-
+	void SetDisplayColour(int red,int green, int blue, int alpha);
+	void Update();
 };
