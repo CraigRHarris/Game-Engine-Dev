@@ -1,6 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 #include "Game.h"
+#include "Bitmaps.h"   //04-01
 
 #include <SDL.h>
 #include <stdio.h>
@@ -87,10 +88,25 @@ Game::Game()
 		//pause for 5secs
 		SDL_Delay(5000);     //SDL_Delay takes millisecs
 	}
+
+	//creating some bitmaps
+	m_monster = new Bitmap (m_Renderer, "assets/monster.bmp", 100, 100);                      //04-01
+	m_monsterTrans = new Bitmap (m_Renderer, "assets/monsterTrans.bmp", 200, 100);            //04-01
+	m_monsterTransKeyed = new Bitmap (m_Renderer, "assets/monsterTrans.bmp", 300, 100, true); //04-01
 }
 
 Game::~Game() //destoy with the symbol ~ in front of fuction
 {
+	//destroy the bitmaps
+	if (m_monsterTransKeyed) //04-01
+		delete m_monsterTransKeyed;
+
+	if (m_monsterTrans)          //04-01
+		delete m_monsterTrans;
+
+	if (m_monster)       //04-01
+		delete m_monster;
+
 
 }
 
@@ -101,5 +117,16 @@ void Game::SetDisplayColour(int red, int green, int blue, int alpha)
 
 void Game::Update()
 {
+	CheckEvents();
 
+	//wipe the display to the currently set colour.
+	m_monster->draw();
+	m_monsterTrans->draw();
+	m_monsterTransKeyed->draw();
+
+	//show what we're drawn
+	SDL_RenderPresent(m_renderer);
+
+	//pause for 1/60th sec (ish)
+	SDL_Delay(16); //SDLDelay takes millisecs
 }
