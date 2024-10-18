@@ -3,12 +3,16 @@
 
 #include "SDL.h"
 #include "SDL_ttf.h"
+#include "Bit"
+
 
 using namespace std;
 
 
 class SDL_Window;
 class SDL_Renderer;
+class Bitmap;
+
 class Game
 {
 private:
@@ -37,4 +41,5 @@ public:
 	void Update();
 
 	
+
 };

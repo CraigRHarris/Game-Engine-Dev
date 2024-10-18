@@ -18,5 +18,5 @@ public:
 
 private: 
 	;
-	bool m_KeysPressed[SIZE_OF_KEYS_PRESSD_ENUM];
+	bool m_KeysPressed[SIZE_OF_KEYS_PRESSD_ENUM]{false};
 };

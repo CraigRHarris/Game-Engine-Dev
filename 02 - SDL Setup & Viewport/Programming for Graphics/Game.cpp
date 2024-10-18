@@ -5,12 +5,62 @@
 
 #include <SDL.h>
 #include <stdio.h>
+#include "SDL_ttf.h"
+#include "Bitmaps.h"
 
 
 #endif
 
 
 
+
+void Game::CheckEvents()
+{
+}
+
+void Game::UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour)
+{
+	SDL_Surface* surface = nullptr;
+	SDL_Texture* texture = nullptr;
+
+	int texW = 0;
+	int texH = 0;
+
+	//SDL_Color color = { 0, 0, 0 };
+
+	//char msg[100];
+	//sprintf_s(msg, "Checks: %d", m_checkTally);
+
+	surface = TTF_RenderText_Solid(font, msg.c_str(), colour);
+	if (!surface)
+	{
+		//surface not loaded? Output the error
+		printf("SURFACE for font not loaded! \n");
+		printf("%s\n", SDL_GetError());
+	}
+	else
+	{
+		texture = SDL_CreateTextureFromSurface(m_Renderer, surface);
+		if (!texture)
+		{
+			//surface not loaded? Output the error
+			printf("SURFACE for font not loaded! \n");
+			printf("%s\n", SDL_GetError());
+		}
+		else
+		{
+			SDL_QueryTexture(texture, NULL, NULL, &texW, &texH);
+			SDL_Rect textRect = { x, y, texW, texH };
+
+			SDL_RenderCopy(m_Renderer, texture, NULL, &textRect);
+		}
+	}
+
+	if (texture)
+		SDL_DestroyTexture(texture);
+	if (surface)
+		SDL_FreeSurface(surface);
+}
 
 Game::Game()
 {
@@ -58,39 +108,11 @@ Game::Game()
 	}
 
 
-	//clean up.
-	//don't gorget - we destroy in the REVERSE order they were created 
+	
 
-	if (m_Renderer)
-	{
-		SDL_DestroyRenderer(m_Renderer);
-	}
+	
 
-	if (m_Window)
-	{
-		SDL_DestroyWindow(m_Window);
-	}
-
-	if (m_Renderer)
-	{
-		//render in a pretty red colour
-		int result = SDL_SetRenderDrawColor(
-			m_Renderer,       //target render
-			255,              //r
-			0,                //g
-			0,                //b
-			255               //alpha
-		);
-
-		//wipe the display to the colour we just set.
-		SDL_RenderClear(m_Renderer);
-
-		//show what we've drawn (i.e. a red screen).
-		SDL_RenderPresent(m_Renderer);
-
-		//pause for 5secs
-		SDL_Delay(5000);     //SDL_Delay takes millisecs
-	}
+	
 
 	//creating some bitmaps
 	m_monster = new Bitmap(m_Renderer, "assets/monster.bmp", 100, 100);                      //04-01
@@ -104,6 +126,8 @@ Game::Game()
 
 Game::~Game() //destoy with the symbol ~ in front of fuction
 {
+
+
 	//destroy the bitmaps
 	if (m_monsterTransKeyed) //04-01
 		delete m_monsterTransKeyed;
@@ -114,18 +138,36 @@ Game::~Game() //destoy with the symbol ~ in front of fuction
 	if (m_monster)       //04-01
 		delete m_monster;
 
-	// drstroy the font
+	// destroy the font
 	TTF_CloseFont(m_pBigFont);
 	TTF_CloseFont(m_pSmallFont);
+
+
+	//clean up.
+	//don't gorget - we destroy in the REVERSE order they were created 
+
+	if (m_Renderer)
+	{
+		SDL_DestroyRenderer(m_Renderer);
+	}
+
+
 }
 
 void Game::SetDisplayColour(int red, int green, int blue, int alpha)
 {
-
+	int result = SDL_SetRenderDrawColor(
+		m_Renderer,       //target render
+		red,              //r
+		green,                //g
+		blue,                //b
+		alpha		//alpha
+	);
 }
 
 void Game::Update()
 {
+	SDL_RenderClear(m_Renderer);
 	CheckEvents();
 
 	//wipe the display to the currently set colour.
@@ -133,9 +175,25 @@ void Game::Update()
 	m_monsterTrans->draw();
 	m_monsterTransKeyed->draw();
 
-	//show what we're drawn
+	
+
+	//draw the text
+	UpdateText("Small Red", 50, 10, m_pSmallFont, { 255, 0, 0 });
+	UpdateText("Small Blue", 50, 40, m_pSmallFont, { 0, 0, 255 });
+
+	char char_array[] = "Big White";
+	UpdateText(char_array, 50, 140, m_pBigFont, { 255, 255, 255});
+
+	int testNumber = 1234;
+	string testString = "Test Number: ";
+	testString += to_string(testNumber);
+	UpdateText(testString, 50, 210, m_pBigFont, { 255, 255, 255 });
+
+	//show what we've drawn
 	SDL_RenderPresent(m_Renderer);
 
-	//pause for 1/60th sec (ish)
-	SDL_Delay(16); //SDLDelay takes millisecs
+	// pause for 1/60th second (ish)
+	SDL_Delay(16);    //SDL_Delay takes millisecs
+	
 }
+

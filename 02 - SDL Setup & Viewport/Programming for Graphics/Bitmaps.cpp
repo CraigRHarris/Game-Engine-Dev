@@ -35,7 +35,7 @@ Bitmap::Bitmap(SDL_Renderer* renderer, std::string fileName, int xpos, int ypos,
 		if (!m_pbitmapTexture)
 		{
 			//texture not loaded? Output the error
-			printf("TEXTURE for bitmap '%s' not loaded! \n", fileName.c_str);
+			printf("TEXTURE for bitmap '%s' not loaded! \n", fileName.c_str());
 			printf("%s\n", SDL_GetError());
 		}
 	}

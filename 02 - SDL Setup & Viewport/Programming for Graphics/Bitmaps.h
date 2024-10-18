@@ -17,7 +17,7 @@ private:
 	int m_x, m_y;
 
 public:
-	Bitmap::Bitmap(SDL_Renderer* renderer, std::string fileName, int xpos, int ypos, bool useTransparency = false);
+	Bitmap(SDL_Renderer* renderer, std::string fileName, int xpos, int ypos, bool useTransparency = false);
 	~Bitmap();
 
 	void draw();
