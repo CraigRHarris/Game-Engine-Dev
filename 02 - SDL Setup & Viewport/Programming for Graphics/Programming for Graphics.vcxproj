@@ -113,13 +113,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)/Programming for Graphics/Libraries\glew-2.1.0\include\GL;$(SolutionDir)/Programming for Graphics\Libraries\glm;$(SolutionDir)/Programming for Graphics\Libraries\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)/Programming for Graphics/Libraries\glew-2.1.0\include\GL;$(SolutionDir)/Programming for Graphics\Libraries\glm;$(SolutionDir)/Programming for Graphics\Libraries\SDL2_ttf\include;$(SolutionDir)/Programming for Graphics\Libraries\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)\Libraries\SDL2\lib\x64;$(ProjectDir)\Libraries\glew-2.1.0\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;glew32s.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)\Programming for Graphics\Libraries\SDL2_ttf\lib\x64;$(ProjectDir)\Libraries\SDL2\lib\x64;$(ProjectDir)\Libraries\glew-2.1.0\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;glew32s.lib;opengl32.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

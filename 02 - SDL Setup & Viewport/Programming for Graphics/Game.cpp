@@ -14,11 +14,14 @@
 
 Game::Game()
 {
+	m_running = true;
+
 	m_Window = nullptr;
 	m_Renderer = nullptr;
 
 	//start up
 	SDL_Init(SDL_INIT_VIDEO);
+	TTF_Init();
 
 	//create the window
 	m_Window = SDL_CreateWindow(
@@ -90,10 +93,14 @@ Game::Game()
 	}
 
 	//creating some bitmaps
-	m_monster = new Bitmap (m_Renderer, "assets/monster.bmp", 100, 100);                      //04-01
-	m_monsterTrans = new Bitmap (m_Renderer, "assets/monsterTrans.bmp", 200, 100);            //04-01
-	m_monsterTransKeyed = new Bitmap (m_Renderer, "assets/monsterTrans.bmp", 300, 100, true); //04-01
-}
+	m_monster = new Bitmap(m_Renderer, "assets/monster.bmp", 100, 100);                      //04-01
+	m_monsterTrans = new Bitmap(m_Renderer, "assets/monsterTrans.bmp", 200, 100);            //04-01
+	m_monsterTransKeyed = new Bitmap(m_Renderer, "assets/monsterTrans.bmp", 300, 100, true); //04-01
+
+	// read in the font
+	m_pSmallFont = TTF_OpenFont("assets/DejaVuSans.ttf", 15); // font size
+	m_pBigFont = TTF_OpenFont("assets/DejaVuSans.ttf", 50);
+};
 
 Game::~Game() //destoy with the symbol ~ in front of fuction
 {
@@ -107,7 +114,9 @@ Game::~Game() //destoy with the symbol ~ in front of fuction
 	if (m_monster)       //04-01
 		delete m_monster;
 
-
+	// drstroy the font
+	TTF_CloseFont(m_pBigFont);
+	TTF_CloseFont(m_pSmallFont);
 }
 
 void Game::SetDisplayColour(int red, int green, int blue, int alpha)
@@ -125,7 +134,7 @@ void Game::Update()
 	m_monsterTransKeyed->draw();
 
 	//show what we're drawn
-	SDL_RenderPresent(m_renderer);
+	SDL_RenderPresent(m_Renderer);
 
 	//pause for 1/60th sec (ish)
 	SDL_Delay(16); //SDLDelay takes millisecs
