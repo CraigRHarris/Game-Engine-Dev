@@ -8,6 +8,10 @@
 #include "SDL_ttf.h"
 #include "Bitmaps.h"
 
+#include "imgui.h"
+#include "backends/imgui_impl_sdl.h"
+#include "imgui_sdl.h"
+//#include "imgui_internal.h"
 
 #endif
 
@@ -168,6 +172,18 @@ void Game::SetDisplayColour(int red, int green, int blue, int alpha)
 void Game::Update()
 {
 	SDL_RenderClear(m_Renderer);
+
+	ImGui::NewFrame();
+	ImGui_ImplSDL2_NewFrame(m_Window);
+	bool show = true;
+	//ShowExampleAppDockSpace(&show);
+
+	ImGui::ShowDemoWindow(nullptr);
+
+	ImGui::Render();
+	ImGuiSDL::Render(ImGui::GetDrawData());
+	
+
 	CheckEvents();
 
 	//wipe the display to the currently set colour.

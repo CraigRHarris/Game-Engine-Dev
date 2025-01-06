@@ -16,8 +16,15 @@ class Bitmap;
 class Game
 {
 private:
-				//SDL Stuff
-	SDL_Window*   m_Window;
+	
+
+	void CheckEvents();
+	void UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour);
+
+
+public:
+	//SDL Stuff
+	SDL_Window* m_Window;
 	SDL_Renderer* m_Renderer;
 	bool		  m_running;
 
@@ -28,12 +35,7 @@ private:
 
 	TTF_Font* m_pSmallFont;
 	TTF_Font* m_pBigFont;
-
-	void CheckEvents();
-	void UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour);
-
-
-public:
+	
 	Game();
 	~Game();
 

@@ -3,6 +3,11 @@
 #include "Game.h"
 #include "Input.h"
 
+#include "imgui.h"
+#include "backends/imgui_impl_sdl.h"
+#include "imgui_sdl.h"
+#include "imgui_internal.h"
+
 //void main (void)
 //{
 	//start up
@@ -17,6 +22,22 @@ int main(int argc, char* argv[])
 	Game* game = new Game();      //create a new Game object
 	Input* input = new Input();   // create an input object
 
+	// inGUI Setup
+	IMGUI_CHECKVERSION();
+	ImGui::CreateContext();
+	SDL_DisplayMode DisplayMode;
+	SDL_GetCurrentDisplayMode(0, &DisplayMode);
+	ImGuiSDL::Initialize(game->m_Renderer, DisplayMode.w, DisplayMode.h);
+	ImGuiIO& io = ImGui::GetIO();
+	(void)io;
+	io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
+	//io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+	//io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnble;
+	ImGui::StyleColorsDark();
+
+	ImGui_ImplSDL2_InitForOpenGL(game->m_Window, SDL_GL_GetCurrentContext());
+
+
 	if (game && input)
 	{
 		//game->SetDisplayColour();  //set and show our coloured display
@@ -26,6 +47,7 @@ int main(int argc, char* argv[])
 		//check keys pressed to update variables
 		while (!input->KeyIsPressed(KEY_ESCAPE))
 		{
+
 			input->Update();
 
 			//increase r

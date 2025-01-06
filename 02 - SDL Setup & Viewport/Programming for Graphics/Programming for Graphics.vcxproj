@@ -113,7 +113,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)/Programming for Graphics/Libraries\glew-2.1.0\include\GL;$(SolutionDir)/Programming for Graphics\Libraries\glm;$(SolutionDir)/Programming for Graphics\Libraries\SDL2_ttf\include;$(SolutionDir)/Programming for Graphics\Libraries\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)/Programming for Graphics/Libraries\glew-2.1.0\include\GL;$(SolutionDir)/Programming for Graphics\Libraries\glm;$(SolutionDir)/Programming for Graphics\Libraries\SDL2_ttf\include;$(SolutionDir)/Programming for Graphics\Libraries\imgui-master;$(SolutionDir)/Programming for Graphics\Libraries\imgui_sdl-master;$(SolutionDir)/Programming for Graphics\Libraries\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,12 +142,27 @@
     <ClCompile Include="Bitmaps.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Input.cpp" />
+    <ClCompile Include="Libraries\imgui-master\backends\imgui_impl_sdl.cpp" />
+    <ClCompile Include="Libraries\imgui-master\imgui.cpp" />
+    <ClCompile Include="Libraries\imgui-master\imgui_demo.cpp" />
+    <ClCompile Include="Libraries\imgui-master\imgui_draw.cpp" />
+    <ClCompile Include="Libraries\imgui-master\imgui_tables.cpp" />
+    <ClCompile Include="Libraries\imgui-master\imgui_widgets.cpp" />
+    <ClCompile Include="Libraries\imgui_sdl-master\imgui_sdl.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bitmaps.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Input.h" />
+    <ClInclude Include="Libraries\imgui-master\backends\imgui_impl_sdl.h" />
+    <ClInclude Include="Libraries\imgui-master\imconfig.h" />
+    <ClInclude Include="Libraries\imgui-master\imgui.h" />
+    <ClInclude Include="Libraries\imgui-master\imgui_internal.h" />
+    <ClInclude Include="Libraries\imgui-master\imstb_rectpack.h" />
+    <ClInclude Include="Libraries\imgui-master\imstb_textedit.h" />
+    <ClInclude Include="Libraries\imgui-master\imstb_truetype.h" />
+    <ClInclude Include="Libraries\imgui_sdl-master\imgui_sdl.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
