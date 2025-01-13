@@ -5,6 +5,8 @@
 #include "SDL_ttf.h"
 #include "Bit"
 
+#include "AssetEditor.h"
+
 
 using namespace std;
 
@@ -20,7 +22,7 @@ private:
 
 	void CheckEvents();
 	void UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour);
-
+	AssetEditor* assetEditor;
 
 public:
 	//SDL Stuff

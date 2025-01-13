@@ -8,6 +8,8 @@ using namespace std;
 
 Bitmap::Bitmap(SDL_Renderer* renderer, std::string fileName, int xpos, int ypos, bool useTransparency)
 {
+	FileName = fileName;
+
 	//store the rander for future configuring and drawing
 	m_pRenderer = renderer;
 

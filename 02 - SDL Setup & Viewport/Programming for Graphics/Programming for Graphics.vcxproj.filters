@@ -51,6 +51,9 @@
     <ClCompile Include="Libraries\imgui-master\backends\imgui_impl_sdl.cpp">
       <Filter>IMGUI</Filter>
     </ClCompile>
+    <ClCompile Include="AssetEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -85,6 +88,9 @@
     </ClInclude>
     <ClInclude Include="Libraries\imgui-master\backends\imgui_impl_sdl.h">
       <Filter>IMGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetEditor.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -22,6 +22,13 @@ public:
 
 	void draw();
 
+	SDL_Texture* GetTextureRef()
+	{
+		return m_pbitmapTexture;
+	}
+
+	std::string FileName;
+
 };
 
 

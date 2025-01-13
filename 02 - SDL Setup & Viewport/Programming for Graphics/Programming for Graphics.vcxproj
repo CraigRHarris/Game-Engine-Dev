@@ -114,6 +114,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)/Programming for Graphics/Libraries\glew-2.1.0\include\GL;$(SolutionDir)/Programming for Graphics\Libraries\glm;$(SolutionDir)/Programming for Graphics\Libraries\SDL2_ttf\include;$(SolutionDir)/Programming for Graphics\Libraries\imgui-master;$(SolutionDir)/Programming for Graphics\Libraries\imgui_sdl-master;$(SolutionDir)/Programming for Graphics\Libraries\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AssetEditor.cpp" />
     <ClCompile Include="Bitmaps.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Input.cpp" />
@@ -152,6 +154,7 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AssetEditor.h" />
     <ClInclude Include="Bitmaps.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Input.h" />

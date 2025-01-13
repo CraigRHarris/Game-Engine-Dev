@@ -24,6 +24,8 @@ void Game::CheckEvents()
 
 void Game::UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour)
 {
+
+	
 	SDL_Surface* surface = nullptr;
 	SDL_Texture* texture = nullptr;
 
@@ -113,7 +115,7 @@ Game::Game()
 
 
 	
-
+	assetEditor = new AssetEditor(m_Renderer);
 	
 
 	
@@ -180,9 +182,13 @@ void Game::Update()
 
 	ImGui::ShowDemoWindow(nullptr);
 
+	assetEditor->Update();
+
 	ImGui::Render();
 	ImGuiSDL::Render(ImGui::GetDrawData());
 	
+
+
 
 	CheckEvents();
 
@@ -190,7 +196,7 @@ void Game::Update()
 	m_monster->draw();
 	m_monsterTrans->draw();
 	m_monsterTransKeyed->draw();
-
+	//vector assests  - push onto the game  - loop for drawing draw for object
 	
 
 	//draw the text
