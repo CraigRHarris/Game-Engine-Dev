@@ -19,10 +19,20 @@ class Game
 {
 private:
 	
+	//Bitmaps
+	Player* player{ nullptr };
+	Bitmap* m_monsterTrans{ nullptr };
+	Bitmap* m_monsterTransKeyed{ nullptr };
+	Bitmap* m_ground{ nullptr };
+
+	//TTF_Font* m_pSmallFont{ nullptr };
+	//TTF_Font* m_pBigFont{ nullptr };
 
 	void CheckEvents();
 	void UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour);
 	AssetEditor* assetEditor;
+	Input input;
+	bool _isRunning{ true };
 
 public:
 	//SDL Stuff
@@ -44,6 +54,6 @@ public:
 	void SetDisplayColour(int red,int green, int blue, int alpha);
 	void Update();
 
-	
+	bool isRunning() { return _isRunning; }
 
 };

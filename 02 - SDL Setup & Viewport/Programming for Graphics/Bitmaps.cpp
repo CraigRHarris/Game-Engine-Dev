@@ -6,13 +6,28 @@
 
 using namespace std;
 
+bool Bitmap::CheckCollision(Bitmap* Other)
+{
+	if (
+		(m_x + m_w >= Other->m_x) && (m_x <= Other->m_x + Other->m_w) &&
+		(m_y + m_h >= Other->m_y) && (m_y <= Other->m_y + Other->m_h)
+		)
+	{
+		return true;
+	}
+	return false;
+}
+
+
+
 Bitmap::Bitmap(SDL_Renderer* renderer, std::string fileName, int xpos, int ypos, bool useTransparency)
 {
 	FileName = fileName;
-
+	
 	//store the rander for future configuring and drawing
 	m_pRenderer = renderer;
 
+	m_pbitmapTexture = NULL;
 	// create the bitmap surface
 	m_pbitmapSurface = SDL_LoadBMP(fileName.c_str());
 
@@ -44,6 +59,9 @@ Bitmap::Bitmap(SDL_Renderer* renderer, std::string fileName, int xpos, int ypos,
 	//store the position vals
 	m_x = xpos;
 	m_y = ypos;
+
+	m_h = m_pbitmapSurface->h;
+	m_w = m_pbitmapSurface->w;
 }
 
 void Bitmap::draw()
@@ -55,7 +73,11 @@ void Bitmap::draw()
 		SDL_RenderCopy(m_pRenderer, m_pbitmapTexture, NULL, &destRect);
 	}
 }
-
+void Bitmap::SetPosition(float x, float y)
+{
+	m_x = x;
+	m_y = y;
+}
 Bitmap::~Bitmap()
 {
 	if (m_pbitmapTexture)

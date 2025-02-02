@@ -2,15 +2,20 @@
 #define GAME_H
 #include "Game.h"
 #include "Bitmaps.h"   //04-01
+#include "Logger.h"
 
 #include <SDL.h>
 #include <stdio.h>
+#include <stdint.h>
 #include "SDL_ttf.h"
 #include "Bitmaps.h"
 
 #include "imgui.h"
 #include "backends/imgui_impl_sdl.h"
 #include "imgui_sdl.h"
+#include "AssetEditor.h"
+
+
 //#include "imgui_internal.h"
 
 #endif
@@ -20,6 +25,31 @@
 
 void Game::CheckEvents()
 {
+	SDL_Event event;
+	//loop throuh all the events in the event list
+	while (SDL_PollEvent(&event) != NULL)
+	{
+	//	// Check for keydown
+	//	if (event.type == SDL_KEYDOWN)
+	//	{
+	//		input.EventKeyPressed(event.key.keysym.sym);
+	//	}
+	//	//check for key up
+	//	else if (event.type == SDL_KEYUP)
+	//	{
+	//		input.EventKeyReleased(event.key.keysym.sym);
+	//	}
+	//	else if (event.type == SDL_QUIT)
+	//	{
+	//		_isRunning = false;
+	//	}
+	//}
+
+	//if (input.KeyIsPressed(SDLK_ESCAPE))
+	//{
+	//	_isRunning = false;
+	//}
+
 }
 
 void Game::UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour)
@@ -128,6 +158,22 @@ Game::Game()
 	// read in the font
 	m_pSmallFont = TTF_OpenFont("assets/DejaVuSans.ttf", 15); // font size
 	m_pBigFont = TTF_OpenFont("assets/DejaVuSans.ttf", 50);
+
+
+	// inGUI Setup
+	IMGUI_CHECKVERSION();
+	ImGui::CreateContext();
+	SDL_DisplayMode DisplayMode;
+	SDL_GetCurrentDisplayMode(0, &DisplayMode);
+	ImGuiSDL::Initialize(game->m_Renderer, DisplayMode.w, DisplayMode.h);
+	ImGuiIO& io = ImGui::GetIO();
+	(void)io;
+	io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
+	//io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+	//io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnble;
+	ImGui::StyleColorsDark();
+
+	ImGui_ImplSDL2_InitForOpenGL(game->m_Window, SDL_GL_GetCurrentContext());
 };
 
 Game::~Game() //destoy with the symbol ~ in front of fuction
@@ -143,6 +189,12 @@ Game::~Game() //destoy with the symbol ~ in front of fuction
 
 	if (m_monster)       //04-01
 		delete m_monster;
+
+	if (player)
+		delete player;
+
+	if (m_ground)
+		delete m_ground;
 
 	// destroy the font
 	TTF_CloseFont(m_pBigFont);
@@ -191,6 +243,26 @@ void Game::Update()
 
 
 	CheckEvents();
+
+
+
+	//m_monster->update(&input);
+
+	player->SetGrounded(player->CheckCollision(m_ground));
+
+	if (input.KeyIsPressed(SDLK_a) || input.KeyIsPressed(SDLK_LEFT))
+	{
+		player->UpdateX(-1);
+	}
+	if (input.KeyIsPressed(SDLK_d) || input.KeyIsPressed(SDLK_RIGHT))
+	{
+		player->UpdateX(1);
+	}
+	if (input.KeyIsPressed(SDLK_SPACE))
+	{
+		player->Jump();
+	}
+
 
 	//wipe the display to the currently set colour.
 	m_monster->draw();

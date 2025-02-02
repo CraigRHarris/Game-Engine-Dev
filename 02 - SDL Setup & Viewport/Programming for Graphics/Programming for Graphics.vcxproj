@@ -151,7 +151,10 @@
     <ClCompile Include="Libraries\imgui-master\imgui_tables.cpp" />
     <ClCompile Include="Libraries\imgui-master\imgui_widgets.cpp" />
     <ClCompile Include="Libraries\imgui_sdl-master\imgui_sdl.cpp" />
+    <ClCompile Include="Logger.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Scene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AssetEditor.h" />
@@ -166,6 +169,9 @@
     <ClInclude Include="Libraries\imgui-master\imstb_textedit.h" />
     <ClInclude Include="Libraries\imgui-master\imstb_truetype.h" />
     <ClInclude Include="Libraries\imgui_sdl-master\imgui_sdl.h" />
+    <ClInclude Include="Logger.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Scene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

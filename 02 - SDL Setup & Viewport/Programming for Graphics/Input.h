@@ -1,5 +1,6 @@
 #pragma once
-//#include "SDL.h"
+#include "SDL.h"
+#include <map>
 
 //Global vars
 enum KEYS_PRESSED_LIST
@@ -10,13 +11,14 @@ enum KEYS_PRESSED_LIST
 class Input
 {
 public:
-	void Update(void);
-	bool KeyIsPressed(KEYS_PRESSED_LIST key);
+	bool KeyIsPressed(SDL_KeyCode key);
+
+	void EventKeyPressed(SDL_Keycode key);
+	void EventKeyReleased(SDL_Keycode key);
 
 	Input();
 	~Input();
 
-private: 
-	;
-	bool m_KeysPressed[SIZE_OF_KEYS_PRESSD_ENUM]{false};
+private:
+	std::map<SDL_Keycode, bool> _keysPressed;
 };
