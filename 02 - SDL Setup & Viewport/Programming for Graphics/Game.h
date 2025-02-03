@@ -6,6 +6,8 @@
 #include "Bit"
 
 #include "AssetEditor.h"
+#include "Player.h"
+#include "Input.h"
 
 
 using namespace std;
@@ -25,8 +27,8 @@ private:
 	Bitmap* m_monsterTransKeyed{ nullptr };
 	Bitmap* m_ground{ nullptr };
 
-	//TTF_Font* m_pSmallFont{ nullptr };
-	//TTF_Font* m_pBigFont{ nullptr };
+	TTF_Font* m_pSmallFont{ nullptr };
+	TTF_Font* m_pBigFont{ nullptr };
 
 	void CheckEvents();
 	void UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour);
@@ -41,12 +43,9 @@ public:
 	bool		  m_running;
 
 	//bitmaps!
-	Bitmap* m_monster;
-	Bitmap* m_monsterTrans;
-	Bitmap* m_monsterTransKeyed;
-
-	TTF_Font* m_pSmallFont;
-	TTF_Font* m_pBigFont;
+	//Bitmap* m_monster;
+	//Bitmap* m_monsterTrans;
+	//Bitmap* m_monsterTransKeyed;
 	
 	Game();
 	~Game();

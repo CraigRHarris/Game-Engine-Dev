@@ -29,25 +29,25 @@ void Game::CheckEvents()
 	//loop throuh all the events in the event list
 	while (SDL_PollEvent(&event) != NULL)
 	{
-	//	// Check for keydown
-	//	if (event.type == SDL_KEYDOWN)
-	//	{
-	//		input.EventKeyPressed(event.key.keysym.sym);
-	//	}
-	//	//check for key up
-	//	else if (event.type == SDL_KEYUP)
-	//	{
-	//		input.EventKeyReleased(event.key.keysym.sym);
-	//	}
-	//	else if (event.type == SDL_QUIT)
-	//	{
-	//		_isRunning = false;
-	//	}
-	//}
+		// Check for keydown
+		if (event.type == SDL_KEYDOWN)
+		{
+			input.EventKeyPressed(event.key.keysym.sym);
+		}
+		//check for key up
+		else if (event.type == SDL_KEYUP)
+		{
+			input.EventKeyReleased(event.key.keysym.sym);
+		}
+		else if (event.type == SDL_QUIT)
+		{
+			_isRunning = false;
+		}
+	}
 
-	//if (input.KeyIsPressed(SDLK_ESCAPE))
-	//{
-	//	_isRunning = false;
+	if (input.KeyIsPressed(SDLK_ESCAPE))
+	{
+		_isRunning = false;
 	}
 
 }
@@ -114,8 +114,8 @@ Game::Game()
 		"My First Window", //title
 		250,               // inital x psition
 		50,                //        y
-		640,               // width, in pixels
-		480,               // height
+		750,               // width, in pixels
+		500,               // height
 		0                  // window behaviour flags (ignore for now)
 	);
 
@@ -148,12 +148,11 @@ Game::Game()
 	assetEditor = new AssetEditor(m_Renderer);
 	
 
-	
-
 	//creating some bitmaps
-	m_monster = new Bitmap(m_Renderer, "assets/monster.bmp", 100, 100);                      //04-01
-	m_monsterTrans = new Bitmap(m_Renderer, "assets/monsterTrans.bmp", 200, 100);            //04-01
-	m_monsterTransKeyed = new Bitmap(m_Renderer, "assets/monsterTrans.bmp", 300, 100, true); //04-01
+    player = new Player (m_Renderer, "assets/monster.bmp", 100, 100);                      //04-01
+	m_monsterTrans = new Bitmap(m_Renderer, "assets/monstertrans.bmp", 200, 100);            //04-01
+	m_monsterTransKeyed = new Bitmap(m_Renderer, "assets/monstertrans.bmp", 300, 100, true); //04-01
+	m_ground = new Bitmap(m_Renderer, "assets/ground.bmp", 0, 300);
 
 	// read in the font
 	m_pSmallFont = TTF_OpenFont("assets/DejaVuSans.ttf", 15); // font size
@@ -165,7 +164,7 @@ Game::Game()
 	ImGui::CreateContext();
 	SDL_DisplayMode DisplayMode;
 	SDL_GetCurrentDisplayMode(0, &DisplayMode);
-	ImGuiSDL::Initialize(game->m_Renderer, DisplayMode.w, DisplayMode.h);
+	ImGuiSDL::Initialize(m_Renderer, DisplayMode.w, DisplayMode.h);
 	ImGuiIO& io = ImGui::GetIO();
 	(void)io;
 	io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
@@ -173,7 +172,7 @@ Game::Game()
 	//io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnble;
 	ImGui::StyleColorsDark();
 
-	ImGui_ImplSDL2_InitForOpenGL(game->m_Window, SDL_GL_GetCurrentContext());
+	ImGui_ImplSDL2_InitForOpenGL(m_Window, SDL_GL_GetCurrentContext());
 };
 
 Game::~Game() //destoy with the symbol ~ in front of fuction
@@ -187,8 +186,8 @@ Game::~Game() //destoy with the symbol ~ in front of fuction
 	if (m_monsterTrans)          //04-01
 		delete m_monsterTrans;
 
-	if (m_monster)       //04-01
-		delete m_monster;
+	if (player)       //04-01
+		delete player;
 
 	if (player)
 		delete player;
@@ -227,17 +226,17 @@ void Game::Update()
 {
 	SDL_RenderClear(m_Renderer);
 
-	ImGui::NewFrame();
-	ImGui_ImplSDL2_NewFrame(m_Window);
-	bool show = true;
-	//ShowExampleAppDockSpace(&show);
+	//ImGui::NewFrame();
+	//ImGui_ImplSDL2_NewFrame(m_Window);
+	//bool show = true;
+	////ShowExampleAppDockSpace(&show);
 
-	ImGui::ShowDemoWindow(nullptr);
+	//ImGui::ShowDemoWindow(nullptr);
 
-	assetEditor->Update();
+	//assetEditor->Update();
 
-	ImGui::Render();
-	ImGuiSDL::Render(ImGui::GetDrawData());
+	//ImGui::Render();
+	//ImGuiSDL::Render(ImGui::GetDrawData());
 	
 
 
@@ -263,25 +262,28 @@ void Game::Update()
 		player->Jump();
 	}
 
+	player->Update();
+	player->FixGroundCollision(m_ground);
 
 	//wipe the display to the currently set colour.
-	m_monster->draw();
-	m_monsterTrans->draw();
-	m_monsterTransKeyed->draw();
+	player->draw();
+	//m_monsterTrans->draw();
+	//m_monsterTransKeyed->draw();
+	m_ground->draw();
 	//vector assests  - push onto the game  - loop for drawing draw for object
 	
 
 	//draw the text
-	UpdateText("Small Red", 50, 10, m_pSmallFont, { 255, 0, 0 });
-	UpdateText("Small Blue", 50, 40, m_pSmallFont, { 0, 0, 255 });
+	//UpdateText("Small Red", 50, 10, m_pSmallFont, { 255, 0, 0 });
+	//UpdateText("Small Blue", 50, 40, m_pSmallFont, { 0, 0, 255 });
 
 	char char_array[] = "Big White";
-	UpdateText(char_array, 50, 140, m_pBigFont, { 255, 255, 255});
+	//UpdateText(char_array, 50, 140, m_pBigFont, { 255, 255, 255});
 
 	int testNumber = 1234;
 	string testString = "Test Number: ";
 	testString += to_string(testNumber);
-	UpdateText(testString, 50, 210, m_pBigFont, { 255, 255, 255 });
+	//UpdateText(testString, 50, 210, m_pBigFont, { 255, 255, 255 });
 
 	//show what we've drawn
 	SDL_RenderPresent(m_Renderer);

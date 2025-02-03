@@ -34,7 +34,7 @@ int main(int argc, char* argv[])
 	//return 0;				//exit nicely
 
 
-	if (game)
+	while(game)
 	{
 		//game->SetDisplayColour();  //set and show our coloured display
 		
@@ -44,11 +44,10 @@ int main(int argc, char* argv[])
 		game->SetDisplayColour(r, g, b, a);  //set coloured display
 		game->Update();  //update the game
 
-
-		delete game;             //clean up game
-		game = nullptr;
-
 	}
+
+	delete game;             //clean up game
+	game = nullptr;
 
 	return 0;                     //exit nicely
 }

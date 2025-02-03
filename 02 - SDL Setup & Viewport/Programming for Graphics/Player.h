@@ -1,5 +1,5 @@
 #pragma once
-#include "Bitmap.h"
+#include "Bitmaps.h"
 #include "Logger.h"
 
 class Player : public Bitmap

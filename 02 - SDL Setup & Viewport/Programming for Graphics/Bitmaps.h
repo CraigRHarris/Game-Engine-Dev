@@ -13,7 +13,7 @@ private:
 	SDL_Surface* m_pbitmapSurface;
 	SDL_Texture* m_pbitmapTexture;
 	SDL_Renderer* m_pRenderer;
-
+	//SDL_Rect CollisionRect;
 
 protected:
 	float			 m_x, m_y, m_h, m_w;
@@ -55,10 +55,7 @@ public:
 	{
 		return m_pbitmapTexture;
 	}
-
-	std::string FileName;
+	
 
 };
 
-
-//Bitmaps and Fonts Tatorial on page 9 (but got a bit confused)

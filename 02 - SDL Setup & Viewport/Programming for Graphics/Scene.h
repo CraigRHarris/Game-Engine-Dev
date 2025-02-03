@@ -1,6 +1,6 @@
 #pragma once
-class Scene :
-    public Game
-{
-};
+//class Scene :
+//    public Game
+//{
+//};
 

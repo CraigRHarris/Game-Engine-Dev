@@ -17,9 +17,13 @@ void Player::Update() {
 
 void Player::FixGroundCollision(Bitmap* ground)
 {
-	while (CheckCollision(ground))
+	if (CheckCollision(ground))
 	{
-		m_y -= 1;
+		isGrounded = true;
+	}
+	else
+	{
+		isGrounded = false;
 	}
 }
 

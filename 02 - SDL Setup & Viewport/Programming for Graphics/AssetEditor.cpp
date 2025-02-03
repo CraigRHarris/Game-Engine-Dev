@@ -21,7 +21,7 @@ AssetEditor::AssetEditor(SDL_Renderer* renderer)
 	std::string path = "assets";
 	for (const auto& entry : std::filesystem::directory_iterator(path)) //directory_iterator(path) //recursive_
 	{
-		if (entry.path().extension() == ".bmp" || entry.path().extension() == ".jpg" || entry.path().extension() == ".png")
+		if (entry.path().extension() == ".bmp")
 		{
 			Bitmap* Asset = new Bitmap(renderer, entry.path().string(), 0, 0, true);
 			content.push_back(Asset);
