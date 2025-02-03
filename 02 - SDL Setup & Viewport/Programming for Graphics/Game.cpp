@@ -114,8 +114,8 @@ Game::Game()
 		"My First Window", //title
 		250,               // inital x psition
 		50,                //        y
-		750,               // width, in pixels
-		500,               // height
+		1024,               // width, in pixels
+		768,               // height
 		0                  // window behaviour flags (ignore for now)
 	);
 
@@ -152,7 +152,8 @@ Game::Game()
     player = new Player (m_Renderer, "assets/monster.bmp", 100, 100);                      //04-01
 	m_monsterTrans = new Bitmap(m_Renderer, "assets/monstertrans.bmp", 200, 100);            //04-01
 	m_monsterTransKeyed = new Bitmap(m_Renderer, "assets/monstertrans.bmp", 300, 100, true); //04-01
-	m_ground = new Bitmap(m_Renderer, "assets/ground.bmp", 0, 300);
+	m_ground = new Bitmap(m_Renderer, "assets/ground.bmp", 100, 300);
+	//m_ground = new Bitmap(m_Renderer, "assets/monstertrans.bmp", 200, 500);
 
 	// read in the font
 	m_pSmallFont = TTF_OpenFont("assets/DejaVuSans.ttf", 15); // font size
@@ -180,13 +181,13 @@ Game::~Game() //destoy with the symbol ~ in front of fuction
 
 
 	//destroy the bitmaps
-	if (m_monsterTransKeyed) //04-01
+	if (m_monsterTransKeyed)        //04-01
 		delete m_monsterTransKeyed;
 
-	if (m_monsterTrans)          //04-01
+	if (m_monsterTrans)             //04-01
 		delete m_monsterTrans;
 
-	if (player)       //04-01
+	if (player)                     //04-01
 		delete player;
 
 	if (player)

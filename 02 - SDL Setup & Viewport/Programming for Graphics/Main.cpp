@@ -38,7 +38,7 @@ int main(int argc, char* argv[])
 	{
 		//game->SetDisplayColour();  //set and show our coloured display
 		
-		Uint8 r = 127, g = 127, b = 127, a = 255; // declare and int variables used for colour background
+		Uint8 r = 137, g = 207, b = 240, a = 255; // declare and int variables used for colour background
 		
 
 		game->SetDisplayColour(r, g, b, a);  //set coloured display
