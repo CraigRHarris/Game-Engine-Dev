@@ -48,7 +48,7 @@ void Game::CheckEvents()
 	//if (input.KeyIsPressed(SDLK_ESCAPE))
 	//{
 	//	_isRunning = false;
-	//}
+	}
 
 }
 
