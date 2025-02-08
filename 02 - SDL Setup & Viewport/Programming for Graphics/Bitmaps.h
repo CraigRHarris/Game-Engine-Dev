@@ -1,10 +1,14 @@
 #pragma once
 
 #include <string>
+#include "SDL.h"
+
+#include "TextureManager.h"
 
 struct SDL_Surface;
 struct SDL_Texture;
 struct SDL_Renderer;
+struct position { float x; float y; };
 
 class Bitmap
 {
@@ -16,18 +20,22 @@ private:
 	//SDL_Rect CollisionRect;
 
 protected:
-	float			 m_x, m_y, m_h, m_w;
+	float  m_x, m_y;
+	int m_h, m_w;
 
-	bool isGrounded{ false };
 
 public:
-	Bitmap(SDL_Renderer* renderer, std::string fileName, int xpos, int ypos, bool useTransparency = false);
-	~Bitmap();
+	
+	bool isGrounded{ false };
+	Bitmap(SDL_Renderer* renderer, TextureManager* texManager,std::string fileName, int xpos, int ypos, bool useTransparency = false);
+	virtual ~Bitmap();
 	std::string FileName;
 
-	void SetPosition(float x, float y);
+	virtual bool IsColliding(Bitmap* Other);
 
-	bool CheckCollision(Bitmap* Other);
+	void SetPosition(float x, float y);
+	position GetPosition();
+	//bool CheckCollision(Bitmap* Other);
 
 	void UpdateX(float xDelta) { m_x += xDelta; }
 	void UpdateY(float yDelta) { m_y += yDelta; }
@@ -40,14 +48,10 @@ public:
 
 	void SetGrounded(bool grounded) { isGrounded = grounded; }
 
-	//SDL_Rect GetTransformRect()
-	//{
-	//	SDL_Rect BitmapRect;
-	//	BitmapRect.w = m_w;
-	//	BitmapRect.y = m_y;
-	//	BitmapRect.x = m_x;
-	//	BitmapRect.h = m_h;
-	//}
+	SDL_Rect GetTransformRect()
+	{
+		return SDL_Rect{ m_w , m_h, m_w, m_h };
+	}
 
 	void draw();
 

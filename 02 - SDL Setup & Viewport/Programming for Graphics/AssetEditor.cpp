@@ -1,47 +1,52 @@
-#include "AssetEditor.h"
-#include "Game.h"
-#include "Bitmaps.h"   
-
+  
+#include "SDL.h"
 #include <SDL.h>
 #include <stdio.h>
 #include "SDL_ttf.h"
-#include "Bitmaps.h"
 
 #include "imgui.h"
 #include "backends/imgui_impl_sdl.h"
+#include "imgui_internal.h"
 #include "imgui_sdl.h"
 
+#include <iostream>
+#include <filesystem>
+#include <vector>
+
+#include "Bitmaps.h"
+#include "AssetEditor.h"
+#include "Game.h"
+#include "SDL.h"
 
 #include <filesystem>
+#include <vector>
+#include <iostream>
 
 
-AssetEditor::AssetEditor(SDL_Renderer* renderer)
+using namespace std;
+
+AssetEditor::AssetEditor(SDL_Renderer* renderer, SDL_Window* window, TextureManager* texManager) : _texManager{ texManager }
 {
 	p_Renderer= renderer;
+	//p_Window = window;
 	std::string path = "assets";
 	for (const auto& entry : std::filesystem::directory_iterator(path)) //directory_iterator(path) //recursive_
 	{
 		if (entry.path().extension() == ".bmp")
 		{
-			Bitmap* Asset = new Bitmap(renderer, entry.path().string(), 0, 0, true);
+			Bitmap* Asset = new Bitmap(renderer, texManager, entry.path().string(), 0, 0, true);
 			content.push_back(Asset);
 
 		}
 		else if (entry.is_directory())
 		{
-			//std::cout << "dir " << entry << std::endl;
+			cout << "dir " << entry << std::endl;
 		}
 		//debug
-		//std::cout << entry.path() << std::endl;
+		cout << entry.path() << std::endl;
 	}
 
 
-
-
-
-
-
-	
 
 }
 
@@ -50,7 +55,7 @@ void AssetEditor::Update()
 
 	if (ImGui::IsMouseReleased(ImGuiMouseButton_Left) && AssetMousDrag != nullptr)
 	{
-		//cout << "Test" << endl;
+		cout << "Test" << endl;
 		int x, y;
 		SDL_GetMouseState(&x, &y);
 		Bitmap* s = new Bitmap(p_Renderer, AssetMousDrag->FileName, x, y, true);
@@ -84,7 +89,6 @@ void AssetEditor::Update()
 		ImGui::SameLine();
 	}
 
-	/////////////////////////////////For Draging
 
 	ImGui::EndChild();
 	ImGui::End();

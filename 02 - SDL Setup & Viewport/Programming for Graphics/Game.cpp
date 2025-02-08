@@ -3,20 +3,19 @@
 #include "Game.h"
 #include "Bitmaps.h"   //04-01
 #include "Logger.h"
+#include "AssetEditor.h"
+#include "Enemy.h"
 
 #include <SDL.h>
 #include <stdio.h>
 #include <stdint.h>
 #include "SDL_ttf.h"
-#include "Bitmaps.h"
 
 #include "imgui.h"
 #include "backends/imgui_impl_sdl.h"
 #include "imgui_sdl.h"
-#include "AssetEditor.h"
+#include "imgui_internal.h"
 
-
-//#include "imgui_internal.h"
 
 #endif
 
@@ -54,24 +53,17 @@ void Game::CheckEvents()
 
 void Game::UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour)
 {
-
-	
 	SDL_Surface* surface = nullptr;
 	SDL_Texture* texture = nullptr;
 
 	int texW = 0;
 	int texH = 0;
 
-	//SDL_Color color = { 0, 0, 0 };
-
-	//char msg[100];
-	//sprintf_s(msg, "Checks: %d", m_checkTally);
-
 	surface = TTF_RenderText_Solid(font, msg.c_str(), colour);
 	if (!surface)
 	{
 		//surface not loaded? Output the error
-		printf("SURFACE for font not loaded! \n");
+		Logger::Error("SURFACE for font not loaded! \n");
 		printf("%s\n", SDL_GetError());
 	}
 	else
@@ -100,8 +92,7 @@ void Game::UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour
 
 Game::Game()
 {
-	m_running = true;
-
+	
 	m_Window = nullptr;
 	m_Renderer = nullptr;
 
@@ -143,22 +134,20 @@ Game::Game()
 		return;
 	}
 
-
-	
-	assetEditor = new AssetEditor(m_Renderer);
+	_texManager = new TextureManager();
 	
 
 	//creating some bitmaps
-    player = new Player (m_Renderer, "assets/monster.bmp", 100, 100);                      //04-01
-	m_monsterTrans = new Bitmap(m_Renderer, "assets/monstertrans.bmp", 200, 100);            //04-01
-	m_monsterTransKeyed = new Bitmap(m_Renderer, "assets/monstertrans.bmp", 300, 100, true); //04-01
-	m_ground = new Bitmap(m_Renderer, "assets/ground.bmp", 100, 300);
-	//m_ground = new Bitmap(m_Renderer, "assets/monstertrans.bmp", 200, 500);
+    player = new Player (m_Renderer, _texManager, "assets/monstertrans.bmp", 100, 100, true);                      
+	m_ground = new Bitmap(m_Renderer, _texManager, "assets/ground.bmp", 100, 300);
+	enemy = new Enemy(m_Renderer, _texManager, "assets/Alian.bmp", 400, 200, 100, 500);
+	pickup = new Pickup(m_Renderer, _texManager, "assets/Key.bmp", 0, 200);
 
 	// read in the font
 	m_pSmallFont = TTF_OpenFont("assets/DejaVuSans.ttf", 15); // font size
 	m_pBigFont = TTF_OpenFont("assets/DejaVuSans.ttf", 50);
-
+	
+	assetEditor = new AssetEditor(m_Renderer, m_Window, _texManager);
 
 	// inGUI Setup
 	IMGUI_CHECKVERSION();
@@ -181,20 +170,17 @@ Game::~Game() //destoy with the symbol ~ in front of fuction
 
 
 	//destroy the bitmaps
-	if (m_monsterTransKeyed)        //04-01
-		delete m_monsterTransKeyed;
-
-	if (m_monsterTrans)             //04-01
-		delete m_monsterTrans;
-
-	if (player)                     //04-01
-		delete player;
-
 	if (player)
 		delete player;
 
 	if (m_ground)
 		delete m_ground;
+
+	if (enemy)
+		delete enemy;
+
+	if (pickup)
+		delete pickup;
 
 	// destroy the font
 	TTF_CloseFont(m_pBigFont);
@@ -208,7 +194,10 @@ Game::~Game() //destoy with the symbol ~ in front of fuction
 	{
 		SDL_DestroyRenderer(m_Renderer);
 	}
-
+	if (m_Window)
+	{
+		SDL_DestroyWindow(m_Window);
+	}
 
 }
 
@@ -238,45 +227,36 @@ void Game::Update()
 
 	//ImGui::Render();
 	//ImGuiSDL::Render(ImGui::GetDrawData());
-	
-
-
 
 	CheckEvents();
 
+	SDL_RenderClear(m_Renderer);
+	enemy->FixGroundCollision(m_ground);
+	player->FixGroundCollision(m_ground);
 
+	player->SetGrounded(player->IsColliding(m_ground));
+	enemy->SetGrounded(enemy->IsColliding(m_ground));
 
-	//m_monster->update(&input);
+	
 
-	player->SetGrounded(player->CheckCollision(m_ground));
+	
 
 	if (input.KeyIsPressed(SDLK_a) || input.KeyIsPressed(SDLK_LEFT))
 	{
-		player->UpdateX(-1);
+		player->UpdateX(-1);// if key A is pressed, player will move left
+		Logger::Info("Left");
 	}
 	if (input.KeyIsPressed(SDLK_d) || input.KeyIsPressed(SDLK_RIGHT))
 	{
 		player->UpdateX(1);
+		Logger::Info("Right");
 	}
 	if (input.KeyIsPressed(SDLK_SPACE))
 	{
 		player->Jump();
+		Logger::Info("Jump");
 	}
 
-	player->Update();
-	player->FixGroundCollision(m_ground);
-
-	//wipe the display to the currently set colour.
-	player->draw();
-	//m_monsterTrans->draw();
-	//m_monsterTransKeyed->draw();
-	m_ground->draw();
-	//vector assests  - push onto the game  - loop for drawing draw for object
-	
-
-	//draw the text
-	//UpdateText("Small Red", 50, 10, m_pSmallFont, { 255, 0, 0 });
-	//UpdateText("Small Blue", 50, 40, m_pSmallFont, { 0, 0, 255 });
 
 	char char_array[] = "Big White";
 	//UpdateText(char_array, 50, 140, m_pBigFont, { 255, 255, 255});
@@ -286,6 +266,26 @@ void Game::Update()
 	testString += to_string(testNumber);
 	//UpdateText(testString, 50, 210, m_pBigFont, { 255, 255, 255 });
 
+
+	player->Update();
+	enemy->Update();
+	enemy->MoveAI();
+	pickup->IsColliding(player);
+
+	//show the bitmaps
+	m_ground->draw();
+	enemy->draw();
+	player->draw();
+	pickup->draw();
+
+	ImGui::NewFrame();
+	ImGui_ImplSDL2_NewFrame(m_Window);
+	bool show = true;
+
+	assetEditor->Update();
+
+	ImGui::Render();
+	ImGuiSDL::Render(ImGui::GetDrawData());
 	//show what we've drawn
 	SDL_RenderPresent(m_Renderer);
 
