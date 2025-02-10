@@ -58,7 +58,7 @@ void AssetEditor::Update()
 		cout << "Test" << endl;
 		int x, y;
 		SDL_GetMouseState(&x, &y);
-		Bitmap* s = new Bitmap(p_Renderer, AssetMousDrag->FileName, x, y, true);
+		Bitmap* s = new Bitmap(p_Renderer, _texManager, AssetMousDrag->FileName, x, y, true);
 		//s->Transfrom.ParentSet(GameWindow::Instance().GetHirarcy());
 		//sceneRoot.Children.push_back(&s->M_Transform);
 

@@ -141,7 +141,7 @@ Game::Game()
     player = new Player (m_Renderer, _texManager, "assets/monstertrans.bmp", 100, 100, true);                      
 	m_ground = new Bitmap(m_Renderer, _texManager, "assets/ground.bmp", 100, 300);
 	enemy = new Enemy(m_Renderer, _texManager, "assets/Alian.bmp", 400, 200, 100, 500);
-	pickup = new Pickup(m_Renderer, _texManager, "assets/Key.bmp", 0, 200);
+	pickup = new Pickup(m_Renderer, _texManager, "assets/Key.bmp", 500, 200);
 
 	// read in the font
 	m_pSmallFont = TTF_OpenFont("assets/DejaVuSans.ttf", 15); // font size

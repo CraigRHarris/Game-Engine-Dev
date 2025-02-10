@@ -29,9 +29,13 @@ Bitmap::Bitmap(SDL_Renderer* renderer, TextureManager* texManager, std::string f
 
 	m_pbitmapTexture = texManager->Load(fileName, true, renderer, m_w, m_h);
 
+	m_pbitmapSurface = texManager->m_surface;
 	//store the position vals
 	m_x = xpos;
 	m_y = ypos;
+
+	//m_w = m_pbitmapSurface->w;
+	//m_h = m_pbitmapSurface->h;
 
 }
 
@@ -42,6 +46,10 @@ void Bitmap::SetPosition(float x, float y)
 	m_x = x;
 	m_y = y;
 }
+position Bitmap::GetPosition()
+{
+	return position(m_x,m_y);
+}
 Bitmap::~Bitmap()
 {
 
@@ -51,7 +59,7 @@ void Bitmap::draw()
 	//render the bitmap at the x/y coords
 	if (m_pbitmapTexture)
 	{
-		SDL_Rect destRect = { m_x, m_y, m_pbitmapSurface->w, m_pbitmapSurface->h };
+		SDL_Rect destRect = { m_x, m_y, m_w, m_h };
 		SDL_RenderCopy(m_pRenderer, m_pbitmapTexture, NULL, &destRect);
 	}
 }
