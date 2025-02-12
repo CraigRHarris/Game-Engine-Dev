@@ -1,11 +1,74 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Programming for Graphics.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+﻿C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Programming for Graphics.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  AssetEditor.cpp
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\AssetEditor.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'AssetEditor.cpp')
+  
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.h(18,7): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'AssetEditor.cpp')
+      C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Libraries\SDL2\include\SDL_video.h(95,16):
+      see declaration of 'SDL_Window'
+  
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.h(19,7): warning C4099: 'SDL_Renderer': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'AssetEditor.cpp')
+      C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Libraries\SDL2\include\SDL_render.h(141,8):
+      see declaration of 'SDL_Renderer'
+  
   Bitmaps.cpp
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Bitmaps.cpp(34,8): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Bitmaps.cpp(35,8): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Bitmaps.cpp(62,25): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Bitmaps.cpp(62,25): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Bitmaps.cpp(62,30): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Bitmaps.cpp(62,30): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Bitmaps.cpp(34,8): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Bitmaps.cpp(35,8): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Bitmaps.cpp(62,25): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Bitmaps.cpp(62,25): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Bitmaps.cpp(62,30): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Bitmaps.cpp(62,30): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   Enemy.cpp
+  Game.cpp
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\AssetEditor.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'Game.cpp')
+  
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.h(18,7): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'Game.cpp')
+      C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Libraries\SDL2\include\SDL_video.h(95,16):
+      see declaration of 'SDL_Window'
+  
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.h(19,7): warning C4099: 'SDL_Renderer': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'Game.cpp')
+      C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Libraries\SDL2\include\SDL_render.h(141,8):
+      see declaration of 'SDL_Renderer'
+  
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(130,10): warning C4778: 'printf' : unterminated format string '%\n'
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(130,59): warning C4474: 'printf' : too many arguments passed for format string
+      C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(130,59):
+      placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+  
+  Input.cpp
+  imgui_impl_sdl.cpp
+  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  imgui_sdl.cpp
+  Logger.cpp
+  Main.cpp
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\AssetEditor.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'Main.cpp')
+  
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.h(18,7): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'Main.cpp')
+      C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Libraries\SDL2\include\SDL_video.h(95,16):
+      see declaration of 'SDL_Window'
+  
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.h(19,7): warning C4099: 'SDL_Renderer': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'Main.cpp')
+      C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Libraries\SDL2\include\SDL_render.h(141,8):
+      see declaration of 'SDL_Renderer'
+  
+  Pickup.cpp
+  Player.cpp
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Player.cpp(8,25): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Player.cpp(24,10): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Player.cpp(25,10): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Scene.cpp
+  TextureManager.cpp
   Generating Code...
-  Programming for Graphics.vcxproj -> C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\x64\Debug\Geme Engine.exe
+  Programming for Graphics.vcxproj -> C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\x64\Debug\Geme Engine.exe
