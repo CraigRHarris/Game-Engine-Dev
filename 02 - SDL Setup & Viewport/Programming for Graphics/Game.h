@@ -11,7 +11,7 @@
 #include "Input.h"
 #include "TextureManager.h"
 #include "Pickup.h"
-
+#include "SceneManager.h"
 
 using namespace std;
 
@@ -24,8 +24,12 @@ class Enemy;
 class Game
 {
 private:
-	
+	SceneManager _sceneManager;
 	//Bitmaps
+	std::vector<Enemy*> enemies;
+	std::vector<Bitmap*> platforms;
+	std::vector<Pickup*> pickups;
+
 	Player* player = nullptr;
 	Enemy* enemy = nullptr;
 	Bitmap* m_ground{ nullptr };
@@ -45,7 +49,9 @@ private:
 	SDL_Window* m_Window{ nullptr }; // Tells the compiler that there will be a struct named SDL_Window defined.
 	SDL_Renderer* m_Renderer{ nullptr };
 	
+	void loadScene(Scene& scene);
 
+	void clearExistingObjects();
 
 public:
 	
@@ -55,5 +61,5 @@ public:
 	void SetDisplayColour(int r, int g, int b, int a);
 
 	bool isRunning() { return _isRunning; }
-	void addKey();
+	
 };

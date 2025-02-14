@@ -1,7 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 #include "Game.h"
-#include "Bitmaps.h"   //04-01
+#include "Bitmaps.h"  
 #include "Logger.h"
 #include "AssetEditor.h"
 #include "Enemy.h"
@@ -137,11 +137,11 @@ Game::Game()
 	_texManager = new TextureManager();
 	
 
-	//creating some bitmaps
-    player = new Player (m_Renderer, _texManager, "assets/monstertrans.bmp", 100, 100, true);                      
-	m_ground = new Bitmap(m_Renderer, _texManager, "assets/ground.bmp", 100, 300);
-	enemy = new Enemy(m_Renderer, _texManager, "assets/Alian.bmp", 400, 200, 100, 500);
-	pickup = new Pickup(m_Renderer, _texManager, "assets/Key.bmp", 500, 200);
+	////creating some bitmaps
+ //   player = new Player (m_Renderer, _texManager, "assets/monstertrans.bmp", 100, 100, true);                      
+	//m_ground = new Bitmap(m_Renderer, _texManager, "assets/ground.bmp", 100, 300);
+	//enemy = new Enemy(m_Renderer, _texManager, "assets/Alian.bmp", 400, 200, 100, 500);
+	//pickup = new Pickup(m_Renderer, _texManager, "assets/Key.bmp", 500, 200);
 
 	// read in the font
 	m_pSmallFont = TTF_OpenFont("assets/DejaVuSans.ttf", 15); // font size
@@ -168,24 +168,9 @@ Game::Game()
 Game::~Game() //destoy with the symbol ~ in front of fuction
 {
 
-
-	//destroy the bitmaps
-	if (player)
-		delete player;
-
-	if (m_ground)
-		delete m_ground;
-
-	if (enemy)
-		delete enemy;
-
-	if (pickup)
-		delete pickup;
-
 	// destroy the font
 	TTF_CloseFont(m_pBigFont);
 	TTF_CloseFont(m_pSmallFont);
-
 
 	//clean up.
 	//don't gorget - we destroy in the REVERSE order they were created 
@@ -199,6 +184,53 @@ Game::~Game() //destoy with the symbol ~ in front of fuction
 		SDL_DestroyWindow(m_Window);
 	}
 
+}
+
+void Game::loadScene(Scene& scene)
+{
+	clearExistingObjects();
+
+	for (auto ent : scene.entities)
+	{
+		switch (ent.type)
+		{
+		case EntityType::Ground:
+			platforms.push_back(new Bitmap(m_Renderer, _texManager, ent.filename, ent.xPos, ent.yPos, ent.isTransparent));//creating the bitmap
+			break;
+		case EntityType::Player:
+			player = new Player(m_Renderer, _texManager, ent.filename, ent.xPos, ent.yPos, ent.isTransparent);
+			break;
+		case EntityType::Enemy:
+			enemies.push_back(new Enemy(m_Renderer, _texManager, ent.filename, ent.xPos, ent.yPos, ent.leftBound, ent.rightBound, ent.isTransparent));
+			break;
+		case EntityType::Pickup:
+			pickups.push_back(new Pickup(m_Renderer, _texManager, ent.filename, ent.xPos, ent.yPos, ent.isTransparent));
+			break;
+		}
+	}
+}
+void Game::clearExistingObjects()
+{
+	if (player)
+		delete player;
+
+	for (auto platform : platforms) {
+		delete platform;
+	}
+
+	platforms.clear();
+
+	for (auto pickup : pickups) {
+		delete pickup;
+	}
+
+	pickups.clear();
+
+	for (auto enemy : enemies) {
+		delete enemy;
+	}
+
+	enemies.clear();
 }
 
 void Game::SetDisplayColour(int red, int green, int blue, int alpha)
@@ -230,14 +262,27 @@ void Game::Update()
 
 	CheckEvents();
 
-	SDL_RenderClear(m_Renderer);
-	enemy->FixGroundCollision(m_ground);
-	player->FixGroundCollision(m_ground);
+	for (auto enemy : enemies)
+	{
+		for (auto platform : platforms)
+		{
+			enemy->FixGroundCollision(platform);
+			bool isGrounded = enemy->IsColliding(platform);
+			if (isGrounded)
+			{
+				enemy->SetGrounded(true);
+				break;
+			}
+		}
+	}
 
-	player->SetGrounded(player->IsColliding(m_ground));
-	enemy->SetGrounded(enemy->IsColliding(m_ground));
-
-	
+	for (auto platform : platforms)
+	{
+		player->FixGroundCollision(platform);
+		bool playerGrounded = player->IsColliding(platform);
+		player->SetGrounded(playerGrounded);
+		if (playerGrounded) break;
+	}
 
 	
 
@@ -268,15 +313,30 @@ void Game::Update()
 
 
 	player->Update();
-	enemy->Update();
-	enemy->MoveAI();
-	pickup->IsColliding(player);
 
-	//show the bitmaps
-	m_ground->draw();
-	enemy->draw();
+	for (auto enemy : enemies) {
+		enemy->Update();
+		enemy->MoveAI();
+	}
+
+	for (auto pickup : pickups) {
+		pickup->IsColliding(player);
+	}
+
+	for (auto platform : platforms) {
+		platform->draw();
+	}
+
 	player->draw();
-	pickup->draw();
+
+	for (auto pickup : pickups) {
+		pickup->draw();
+	}
+
+	for (auto enemy : enemies) {
+		enemy->draw();
+	}
+
 
 	ImGui::NewFrame();
 	ImGui_ImplSDL2_NewFrame(m_Window);

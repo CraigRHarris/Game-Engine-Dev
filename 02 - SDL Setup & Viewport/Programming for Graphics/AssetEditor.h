@@ -22,6 +22,7 @@ public:
 
 	void Update(); 
 	std::vector<Bitmap*> content;
+	std::vector<Bitmap*> Dragables;
 
 private:
 	TextureManager* _texManager;

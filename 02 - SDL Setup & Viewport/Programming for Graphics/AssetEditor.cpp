@@ -16,19 +16,14 @@
 #include "Bitmaps.h"
 #include "AssetEditor.h"
 #include "Game.h"
-#include "SDL.h"
-
-#include <filesystem>
-#include <vector>
-#include <iostream>
-
 
 using namespace std;
 
 AssetEditor::AssetEditor(SDL_Renderer* renderer, SDL_Window* window, TextureManager* texManager) : _texManager{ texManager }
 {
 	p_Renderer= renderer;
-	//p_Window = window;
+	p_Window = window;
+
 	std::string path = "assets";
 	for (const auto& entry : std::filesystem::directory_iterator(path)) //directory_iterator(path) //recursive_
 	{
@@ -46,7 +41,8 @@ AssetEditor::AssetEditor(SDL_Renderer* renderer, SDL_Window* window, TextureMana
 		cout << entry.path() << std::endl;
 	}
 
-
+	//debug
+	//std::cout << entry.path() << std::endl;
 
 }
 
@@ -59,13 +55,17 @@ void AssetEditor::Update()
 		int x, y;
 		SDL_GetMouseState(&x, &y);
 		Bitmap* s = new Bitmap(p_Renderer, _texManager, AssetMousDrag->FileName, x, y, true);
+
 		//s->Transfrom.ParentSet(GameWindow::Instance().GetHirarcy());
 		//sceneRoot.Children.push_back(&s->M_Transform);
-
+		Dragables.push_back(s);
 		AssetMousDrag = nullptr;
 	}
 
-
+	for (auto& bitmap : Dragables)
+	{
+		bitmap->draw();
+	}
 
 	ImGui::Begin("Editor");
 	ImGui::BeginChild("Content Window", ImVec2(), true);

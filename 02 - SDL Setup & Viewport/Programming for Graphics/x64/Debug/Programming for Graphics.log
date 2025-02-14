@@ -13,14 +13,6 @@ C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Progra
       C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Libraries\SDL2\include\SDL_render.h(141,8):
       see declaration of 'SDL_Renderer'
   
-  Bitmaps.cpp
-C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Bitmaps.cpp(34,8): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Bitmaps.cpp(35,8): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Bitmaps.cpp(62,25): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Bitmaps.cpp(62,25): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Bitmaps.cpp(62,30): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
-C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Bitmaps.cpp(62,30): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-  Enemy.cpp
   Game.cpp
 C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\AssetEditor.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   (compiling source file 'Game.cpp')
@@ -40,15 +32,6 @@ C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Progra
       C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(130,59):
       placeholders and their parameters expect 0 variadic arguments, but 1 were provided
   
-  Input.cpp
-  imgui_impl_sdl.cpp
-  imgui.cpp
-  imgui_demo.cpp
-  imgui_draw.cpp
-  imgui_tables.cpp
-  imgui_widgets.cpp
-  imgui_sdl.cpp
-  Logger.cpp
   Main.cpp
 C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\AssetEditor.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   (compiling source file 'Main.cpp')
@@ -64,11 +47,6 @@ C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Progra
       see declaration of 'SDL_Renderer'
   
   Pickup.cpp
-  Player.cpp
-C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Player.cpp(8,25): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Player.cpp(24,10): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Player.cpp(25,10): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-  Scene.cpp
-  TextureManager.cpp
+  SceneManager.cpp
   Generating Code...
   Programming for Graphics.vcxproj -> C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\x64\Debug\Geme Engine.exe

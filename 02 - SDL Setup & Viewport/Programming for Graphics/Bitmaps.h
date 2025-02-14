@@ -17,7 +17,7 @@ private:
 	SDL_Surface* m_pbitmapSurface;
 	SDL_Texture* m_pbitmapTexture;
 	SDL_Renderer* m_pRenderer;
-	//SDL_Rect CollisionRect;
+	SDL_Rect CollisionRect;
 
 protected:
 	float  m_x, m_y;
@@ -43,8 +43,8 @@ public:
 	void SetX(float x) { m_x = x; }
 	void SetY(float y) { m_y = y; }
 
-	float GetX() const { return m_x; }
-	float GetY() const { return m_y; }
+	//float GetX() const { return m_x; }
+	//float GetY() const { return m_y; }
 
 	void SetGrounded(bool grounded) { isGrounded = grounded; }
 
