@@ -143,6 +143,13 @@ Game::Game()
 	//enemy = new Enemy(m_Renderer, _texManager, "assets/Alian.bmp", 400, 200, 100, 500);
 	//pickup = new Pickup(m_Renderer, _texManager, "assets/Key.bmp", 500, 200);
 
+	Scene newScene = _sceneManager.readscene("level1.json");
+
+	loadScene(newScene);
+
+	if(!player)
+		player = new Player(m_Renderer, _texManager, "assets/monstertrans.bmp", 100, 100, true);
+
 	// read in the font
 	m_pSmallFont = TTF_OpenFont("assets/DejaVuSans.ttf", 15); // font size
 	m_pBigFont = TTF_OpenFont("assets/DejaVuSans.ttf", 50);

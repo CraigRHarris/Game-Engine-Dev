@@ -44,15 +44,6 @@
       "ypos": 480,
       "transparent": false,
       "direction": -1
-    },
-    //{ // for the end goal when added
-    //  "type": "pickup",
-    //  "sprite": "assets/pickup.bmp",
-    //  "xpos": 100,
-    //  "ypos": 480,
-    //  "transparent": false,
-    //  "direction": -1
-    //}
+    }
   ]
-
 }

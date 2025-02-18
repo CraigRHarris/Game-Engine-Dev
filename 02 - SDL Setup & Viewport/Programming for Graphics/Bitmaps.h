@@ -26,11 +26,11 @@ protected:
 
 public:
 	
-	bool isGrounded{ false };
+	bool isGrounded = false;
 	Bitmap(SDL_Renderer* renderer, TextureManager* texManager,std::string fileName, int xpos, int ypos, bool useTransparency = false);
 	virtual ~Bitmap();
 	std::string FileName;
-
+	
 	virtual bool IsColliding(Bitmap* Other);
 
 	void SetPosition(float x, float y);

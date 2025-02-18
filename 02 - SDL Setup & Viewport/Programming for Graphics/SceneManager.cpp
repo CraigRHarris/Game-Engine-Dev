@@ -3,13 +3,14 @@
 
 Scene SceneManager::readscene(std::string filepath)
 {
-	std::ifstream input(filepath.c_str());
-	if (!input)
-	{
-		std::cerr << "JSON FILE: " << filepath << "Could not be opened." << std::endl;
+	std::ifstream input{ filepath };
+
+	if (!input) {
+		std::cerr << "Error loading " << filepath << '\n';
+		return;
 	}
 
-	json parsedData = json::parse(input);
+    json parsedData = json::parse(input);
 
 	Scene loadedScene;
 
