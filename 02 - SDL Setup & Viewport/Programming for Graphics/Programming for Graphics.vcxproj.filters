@@ -137,6 +137,5 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Level.json" />
   </ItemGroup>
 </Project>
