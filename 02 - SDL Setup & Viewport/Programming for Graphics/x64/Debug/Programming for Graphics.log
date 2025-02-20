@@ -1,11 +1,6 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Programming for Graphics.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Game.cpp
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\AssetEditor.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.h(19,7): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.h(20,7): warning C4099: 'SDL_Renderer': type name first seen using 'struct' now seen using 'class'
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(130,10): warning C4778: 'printf' : unterminated format string '%\n'
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(130,59): warning C4474: 'printf' : too many arguments passed for format string
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(386,63): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(393,93): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(456,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Player.cpp
+C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Player.cpp(9,25): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Player.cpp(25,10): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Player.cpp(26,10): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   Programming for Graphics.vcxproj -> C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\x64\Debug\Geme Engine.exe

@@ -13,7 +13,7 @@ void Player::Update() {
 		m_y += yVelocity;
 	}
 	else {
-		yVelocity = 0.0f;
+		yVelocity = 0.0f;// velocity is 0 if grounded
 	}
 }
 
@@ -52,4 +52,10 @@ void Player::Jump()
 {
 	isGrounded = false;
 	yVelocity = -jumpForce;
+
+	/*if (isGrounded)
+	{
+		yVelocity = -jumpForce;
+		isGrounded = false;
+	}*/
 }

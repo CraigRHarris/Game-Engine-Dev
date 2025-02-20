@@ -278,7 +278,7 @@ void Game::Update()
 
 	profiler->push(io.DeltaTime * 1000);
 
-	for (auto enemy : enemies)   // eneming every frame
+	for (auto enemy : enemies)   // enemies every frame
 	{
 		for (auto platform : platforms)
 		{
@@ -305,17 +305,17 @@ void Game::Update()
 	if (input.KeyIsPressed(SDLK_a) || input.KeyIsPressed(SDLK_LEFT))
 	{
 		player->UpdateX(-4);// if key A is pressed, player will move left
-		Logger::Info("Left");
+		//Logger::Info("Left");
 	}
 	if (input.KeyIsPressed(SDLK_d) || input.KeyIsPressed(SDLK_RIGHT))
 	{
 		player->UpdateX(4);
-		Logger::Info("Right");
+		//Logger::Info("Right");
 	}
 	if (input.KeyIsPressed(SDLK_SPACE))
 	{
 		player->Jump();
-		Logger::Info("Jump");
+		//Logger::Info("Jump");
 	}
 
 
