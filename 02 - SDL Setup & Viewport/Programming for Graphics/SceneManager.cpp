@@ -7,7 +7,7 @@ Scene SceneManager::readscene(std::string filepath)
 
 	if (!input) {
 		std::cerr << "Error loading " << filepath << '\n';
-		return;
+		//return ;
 	}
 
     json parsedData = json::parse(input);

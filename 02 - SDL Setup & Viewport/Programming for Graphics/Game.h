@@ -12,6 +12,7 @@
 #include "TextureManager.h"
 #include "Pickup.h"
 #include "SceneManager.h"
+#include "ProfilerSystem.h"
 
 using namespace std;
 
@@ -45,6 +46,7 @@ private:
 	bool _isRunning{ true };
 
 	TextureManager* _texManager;
+	Profiler* profiler;
 
 	SDL_Window* m_Window{ nullptr }; // Tells the compiler that there will be a struct named SDL_Window defined.
 	SDL_Renderer* m_Renderer{ nullptr };

@@ -21,7 +21,7 @@
     },
     {
       "type": "enemy",
-      "sprite": "assets/enemy.bmp",
+      "sprite": "assets/Alian.bmp",
       "xpos": 200,
       "ypos": 200,
       "left": 100,
@@ -39,7 +39,7 @@
     },
     {
       "type": "pickup",
-      "sprite": "assets/pickup.bmp",
+      "sprite": "assets/Key.bmp",
       "xpos": 0,
       "ypos": 480,
       "transparent": false,
