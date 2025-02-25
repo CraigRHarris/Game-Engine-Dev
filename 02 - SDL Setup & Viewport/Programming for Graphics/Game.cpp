@@ -140,12 +140,6 @@ Game::Game()
 
 	profiler = new Profiler();
 
-	////creating some bitmaps
- //   player = new Player (m_Renderer, _texManager, "assets/monstertrans.bmp", 100, 100, true);                      
-	//m_ground = new Bitmap(m_Renderer, _texManager, "assets/ground.bmp", 100, 300);
-	//enemy = new Enemy(m_Renderer, _texManager, "assets/Alian.bmp", 400, 200, 100, 500);
-	//pickup = new Pickup(m_Renderer, _texManager, "assets/Key.bmp", 500, 200);
-
 	Scene newScene = _sceneManager.readscene("level1.json");
 
 	loadScene(newScene);
@@ -336,7 +330,12 @@ void Game::Update()
 	}
 
 	for (auto pickup : pickups) {
-		pickup->IsColliding(player);
+		//Check if current pickup is colliding with player
+		//If so, remove from pickups and destroy
+		if (pickup->IsColliding(player))
+		{
+			pickups.erase(find(pickups.begin(), pickups.end(), pickup));
+		}
 	}
 
 	for (auto platform : platforms) {
