@@ -22,24 +22,19 @@ void Player::FixGroundCollision(Bitmap* ground)
 	if (IsColliding(ground))
 	{
 		isGrounded = true;
-		int cx = m_x + (m_w / 2); // generating center point
-		int cy = m_y + (m_h / 2);
+		
 
 		SDL_Rect groundRect = ground->GetTransformRect();
+		SDL_Rect playerRect = GetTransformRect();
+		SDL_Rect intersection;
 
-		int ground_cx = groundRect.x + (groundRect.w / 2); // generating center point
-		int ground_cy = groundRect.x + (groundRect.h / 2);
+		SDL_IntersectRect(&groundRect, &playerRect, &intersection);
 
-		int DistBetween = ground_cy - cy;
-
-		int OverlapAmount = (groundRect.h + m_h) / 2;
-		int AmountToMove = 0;
-		if (DistBetween < OverlapAmount)
+		int yDiff = playerRect.y - groundRect.y;
+		if (yDiff < 0)
 		{
-			AmountToMove = DistBetween - OverlapAmount;
+			m_y -= intersection.h;
 		}
-
-		m_y += AmountToMove;
 
 	}
 	else
@@ -59,3 +54,16 @@ void Player::Jump()
 		isGrounded = false;
 	}*/
 }
+
+void Player::GUIDraw()
+{
+	Bitmap::GUIDraw();
+
+	ImGui::Begin("Selection");
+
+	ImGui::InputInt("Coins:", &KeysCollected);
+
+
+	ImGui::End();
+}
+

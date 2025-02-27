@@ -6,8 +6,8 @@
 class Enemy : public Bitmap
 {
 public:
-	Enemy(SDL_Renderer* renderer, TextureManager* texManager, std::string fileName, int xpos, int ypos, int left, int right, bool useTransparency = false) : Bitmap(renderer, texManager, fileName, xpos, ypos, useTransparency) {
-		Logger::Info("Enemy constructor");
+	Enemy(SDL_Renderer* renderer, TextureManager* texManager, std::string fileName, int xpos, int ypos, int left, int right, const std::string ObjectName, bool useTransparency = false) : Bitmap(renderer, texManager, fileName, xpos, ypos,ObjectName, useTransparency) {
+		Logger::Info("Enemy ");
 		point_l = left;
 		point_r = right;
 		direction = -1; //start moving left
@@ -19,8 +19,13 @@ public:
 
 	void MoveAI();
 
+	virtual void GUIDraw() override;
+
+	int getLeftBound() { return point_l; }
+	int getRightBound() { return point_r; }
+
 private:
-	float movementSpeed;
+	float movementSpeed{ 3.0f };
 	float yVelocity;
 	float xVelocity;
 	float direction;

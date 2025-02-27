@@ -5,6 +5,8 @@
 #include "Logger.h"
 #include "AssetEditor.h"
 #include "Enemy.h"
+#include "Hierarchy.h"
+#include "ProfilerSystem.h"
 
 #include <SDL.h>
 #include <stdio.h>
@@ -19,7 +21,39 @@
 
 #endif
 
+bool Game::checkMouseJustPressed()
+{
+	return (isMouseDown && mouseDownCount >= 5);
+}
 
+void Game::startDragObject()
+{
+	if (!checkMouseJustPressed() || assetEditor->hasSelected || assetEditor->AssetMouseDrag != nullptr) return;
+
+	int mouseX, mouseY;
+	SDL_GetMouseState(&mouseX, &mouseY);
+	for (auto object : AllObjects)
+	{
+		SDL_Rect RectBounds = object->GetTransformRect();
+		if (mouseX > RectBounds.x && mouseX < RectBounds.x + RectBounds.w && mouseY > RectBounds.y && mouseY < RectBounds.y + RectBounds.h)
+		{
+			SelectedObject = object;
+			break;
+		}
+	}
+}
+
+void Game::endDragObject()
+{
+	int mouseX, mouseY;
+	SDL_GetMouseState(&mouseX, &mouseY);
+	if (SelectedObject != nullptr)
+	{
+		SelectedObject->SetX(mouseX);
+		SelectedObject->SetY(mouseY);
+		SelectedObject = nullptr;
+	}
+}
 
 
 void Game::CheckEvents()
@@ -31,6 +65,11 @@ void Game::CheckEvents()
 		// Check for keydown
 		if (event.type == SDL_KEYDOWN)
 		{
+			if (event.key.keysym.sym == SDLK_RETURN)
+			{
+				_sceneManager.savescene("assets\\leveltemp.json", AllObjects);
+			}
+
 			input.EventKeyPressed(event.key.keysym.sym);
 		}
 		//check for key up
@@ -41,6 +80,19 @@ void Game::CheckEvents()
 		else if (event.type == SDL_QUIT)
 		{
 			_isRunning = false;
+		}
+		else if (event.type == SDL_MOUSEBUTTONDOWN)
+		{
+			if (!isMouseDown)
+			{
+				mouseDownCount = 0;
+				isMouseDown = true;
+			}
+		}
+		else if (event.type == SDL_MOUSEBUTTONUP)
+		{
+			isMouseDown = false;
+			mouseDownCount = 0;
 		}
 	}
 
@@ -77,10 +129,20 @@ void Game::UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour
 		}
 		else
 		{
-			SDL_QueryTexture(texture, NULL, NULL, &texW, &texH);
-			SDL_Rect textRect = { x, y, texW, texH };
+			texture = SDL_CreateTextureFromSurface(m_Renderer, surface);
+			if (!texture)
+			{
+				//surface not loaded, output error
+				Logger::Error("SURFACE for font not loaded! \n");
+				printf("%s\n", SDL_GetError());
+			}
+			else
+			{
+				SDL_QueryTexture(texture, NULL, NULL, &texW, &texH);
+				SDL_Rect textRect = { x,y, texW, texH };
 
-			SDL_RenderCopy(m_Renderer, texture, NULL, &textRect);
+				SDL_RenderCopy(m_Renderer, texture, NULL, &textRect);
+			}
 		}
 	}
 
@@ -136,16 +198,18 @@ Game::Game()
 
 	_texManager = new TextureManager();
 	
-	assetEditor = new AssetEditor(m_Renderer, m_Window, _texManager);
+	assetEditor = new AssetEditor( m_Renderer, m_Window, _texManager);
 
 	profiler = new Profiler();
 
-	Scene newScene = _sceneManager.readscene("level1.json");
+	Root = new I_SceneNode();
+
+	newScene = _sceneManager.readscene("assets/level1.json");
 
 	loadScene(newScene);
 
 	if(!player)
-		player = new Player(m_Renderer, _texManager, "assets/monstertrans.bmp", 100, 100, true);
+		player = new Player(m_Renderer, _texManager, "assets/monstertrans.bmp", 100, 100, "player", true);
 
 	// read in the font
 	m_pSmallFont = TTF_OpenFont("assets/DejaVuSans.ttf", 15); // font size
@@ -196,23 +260,49 @@ void Game::loadScene(Scene& scene)
 
 	for (auto ent : scene.entities)
 	{
-		switch (ent.type)
-		{
-		case EntityType::Ground:
-			platforms.push_back(new Bitmap(m_Renderer, _texManager, ent.filename, ent.xPos, ent.yPos, ent.isTransparent));//creating the bitmap
-			break;
-		case EntityType::Player:
-			player = new Player(m_Renderer, _texManager, ent.filename, ent.xPos, ent.yPos, ent.isTransparent);
-			break;
-		case EntityType::Enemy:
-			enemies.push_back(new Enemy(m_Renderer, _texManager, ent.filename, ent.xPos, ent.yPos, ent.leftBound, ent.rightBound, ent.isTransparent));
-			break;
-		case EntityType::Pickup:
-			pickups.push_back(new Pickup(m_Renderer, _texManager, ent.filename, ent.xPos, ent.yPos, ent.isTransparent));
-			break;
-		}
+		addEntity(ent.type, ent.filename, ent.xPos, ent.yPos, ent.ObjectName, ent.isTransparent, false, ent.leftBound, ent.rightBound);
 	}
 }
+
+void Game::addEntity(EntityType type, const std::string& file, int x, int y, const std::string& name, bool trans, bool isNew, int left, int right)
+{
+	switch (type)
+	{
+	case EntityType::Ground:
+		platforms.push_back(new Bitmap(m_Renderer, _texManager, file, x, y, name, trans));
+		if (isNew)
+		{
+			platforms[platforms.size() - 1]->ObjectName += std::to_string(platforms.size());
+		}
+		AllObjects.push_back(platforms[platforms.size() - 1]);
+		Root->addchild(platforms[platforms.size() - 1]);
+		break;
+	case EntityType::Player:
+		player = new Player(m_Renderer, _texManager, file, x, y, name, trans);
+		AllObjects.push_back(player);
+		Root->addchild(player);
+		break;
+	case EntityType::Enemy:
+		enemies.push_back(new Enemy(m_Renderer, _texManager, file, x, y, left, right, name, trans));
+		if (isNew)
+		{
+			enemies[enemies.size() - 1]->ObjectName += std::to_string(enemies.size());
+		}
+		AllObjects.push_back(enemies[enemies.size() - 1]);
+		Root->addchild(enemies[enemies.size() - 1]);
+		break;
+	case EntityType::Pickup:
+		pickups.push_back(new Pickup(m_Renderer, _texManager, file, x, y, name, trans));
+		if (isNew)
+		{
+			pickups[pickups.size() - 1]->ObjectName += std::to_string(pickups.size());
+		}
+		AllObjects.push_back(pickups[pickups.size() - 1]);
+		Root->addchild(pickups[pickups.size() - 1]);
+		break;
+	}
+}
+
 void Game::clearExistingObjects()
 {
 	if (player)
@@ -358,6 +448,12 @@ void Game::Update()
 	bool show = true;
 	int  selectFrame = -1;
 
+	if (I_GuiWindow::SelectedObject != nullptr)
+	{
+		static_cast<Bitmap*>(I_GuiWindow::SelectedObject)->GUIDraw();
+	}
+
+
 	{
 		PROFILE("Flame Graph");
 		ImGui::Begin("Profiler");
@@ -498,9 +594,23 @@ void Game::Update()
 
 
 	assetEditor->Update();
+	hierarchy->Update();
 
 	ImGui::Render();
 	ImGuiSDL::Render(ImGui::GetDrawData());
+
+	if (isMouseDown)
+	{
+		mouseDownCount++;
+
+		std::cout << "mouseDownCount: " << mouseDownCount << '\n';
+		startDragObject();
+	}
+
+	if (!isMouseDown && SelectedObject != nullptr)
+	{
+		endDragObject();
+	}
 	//show what we've drawn
 	SDL_RenderPresent(m_Renderer);
 

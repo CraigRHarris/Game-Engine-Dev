@@ -49,3 +49,16 @@ void Enemy::MoveAI()
 	UpdateX(xVelocity);
 
 }
+
+void Enemy::GUIDraw()
+{
+	Bitmap::GUIDraw();
+
+	ImGui::Begin("Selection");
+
+	int* TempPosAddressArry[2] = { &point_l, &point_r };
+	ImGui::InputInt2("Bounds:", *TempPosAddressArry);
+
+	ImGui::SliderFloat("Movement Speed:", &movementSpeed, 0, 10);
+	ImGui::End();
+}

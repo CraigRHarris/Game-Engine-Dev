@@ -24,9 +24,10 @@ struct SceneEntity {
 	int xPos;
 	int yPos;
 	int direction;
+	std::string ObjectName;
 	bool isTransparent;
-	int leftBound;
-	int rightBound;
+	int leftBound{ 0 };
+	int rightBound{ 0 };
 };
 
 struct Scene {
@@ -38,7 +39,7 @@ class SceneManager
 {
 public:
 	Scene readscene(std::string filepath);
-
+	void savescene(const std::string& file, const std::vector<Bitmap*>& objects);
 private:
 	EntityType getEntityEnumFromString(const std::string& type);
 };

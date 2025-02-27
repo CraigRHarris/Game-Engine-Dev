@@ -14,27 +14,42 @@
 #include "SceneManager.h"
 #include "ProfilerSystem.h"
 
+
 using namespace std;
 
 class SDL_Window;
 class SDL_Renderer;
 class AssetEditor;
 class Enemy;
-
+class Hierarchy;
 
 class Game
 {
 private:
+
+	int mouseDownCount{ 0 };
+	bool checkMouseJustPressed();
+
+	void startDragObject();
+	void endDragObject();
+
+	bool isMouseDown{ false };
+
 	SceneManager _sceneManager;
+	
 	//Bitmaps
+	std::vector<Bitmap*> AllObjects;
 	std::vector<Enemy*> enemies;
 	std::vector<Bitmap*> platforms;
 	std::vector<Pickup*> pickups;
 
+	Hierarchy* hierarchy;
+	I_SceneNode* Root;
 	Player* player = nullptr;
 	Enemy* enemy = nullptr;
 	Bitmap* m_ground{ nullptr };
 	Pickup* pickup{ nullptr };
+	Bitmap* SelectedObject{ nullptr };
 
 	TTF_Font* m_pSmallFont{ nullptr };
 	TTF_Font* m_pBigFont{ nullptr };
@@ -55,10 +70,12 @@ private:
 
 	void clearExistingObjects();
 
+	Scene newScene;
 public:
 	
 	Game();
 	~Game();
+	void addEntity(EntityType type, const std::string& file, int x, int y, const std::string& name, bool trans, bool isNew = false, int left = 0, int right = 0);
 	void Update(void);
 	void SetDisplayColour(int r, int g, int b, int a);
 

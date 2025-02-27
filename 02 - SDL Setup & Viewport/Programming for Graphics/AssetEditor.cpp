@@ -16,6 +16,8 @@
 #include "Bitmaps.h"
 #include "AssetEditor.h"
 #include "Game.h"
+#include "Pickup.h"
+#include "Enemy.h"
 
 using namespace std;
 
@@ -29,7 +31,7 @@ AssetEditor::AssetEditor(SDL_Renderer* renderer, SDL_Window* window, TextureMana
 	{
 		if (entry.path().extension() == ".bmp")
 		{
-			Bitmap* Asset = new Bitmap(renderer, texManager, entry.path().string(), 0, 0, true);
+			Bitmap* Asset = new Bitmap(renderer, texManager, entry.path().string(), 0, 0,"", true);
 			content.push_back(Asset);
 
 		}
@@ -49,17 +51,29 @@ AssetEditor::AssetEditor(SDL_Renderer* renderer, SDL_Window* window, TextureMana
 void AssetEditor::Update()
 {
 
-	if (ImGui::IsMouseReleased(ImGuiMouseButton_Left) && AssetMousDrag != nullptr)
+	if (ImGui::IsMouseReleased(ImGuiMouseButton_Left) && AssetMouseDrag != nullptr)
 	{
 		cout << "Test" << endl;
+		hasSelected = false;
 		int x, y;
 		SDL_GetMouseState(&x, &y);
-		Bitmap* s = new Bitmap(p_Renderer, _texManager, AssetMousDrag->FileName, x, y, true);
-
-		//s->Transfrom.ParentSet(GameWindow::Instance().GetHirarcy());
-		//sceneRoot.Children.push_back(&s->M_Transform);
-		Dragables.push_back(s);
-		AssetMousDrag = nullptr;
+		
+		if (AssetMouseDrag->FileName == "assets\\monstertrans.bmp")
+		{
+			_game->addEntity(EntityType::Player, AssetMouseDrag->FileName, x, y, "monster", true, true);
+		}
+		else if (AssetMouseDrag->FileName == "assets\\Alian.bmp")
+		{
+			_game->addEntity(EntityType::Enemy, AssetMouseDrag->FileName, x, y, "enemy", true, true, x, y + 100);
+		}
+		else if (AssetMouseDrag->FileName == "assets\\key.bmp")
+		{
+			_game->addEntity(EntityType::Pickup, AssetMouseDrag->FileName, x, y, "key", true, true);
+		}
+		else {
+			_game->addEntity(EntityType::Ground, AssetMouseDrag->FileName, x, y, "ground", true, true);
+		}
+		AssetMouseDrag = nullptr;
 	}
 
 	for (auto& bitmap : Dragables)
@@ -81,7 +95,7 @@ void AssetEditor::Update()
 		//for dragging
 		if (ImGui::BeginDragDropSource())
 		{
-			AssetMousDrag = content[i];
+			AssetMouseDrag = content[i];
 			ImGui::Image((ImTextureID)content[i]->GetTextureRef(), { 100,100 });
 			ImGui::EndDragDropSource();
 		}

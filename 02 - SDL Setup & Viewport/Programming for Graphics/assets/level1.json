@@ -1,0 +1,49 @@
+{
+  "name": "level 1",
+  "entities": [
+    {
+      "type": "player",
+      "sprite": "assets/monstertrans.bmp",
+      "xpos": 300,
+      "ypos": 450,
+      "transparent": true,
+      "direction": -1,
+      "children": [
+        {
+          "type": "player",
+          "sprite": "assets/monster.bmp",
+          "xpos": 0,
+          "ypos": 0,
+          "transparent": true,
+          "direction": -1
+        }
+      ]
+    },
+    {
+      "type": "enemy",
+      "sprite": "assets/Alian.bmp",
+      "xpos": 200,
+      "ypos": 200,
+      "left": 100,
+      "right": 500,
+      "transparent": true,
+      "direction": -1
+    },
+    {
+      "type": "ground",
+      "sprite": "assets/ground.bmp",
+      "xpos": 0,
+      "ypos": 600,
+      "transparent": false,
+      "direction": -1
+    },
+    {
+      "type": "pickup",
+      "sprite": "assets/Key.bmp",
+      "xpos": 0,
+      "ypos": 480,
+      "transparent": false,
+      "direction": -1
+    }
+  ]
+}
