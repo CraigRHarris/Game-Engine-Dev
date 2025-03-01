@@ -12,9 +12,7 @@
 int main(int argc, char* argv[])
 {
 	Game* game = new Game();      //create a new Game object
-	Input* input = new Input();   // create an input object
-
-
+	//Input* input = new Input();   // create an input object
 
 	while(game->isRunning())
 	{
@@ -28,3 +26,5 @@ int main(int argc, char* argv[])
 
 	return 0;                     //exit nicely
 }
+
+//When focused on the first level of the game engine, press ENTER to save!Once you reach the goal, the changes you have made to level2 should have been made before loading.

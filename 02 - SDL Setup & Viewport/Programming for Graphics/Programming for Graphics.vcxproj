@@ -144,6 +144,7 @@
     <ClCompile Include="Bitmaps.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Goal.cpp" />
     <ClCompile Include="Hierarchy.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="I_GuiWindow.cpp" />
@@ -169,6 +170,7 @@
     <ClInclude Include="Bitmaps.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Goal.h" />
     <ClInclude Include="Hierarchy.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="I_GuiWindow.h" />
@@ -190,6 +192,7 @@
     <ClInclude Include="TextureManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="assets\Level2.json" />
     <None Include="level1.json" />
     <None Include="packages.config" />
   </ItemGroup>

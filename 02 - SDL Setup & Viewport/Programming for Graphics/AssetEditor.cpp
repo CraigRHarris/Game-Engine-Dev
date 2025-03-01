@@ -70,15 +70,14 @@ void AssetEditor::Update()
 		{
 			_game->addEntity(EntityType::Pickup, AssetMouseDrag->FileName, x, y, "key", true, true);
 		}
+		else if (AssetMouseDrag->FileName == "assets\\door.bmp")
+		{
+			_game->addEntity(EntityType::Goal, AssetMouseDrag->FileName, x, y, "goal", true, true);
+		}
 		else {
 			_game->addEntity(EntityType::Ground, AssetMouseDrag->FileName, x, y, "ground", true, true);
 		}
 		AssetMouseDrag = nullptr;
-	}
-
-	for (auto& bitmap : Dragables)
-	{
-		bitmap->draw();
 	}
 
 	ImGui::Begin("Editor");
@@ -95,6 +94,8 @@ void AssetEditor::Update()
 		//for dragging
 		if (ImGui::BeginDragDropSource())
 		{
+			hasSelected = true;
+			std::cout << "BeginDragDropSource\n";
 			AssetMouseDrag = content[i];
 			ImGui::Image((ImTextureID)content[i]->GetTextureRef(), { 100,100 });
 			ImGui::EndDragDropSource();

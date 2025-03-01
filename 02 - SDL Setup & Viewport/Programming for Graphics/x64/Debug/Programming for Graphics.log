@@ -1,16 +1,48 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Programming for Graphics.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+﻿C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Programming for Graphics.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   AssetEditor.cpp
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.h(20,7): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.h(21,7): warning C4099: 'SDL_Renderer': type name first seen using 'struct' now seen using 'class'
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.h(21,7): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'AssetEditor.cpp')
+      C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Libraries\SDL2\include\SDL_video.h(95,16):
+      see declaration of 'SDL_Window'
+  
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.h(22,7): warning C4099: 'SDL_Renderer': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'AssetEditor.cpp')
+      C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Libraries\SDL2\include\SDL_render.h(141,8):
+      see declaration of 'SDL_Renderer'
+  
   Game.cpp
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.h(20,7): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.h(21,7): warning C4099: 'SDL_Renderer': type name first seen using 'struct' now seen using 'class'
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(52,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(53,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(192,10): warning C4778: 'printf' : unterminated format string '%\n'
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(192,59): warning C4474: 'printf' : too many arguments passed for format string
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(481,63): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(488,93): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(551,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.h(21,7): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'Game.cpp')
+      C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Libraries\SDL2\include\SDL_video.h(95,16):
+      see declaration of 'SDL_Window'
+  
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.h(22,7): warning C4099: 'SDL_Renderer': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'Game.cpp')
+      C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Libraries\SDL2\include\SDL_render.h(141,8):
+      see declaration of 'SDL_Renderer'
+  
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(53,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(54,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(193,10): warning C4778: 'printf' : unterminated format string '%\n'
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(193,59): warning C4474: 'printf' : too many arguments passed for format string
+      C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(193,59):
+      placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+  
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(496,63): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(503,93): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.cpp(566,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Goal.cpp
+  Main.cpp
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.h(21,7): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'Main.cpp')
+      C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Libraries\SDL2\include\SDL_video.h(95,16):
+      see declaration of 'SDL_Window'
+  
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Game.h(22,7): warning C4099: 'SDL_Renderer': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'Main.cpp')
+      C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\Programming for Graphics\Libraries\SDL2\include\SDL_render.h(141,8):
+      see declaration of 'SDL_Renderer'
+  
+  SceneManager.cpp
   Generating Code...
-  Programming for Graphics.vcxproj -> C:\Users\Games\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\x64\Debug\Geme Engine.exe
+  Programming for Graphics.vcxproj -> C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup & Viewport\x64\Debug\Geme Engine.exe

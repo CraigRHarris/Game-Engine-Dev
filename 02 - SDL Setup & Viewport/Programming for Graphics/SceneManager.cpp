@@ -91,5 +91,8 @@ EntityType SceneManager::getEntityEnumFromString(const std::string& type)
 	if (type == "pickup")
 		return EntityType::Pickup;
 
+	if (type == "goal")
+		return EntityType::Goal;
+
 	return EntityType::Ground;
 }

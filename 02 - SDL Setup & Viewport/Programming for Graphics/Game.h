@@ -13,6 +13,7 @@
 #include "Pickup.h"
 #include "SceneManager.h"
 #include "ProfilerSystem.h"
+#include "Goal.h"
 
 
 using namespace std;
@@ -45,11 +46,13 @@ private:
 
 	Hierarchy* hierarchy;
 	I_SceneNode* Root;
+
 	Player* player = nullptr;
 	Enemy* enemy = nullptr;
 	Bitmap* m_ground{ nullptr };
 	Pickup* pickup{ nullptr };
 	Bitmap* SelectedObject{ nullptr };
+	Goal* goal{ nullptr };
 
 	TTF_Font* m_pSmallFont{ nullptr };
 	TTF_Font* m_pBigFont{ nullptr };
@@ -71,6 +74,9 @@ private:
 	void clearExistingObjects();
 
 	Scene newScene;
+	string levels[2] = { "assets/Level1.json", "assets/Level2.json" };
+	int currentLV = 0;
+
 public:
 	
 	Game();

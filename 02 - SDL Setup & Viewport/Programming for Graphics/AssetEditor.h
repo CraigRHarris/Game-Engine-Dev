@@ -5,6 +5,7 @@
 #include "imgui_internal.h"
 #include "backends/imgui_impl_sdl.h"
 #include "imgui_sdl.h"
+
 #include "Bitmaps.h"
 
 class Bitmap;

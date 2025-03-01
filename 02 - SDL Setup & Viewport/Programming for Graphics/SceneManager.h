@@ -1,6 +1,7 @@
 #pragma once
 #include "Bitmaps.h"
 #include "Player.h"
+
 #include "nlohmann/json.hpp"
 #include <iostream>
 #include <vector>
@@ -15,7 +16,8 @@ enum class EntityType {
 	Ground,
 	Player,
 	Enemy,
-	Pickup
+	Pickup,
+	Goal
 };
 
 struct SceneEntity {

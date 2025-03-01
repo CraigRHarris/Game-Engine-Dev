@@ -17,9 +17,9 @@ bool Pickup::IsColliding(Bitmap* other)
 
 	if (playerCol)
 	{
-		player->addKey();// add a coin to the total if player is colliding
+		player->addKey();// add a Key to the total if player is colliding
 		enabled = false;
-		Logger::Info("Coin Collected.");
+		Logger::Info("Key Collected.");
 		return true;
 	}
 

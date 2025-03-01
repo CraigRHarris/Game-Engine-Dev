@@ -35,10 +35,6 @@ ProfilerSystem::ProfilerSystem()
 	lastFramesFrameData = new FrameMap();
 }
 
-ProfilerSystem::~ProfilerSystem()
-{
-}
-
 void ProfilerSystem::StartFrame()
 {
 	currentFrame++;

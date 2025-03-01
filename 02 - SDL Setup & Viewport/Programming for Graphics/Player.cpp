@@ -61,7 +61,7 @@ void Player::GUIDraw()
 
 	ImGui::Begin("Selection");
 
-	ImGui::InputInt("Coins:", &KeysCollected);
+	ImGui::InputInt("Keys:", &KeysCollected);
 
 
 	ImGui::End();

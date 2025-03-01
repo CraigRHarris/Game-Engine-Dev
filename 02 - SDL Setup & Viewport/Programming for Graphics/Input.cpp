@@ -9,23 +9,13 @@ bool Input::KeyIsPressed(SDL_KeyCode key)
 
 void Input::EventKeyPressed(SDL_Keycode key)
 {
-	_keysPressed.insert_or_assign(key, true);
+	_keysPressed.insert_or_assign(key, true);// Any key that is pressed = true
 }
 
 void Input::EventKeyReleased(SDL_Keycode key)
 {
-	_keysPressed.insert_or_assign(key, false);
+	_keysPressed.insert_or_assign(key, false);// Any key release = true
 }
 
-
-Input::Input() //constructor
-{
-
-}
-
-Input::~Input() //destroy to clear code
-{
-
-}
 
 

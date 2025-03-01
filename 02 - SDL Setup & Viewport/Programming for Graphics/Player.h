@@ -8,7 +8,7 @@ public:
 
 	
 	Player(SDL_Renderer* renderer, TextureManager* texManager, std::string fileName, int xpos, int ypos, const std::string ObjectName, bool useTransparency = false) : Bitmap(renderer, texManager, fileName, xpos, ypos,ObjectName, useTransparency) {
-		Logger::Info("Player constructor");
+		Logger::Info("Player");
 	}
 
 	void Update();

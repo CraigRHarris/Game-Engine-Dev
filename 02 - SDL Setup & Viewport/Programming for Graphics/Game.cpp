@@ -7,6 +7,7 @@
 #include "Enemy.h"
 #include "Hierarchy.h"
 #include "ProfilerSystem.h"
+#include "Goal.h"
 
 #include <SDL.h>
 #include <stdio.h>
@@ -67,7 +68,7 @@ void Game::CheckEvents()
 		{
 			if (event.key.keysym.sym == SDLK_RETURN)
 			{
-				_sceneManager.savescene("assets\\leveltemp.json", AllObjects);
+				_sceneManager.savescene("assets\\level2.json", AllObjects);
 			}
 
 			input.EventKeyPressed(event.key.keysym.sym);
@@ -198,14 +199,13 @@ Game::Game()
 
 	_texManager = new TextureManager();
 	
-	assetEditor = new AssetEditor( m_Renderer, m_Window, _texManager);
+	hierarchy = new Hierarchy(Root);
 
 	profiler = new Profiler();
 
 	Root = new I_SceneNode();
 
 	newScene = _sceneManager.readscene("assets/level1.json");
-
 	loadScene(newScene);
 
 	if(!player)
@@ -226,8 +226,6 @@ Game::Game()
 	ImGuiIO& io = ImGui::GetIO();
 	(void)io;
 	io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
-	//io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
-	//io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnble;
 	ImGui::StyleColorsDark();
 
 	ImGui_ImplSDL2_InitForOpenGL(m_Window, SDL_GL_GetCurrentContext());
@@ -258,7 +256,7 @@ void Game::loadScene(Scene& scene)
 {
 	clearExistingObjects();
 
-	for (auto ent : scene.entities)
+	for (auto ent : scene.entities)// go through each entity in scene, and pushing back each entity
 	{
 		addEntity(ent.type, ent.filename, ent.xPos, ent.yPos, ent.ObjectName, ent.isTransparent, false, ent.leftBound, ent.rightBound);
 	}
@@ -300,6 +298,15 @@ void Game::addEntity(EntityType type, const std::string& file, int x, int y, con
 		AllObjects.push_back(pickups[pickups.size() - 1]);
 		Root->addchild(pickups[pickups.size() - 1]);
 		break;
+	case EntityType::Goal:
+		goal = (new Goal(m_Renderer, _texManager, file, x, y, name, trans));
+		if (isNew)
+		{
+			platforms[platforms.size() - 1]->ObjectName += std::to_string(platforms.size());
+		}
+		AllObjects.push_back(platforms[platforms.size() - 1]);
+		Root->addchild(platforms[platforms.size() - 1]);
+		break;
 	}
 }
 
@@ -325,6 +332,9 @@ void Game::clearExistingObjects()
 	}
 
 	enemies.clear();
+
+	if (goal)
+		delete goal;
 }
 
 void Game::SetDisplayColour(int red, int green, int blue, int alpha)
@@ -341,18 +351,6 @@ void Game::SetDisplayColour(int red, int green, int blue, int alpha)
 void Game::Update()
 {
 	SDL_RenderClear(m_Renderer);
-
-	//ImGui::NewFrame();
-	//ImGui_ImplSDL2_NewFrame(m_Window);
-	//bool show = true;
-	////ShowExampleAppDockSpace(&show);
-
-	//ImGui::ShowDemoWindow(nullptr);
-
-	//assetEditor->Update();
-
-	//ImGui::Render();
-	//ImGuiSDL::Render(ImGui::GetDrawData());
 
 	CheckEvents();
 
@@ -373,6 +371,21 @@ void Game::Update()
 				enemy->SetGrounded(true);
 				break;
 			}
+		}
+	}
+	if (goal->IsColliding(player))
+	{
+		Root = new I_SceneNode();
+		currentLV++;
+		if (currentLV >= 2)
+			currentLV = 0;
+		newScene = _sceneManager.readscene(levels[currentLV]);
+
+		loadScene(newScene);
+		//Recreate hierarchy when loading a new scene (how?)
+		if (Root)
+		{
+			hierarchy = new Hierarchy(Root);
 		}
 	}
 
@@ -442,6 +455,7 @@ void Game::Update()
 		enemy->draw();
 	}
 
+	goal->draw();
 
 	ImGui::NewFrame();
 	ImGui_ImplSDL2_NewFrame(m_Window);
