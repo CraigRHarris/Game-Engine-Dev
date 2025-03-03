@@ -33,7 +33,7 @@ void Player::FixGroundCollision(Bitmap* ground)
 		int yDiff = playerRect.y - groundRect.y;
 		if (yDiff < 0)
 		{
-			m_y -= intersection.h;
+			//m_y -= intersection.h;
 		}
 
 	}

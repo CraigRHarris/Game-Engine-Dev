@@ -198,14 +198,14 @@ Game::Game()
 	}
 
 	_texManager = new TextureManager();
-	
+	Root = new I_SceneNode();
 	hierarchy = new Hierarchy(Root);
 
 	profiler = new Profiler();
 
-	Root = new I_SceneNode();
+	
 
-	newScene = _sceneManager.readscene("assets/level1.json");
+	newScene = _sceneManager.readscene("assets/Level1.json");
 	loadScene(newScene);
 
 	if(!player)

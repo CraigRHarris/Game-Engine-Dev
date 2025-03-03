@@ -16,6 +16,9 @@
     <Filter Include="IMGUI">
       <UniqueIdentifier>{fe948d3e-1762-45ff-afed-ac2df628fa2b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Levels">
+      <UniqueIdentifier>{216e2aea-910e-4227-9fde-e4cf52ad3954}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -167,11 +170,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="level1.json">
-      <Filter>Source Files</Filter>
-    </None>
     <None Include="assets\Level2.json">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Levels</Filter>
+    </None>
+    <None Include="assets\level1.json">
+      <Filter>Source Files\Levels</Filter>
     </None>
   </ItemGroup>
 </Project>

@@ -17,5 +17,13 @@ void Input::EventKeyReleased(SDL_Keycode key)
 	_keysPressed.insert_or_assign(key, false);// Any key release = true
 }
 
+Input::Input()
+{
+}
+
+Input::~Input()
+{
+}
+
 
 
