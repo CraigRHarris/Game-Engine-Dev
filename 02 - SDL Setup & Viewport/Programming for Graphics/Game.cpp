@@ -68,7 +68,7 @@ void Game::CheckEvents()
 		{
 			if (event.key.keysym.sym == SDLK_RETURN)
 			{
-				_sceneManager.savescene("assets\\level2.json", AllObjects);
+				_sceneManager.savescene("assets\\level1.json", AllObjects);
 			}
 
 			input.EventKeyPressed(event.key.keysym.sym);
@@ -215,7 +215,7 @@ Game::Game()
 	m_pSmallFont = TTF_OpenFont("assets/DejaVuSans.ttf", 15); // font size
 	m_pBigFont = TTF_OpenFont("assets/DejaVuSans.ttf", 50);
 	
-	assetEditor = new AssetEditor(m_Renderer, m_Window, _texManager);
+	assetEditor = new AssetEditor(m_Renderer, m_Window, _texManager, this);
 
 	// inGUI Setup
 	IMGUI_CHECKVERSION();
@@ -312,29 +312,42 @@ void Game::addEntity(EntityType type, const std::string& file, int x, int y, con
 
 void Game::clearExistingObjects()
 {
+	SelectedObject = nullptr;
 	if (player)
+	{
 		delete player;
+		player = nullptr;
+	}
 
-	for (auto platform : platforms) {
+	for (auto platform : platforms) 
+	{
 		delete platform;
+		platform = nullptr;
 	}
 
 	platforms.clear();
 
-	for (auto pickup : pickups) {
+	for (auto pickup : pickups) 
+	{
 		delete pickup;
+		pickup = nullptr;
 	}
 
 	pickups.clear();
 
-	for (auto enemy : enemies) {
+	for (auto enemy : enemies) 
+	{
 		delete enemy;
+		enemy = nullptr;
 	}
 
 	enemies.clear();
 
-	if (goal)
+	if (goal) 
+	{
 		delete goal;
+		goal = nullptr;
+	}
 }
 
 void Game::SetDisplayColour(int red, int green, int blue, int alpha)

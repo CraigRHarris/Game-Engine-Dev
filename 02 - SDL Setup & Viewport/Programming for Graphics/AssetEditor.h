@@ -16,7 +16,7 @@ class AssetEditor
 public:
 	bool hasSelected{ false };
 	Bitmap* AssetMouseDrag = nullptr;
-	AssetEditor(SDL_Renderer* renderer, SDL_Window* window, TextureManager* texManager);
+	AssetEditor(SDL_Renderer* renderer, SDL_Window* window, TextureManager* texManager, Game* game );
 
 	//std::vector<Bitmap*> content;
 	SDL_Renderer* p_Renderer;

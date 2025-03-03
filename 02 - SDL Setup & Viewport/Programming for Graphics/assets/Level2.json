@@ -1,61 +1,52 @@
 {
-  "entities": [
-    {
-      "direction": -1,
-      "objectname": "monster",
-      "sprite": "assets/monstertrans.bmp",
-      "transparent": true,
-      "type": "player",
-      "xpos": 300,
-      "ypos": 486
-    },
-    {
-      "direction": -1,
-      "left": 100,
-      "objectname": "enemy",
-      "right": 500,
-      "sprite": "assets/Alian.bmp",
-      "transparent": true,
-      "type": "enemy",
-      "xpos": 227,
-      "ypos": 520
-    },
-    {
-      "direction": -1,
-      "objectname": "ground",
-      "sprite": "assets/ground.bmp",
-      "transparent": true,
-      "type": "ground",
-      "xpos": 0,
-      "ypos": 600
-    },
-    {
-      "direction": -1,
-      "objectname": "pickup",
-      "sprite": "assets/Key.bmp",
-      "transparent": true,
-      "type": "pickup",
-      "xpos": 0,
-      "ypos": 480
-    },
-    {
-      "direction": -1,
-      "objectname": "ground",
-      "sprite": "assets/ground.bmp",
-      "transparent": true,
-      "type": "ground",
-      "xpos": 0,
-      "ypos": 600
-    },
-    {
-      "direction": -1,
-      "objectname": "goal",
-      "sprite": "assets\\door.bmp",
-      "transparent": true,
-      "type": "goal",
-      "xpos": 100,
-      "ypos": 514
-    }
-  ],
-  "name": "Level 1"
+    "entities": [
+        {
+            "direction": -1,
+            "objectname": "monster",
+            "sprite": "assets/monstertrans.bmp",
+            "transparent": true,
+            "type": "player",
+            "xpos": 250,
+            "ypos": 450
+        },
+        {
+            "direction": -1,
+            "left": 100,
+            "objectname": "enemy",
+            "right": 300,
+            "sprite": "assets/Alian.bmp",
+            "transparent": true,
+            "type": "enemy",
+            "xpos": 200,
+            "ypos": 590
+        },
+        {
+            "direction": -1,
+            "objectname": "ground",
+            "sprite": "assets/ground.bmp",
+            "transparent": true,
+            "type": "ground",
+            "xpos": -100,
+            "ypos": 600
+        },
+        {
+            "direction": -1,
+            "objectname": "key",
+            "sprite": "assets/Key.bmp",
+            "transparent": true,
+            "type": "key",
+            "xpos": 150,
+            "ypos": 550
+        },
+        {
+          "direction": -1,
+          "objectname": "goal",
+          "sprite": "assets\\door.bmp",
+          "transparent": true,
+          "type": "goal",
+          "xpos": 750,
+          "ypos": 514
+        }
+    ],
+    "name": "Level 2"
 }

@@ -60,7 +60,7 @@ void SceneManager::savescene(const std::string& file, const std::vector<Bitmap*>
 		entity["direction"] = -1;
 		entity["transparent"] = true;
 
-		Player* player = dynamic_cast<Player*>(object);
+		/*Player* player = dynamic_cast<Player*>(object);
 		if (player) {
 			entity["type"] = "player";
 		}
@@ -70,7 +70,7 @@ void SceneManager::savescene(const std::string& file, const std::vector<Bitmap*>
 		{
 			entity["left"] = monster->getLeftBound();
 			entity["right"] = monster->getRightBound();
-		}
+		}*/
 
 		sceneJson["entities"].push_back(entity);
 	}
@@ -78,6 +78,8 @@ void SceneManager::savescene(const std::string& file, const std::vector<Bitmap*>
 	std::ofstream outfile{ file };
 
 	outfile << sceneJson.dump(4);
+
+
 }
 
 EntityType SceneManager::getEntityEnumFromString(const std::string& type)

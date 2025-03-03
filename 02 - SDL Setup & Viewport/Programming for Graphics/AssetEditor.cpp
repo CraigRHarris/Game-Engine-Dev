@@ -21,8 +21,9 @@
 
 using namespace std;
 
-AssetEditor::AssetEditor(SDL_Renderer* renderer, SDL_Window* window, TextureManager* texManager) : _texManager{ texManager }
+AssetEditor::AssetEditor(SDL_Renderer* renderer, SDL_Window* window, TextureManager* texManager, Game* game) : _texManager{ texManager }
 {
+	_game = game;
 	p_Renderer= renderer;
 	p_Window = window;
 
