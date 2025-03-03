@@ -43,7 +43,7 @@ private:
 	std::vector<Enemy*> enemies;
 	std::vector<Bitmap*> platforms;
 	std::vector<Pickup*> pickups;
-
+	std::vector<Goal*> goals;
 	Hierarchy* hierarchy;
 	I_SceneNode* Root;
 
