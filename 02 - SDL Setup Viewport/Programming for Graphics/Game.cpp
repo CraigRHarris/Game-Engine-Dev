@@ -29,7 +29,7 @@ bool Game::checkMouseJustPressed()
 
 void Game::startDragObject()
 {
-	if (!checkMouseJustPressed() || assetEditor->hasSelected || assetEditor->AssetMouseDrag != nullptr) return;
+	if (!checkMouseJustPressed() || assetEditor->_selected || assetEditor->AssetMouseDrag != nullptr) return;
 
 	int mouseX, mouseY;
 	SDL_GetMouseState(&mouseX, &mouseY);
@@ -121,7 +121,7 @@ void Game::UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour
 	}
 	else
 	{
-		texture = SDL_CreateTextureFromSurface(m_Renderer, surface);
+		texture = SDL_CreateTextureFromSurface(_Renderer, surface);
 		if (!texture)
 		{
 			//surface not loaded? Output the error
@@ -130,7 +130,7 @@ void Game::UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour
 		}
 		else
 		{
-			texture = SDL_CreateTextureFromSurface(m_Renderer, surface);
+			texture = SDL_CreateTextureFromSurface(_Renderer, surface);
 			if (!texture)
 			{
 				//surface not loaded, output error
@@ -142,7 +142,7 @@ void Game::UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour
 				SDL_QueryTexture(texture, NULL, NULL, &texW, &texH);
 				SDL_Rect textRect = { x,y, texW, texH };
 
-				SDL_RenderCopy(m_Renderer, texture, NULL, &textRect);
+				SDL_RenderCopy(_Renderer, texture, NULL, &textRect);
 			}
 		}
 	}
@@ -156,15 +156,15 @@ void Game::UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour
 Game::Game()
 {
 	
-	m_Window = nullptr;
-	m_Renderer = nullptr;
+	_Window = nullptr;
+	_Renderer = nullptr;
 
 	//start up
 	SDL_Init(SDL_INIT_VIDEO);
 	TTF_Init();
 
 	//create the window
-	m_Window = SDL_CreateWindow(
+	_Window = SDL_CreateWindow(
 		"My First Window", //title
 		250,               // inital x psition
 		50,                //        y
@@ -173,7 +173,7 @@ Game::Game()
 		0                  // window behaviour flags (ignore for now)
 	);
 
-	if (!m_Window)
+	if (!_Window)
 	{
 		printf("WINDOW initialistion failed: %s\n", SDL_GetError());
 		printf("Press any key to continue\n");
@@ -182,13 +182,13 @@ Game::Game()
 	}
 
 	//now create the renderer
-	m_Renderer = SDL_CreateRenderer(
-		m_Window,        // link the renderer to our newly created win 
+	_Renderer = SDL_CreateRenderer(
+		_Window,        // link the renderer to our newly created win 
 		-1,              // index rendering driver (igoree for now)
 		0                // renderer behaviuor flags (igoree for now)
 	);
 
-	if (!m_Renderer)
+	if (!_Renderer)
 	{
 		printf("ENDERER initialistion failed: %\n", SDL_GetError());
 		printf("Press any key to cintinue\n");
@@ -209,26 +209,26 @@ Game::Game()
 	loadScene(newScene);
 
 	if(!player)
-		player = new Player(m_Renderer, _texManager, "assets/monstertrans.bmp", 100, 100, "player", true);
+		player = new Player(_Renderer, _texManager, "assets/monstertrans.bmp", 100, 100, "player", true);
 
 	// read in the font
 	m_pSmallFont = TTF_OpenFont("assets/DejaVuSans.ttf", 15); // font size
 	m_pBigFont = TTF_OpenFont("assets/DejaVuSans.ttf", 50);
 	
-	assetEditor = new AssetEditor(m_Renderer, m_Window, _texManager, this);
+	assetEditor = new AssetEditor(_Renderer, _Window, _texManager, this);
 
 	// inGUI Setup
 	IMGUI_CHECKVERSION();
 	ImGui::CreateContext();
 	SDL_DisplayMode DisplayMode;
 	SDL_GetCurrentDisplayMode(0, &DisplayMode);
-	ImGuiSDL::Initialize(m_Renderer, DisplayMode.w, DisplayMode.h);
+	ImGuiSDL::Initialize(_Renderer, DisplayMode.w, DisplayMode.h);
 	ImGuiIO& io = ImGui::GetIO();
 	(void)io;
 	io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
 	ImGui::StyleColorsDark();
 
-	ImGui_ImplSDL2_InitForOpenGL(m_Window, SDL_GL_GetCurrentContext());
+	ImGui_ImplSDL2_InitForOpenGL(_Window, SDL_GL_GetCurrentContext());
 };
 
 Game::~Game() //destoy with the symbol ~ in front of fuction
@@ -241,13 +241,13 @@ Game::~Game() //destoy with the symbol ~ in front of fuction
 	//clean up.
 	//don't gorget - we destroy in the REVERSE order they were created 
 
-	if (m_Renderer)
+	if (_Renderer)
 	{
-		SDL_DestroyRenderer(m_Renderer);
+		SDL_DestroyRenderer(_Renderer);
 	}
-	if (m_Window)
+	if (_Window)
 	{
-		SDL_DestroyWindow(m_Window);
+		SDL_DestroyWindow(_Window);
 	}
 
 }
@@ -267,7 +267,7 @@ void Game::addEntity(EntityType type, const std::string& file, int x, int y, con
 	switch (type)
 	{
 	case EntityType::Ground:
-		platforms.push_back(new Bitmap(m_Renderer, _texManager, file, x, y, name, trans));
+		platforms.push_back(new Bitmap(_Renderer, _texManager, file, x, y, name, trans));
 		if (isNew)
 		{
 			platforms[platforms.size() - 1]->Object += std::to_string(platforms.size());
@@ -276,12 +276,12 @@ void Game::addEntity(EntityType type, const std::string& file, int x, int y, con
 		Root->addchild(platforms[platforms.size() - 1]);
 		break;
 	case EntityType::Player:
-		player = new Player(m_Renderer, _texManager, file, x, y, name, trans);
+		player = new Player(_Renderer, _texManager, file, x, y, name, trans);
 		AllObjects.push_back(player);
 		Root->addchild(player);
 		break;
 	case EntityType::Enemy:
-		enemies.push_back(new Enemy(m_Renderer, _texManager, file, x, y, left, right, name, trans));
+		enemies.push_back(new Enemy(_Renderer, _texManager, file, x, y, left, right, name, trans));
 		if (isNew)
 		{
 			enemies[enemies.size() - 1]->Object += std::to_string(enemies.size());
@@ -290,7 +290,7 @@ void Game::addEntity(EntityType type, const std::string& file, int x, int y, con
 		Root->addchild(enemies[enemies.size() - 1]);
 		break;
 	case EntityType::Pickup:
-		pickups.push_back(new Pickup(m_Renderer, _texManager, file, x, y, name, trans));
+		pickups.push_back(new Pickup(_Renderer, _texManager, file, x, y, name, trans));
 		if (isNew)
 		{
 			pickups[pickups.size() - 1]->Object += std::to_string(pickups.size());
@@ -299,7 +299,7 @@ void Game::addEntity(EntityType type, const std::string& file, int x, int y, con
 		Root->addchild(pickups[pickups.size() - 1]);
 		break;
 	case EntityType::Goal:
-		goal = (new Goal(m_Renderer, _texManager, file, x, y, name, trans));
+		goal = (new Goal(_Renderer, _texManager, file, x, y, name, trans));
 		if (isNew)
 		{
 			platforms[platforms.size() - 1]->Object += std::to_string(platforms.size());
@@ -353,7 +353,7 @@ void Game::clearExistingObjects()
 void Game::SetDisplayColour(int red, int green, int blue, int alpha)
 {
 	int result = SDL_SetRenderDrawColor(
-		m_Renderer,       //target render
+		_Renderer,       //target render
 		red,              //r
 		green,                //g
 		blue,                //b
@@ -363,7 +363,7 @@ void Game::SetDisplayColour(int red, int green, int blue, int alpha)
 
 void Game::Update()
 {
-	SDL_RenderClear(m_Renderer);
+	SDL_RenderClear(_Renderer);
 
 	CheckEvents();
 
@@ -471,7 +471,7 @@ void Game::Update()
 	goal->draw();
 
 	ImGui::NewFrame();
-	ImGui_ImplSDL2_NewFrame(m_Window);
+	ImGui_ImplSDL2_NewFrame(_Window);
 	bool show = true;
 	int  selectFrame = -1;
 
@@ -639,7 +639,7 @@ void Game::Update()
 		endDragObject();
 	}
 	//show what we've drawn
-	SDL_RenderPresent(m_Renderer);
+	SDL_RenderPresent(_Renderer);
 
 	// pause for 1/60th second (ish)
 	SDL_Delay(8);    //SDL_Delay takes millisecs

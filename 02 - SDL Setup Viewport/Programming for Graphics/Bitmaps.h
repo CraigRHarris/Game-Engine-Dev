@@ -37,12 +37,12 @@ public:
 	/**
 	* storing the render of assets to configurer later on.loading the texture for asessts.param checking the surface on the asesst.
 	* Going tough each object.
-	* @ param renderer storing.
-	* @ param texManager loading the texture for asessts.
-	* @ param fileName checking the name of the asesst.
-	* @ param postion of aseets.
-	* @ param object name of the asset.
-	* @ param transparent to see if it neededs background.
+	* @param renderer 
+	* @param texManager loading the texture for asessts.
+	* @param fileName checking the name of the asesst.
+	* @param postion of assets.
+	* @param object name of the asset.
+	* @param transparent to see if it neededs background.
 	*/
 	Bitmap(SDL_Renderer* renderer, TextureManager* texManager,std::string fileName, int xpos, int ypos, const std::string _ObjectName, bool useTransparency = false);
 	virtual ~Bitmap();

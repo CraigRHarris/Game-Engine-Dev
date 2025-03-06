@@ -40,8 +40,20 @@ struct Scene {
 class SceneManager
 {
 public:
+	/**
+	Reading the different json files for different scenes(levels).
+	*/
 	Scene readscene(std::string filepath);
+	/**
+	* Saving the objects in the json file for the different levels to save.
+	* @param file The file of the asset.
+	* @param objects The object in the scene.
+	*/
 	void savescene(const std::string& file, const std::vector<Bitmap*>& objects);
 private:
+	/**
+	* Choosing the different items from the entities.
+	* @param type
+	*/
 	EntityType getEntityEnumFromString(const std::string& type);
 };

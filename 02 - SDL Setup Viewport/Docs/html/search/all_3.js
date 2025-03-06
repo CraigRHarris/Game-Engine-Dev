@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['game_0',['Game',['../class_game.html',1,'']]],
-  ['goal_1',['Goal',['../class_goal.html',1,'']]]
+  ['fixgroundcollision_0',['FixGroundCollision',['../class_player.html#a36fa840b0d174215c8a912cb31ca0729',1,'Player']]]
 ];

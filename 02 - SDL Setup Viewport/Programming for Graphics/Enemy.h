@@ -35,7 +35,7 @@ public:
 	int getRightBound() { return point_r; }
 
 private:
-	float movementSpeed{ 3.0f };
+	float moveSpeed{ 3.0f };
 	float yVelocity;
 	float xVelocity;
 	float direction;

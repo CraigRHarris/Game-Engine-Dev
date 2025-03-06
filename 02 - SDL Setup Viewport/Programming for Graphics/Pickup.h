@@ -9,6 +9,10 @@ public:
 		Logger::Info("Pickup ");
 	}
 
+
+	/**
+	Checks if colliding with player and add key to total if player is colliding.
+	*/
 	bool IsColliding(Bitmap* other) override;
 
 private:

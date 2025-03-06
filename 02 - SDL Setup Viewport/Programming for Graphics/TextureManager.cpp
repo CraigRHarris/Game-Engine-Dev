@@ -40,9 +40,9 @@ SDL_Texture* TextureManager::Load(const std::string fileName, bool useTransparan
 	{
 
 		//if file does not exist in map
-		m_surface = SDL_LoadBMP(fileName.c_str());
+		_surface = SDL_LoadBMP(fileName.c_str());
 		
-		if (!m_surface)
+		if (!_surface)
 		{
 			printf("SURFACE for bitmap '%s' not loaded\n", fileName.c_str());
 			printf("%s\n", SDL_GetError());
@@ -51,20 +51,20 @@ SDL_Texture* TextureManager::Load(const std::string fileName, bool useTransparan
 		{
 			if (useTransparancy)
 			{
-				Uint32 colourKey = SDL_MapRGB(m_surface->format, 255, 0, 255);
-				SDL_SetColorKey(m_surface, SDL_TRUE, colourKey);
+				Uint32 colourKey = SDL_MapRGB(_surface->format, 255, 0, 255);
+				SDL_SetColorKey(_surface, SDL_TRUE, colourKey);
 			}
-			m_pbitmapTexture = SDL_CreateTextureFromSurface(PRenderer, m_surface);
+			m_pbitmapTexture = SDL_CreateTextureFromSurface(PRenderer, _surface);
 			if (!m_pbitmapTexture)
 			{
 				printf("TEXTURE for bitmap '%s' not loaded!\n", fileName.c_str());
 				printf("%s\n", SDL_GetError());
 			}
 
-			width = m_surface->w;
-			height = m_surface->h;
+			width = _surface->w;
+			height = _surface->h;
 
-			SDL_FreeSurface(m_surface);
+			SDL_FreeSurface(_surface);
 
 			TextureData texData{ m_pbitmapTexture , width, height };
 

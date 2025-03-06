@@ -35,7 +35,7 @@
             "sprite": "assets/Key.bmp",
             "transparent": true,
             "type": "key",
-            "xpos": 150,
+            "xpos": 650,
             "ypos": 550
         },
         {

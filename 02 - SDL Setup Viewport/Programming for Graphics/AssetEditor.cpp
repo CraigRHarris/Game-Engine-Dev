@@ -24,8 +24,8 @@ using namespace std;
 AssetEditor::AssetEditor(SDL_Renderer* renderer, SDL_Window* window, TextureManager* texManager, Game* game) : _tManager{ texManager }
 {
 	_game = game;
-	p_Renderer= renderer;
-	p_Window = window;
+	_Renderer= renderer;
+	_Window = window;
 
 	std::string path = "assets";
 	for (const auto& entry : std::filesystem::directory_iterator(path)) 
@@ -55,7 +55,7 @@ void AssetEditor::Update()
 	if (ImGui::IsMouseReleased(ImGuiMouseButton_Left) && AssetMouseDrag != nullptr)
 	{
 		cout << "Test" << endl;
-		hasSelected = false;
+		_selected = false;
 		int x, y;
 		SDL_GetMouseState(&x, &y);
 		
@@ -95,7 +95,7 @@ void AssetEditor::Update()
 		//for dragging
 		if (ImGui::BeginDragDropSource())
 		{
-			hasSelected = true;
+			_selected = true;
 			std::cout << "BeginDragDropSource\n";
 			AssetMouseDrag = content[i];
 			ImGui::Image((ImTextureID)content[i]->GetTextureRef(), { 100,100 });

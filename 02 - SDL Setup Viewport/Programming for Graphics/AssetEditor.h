@@ -14,7 +14,7 @@ class Game;
 class AssetEditor
 {
 public:
-	bool hasSelected{ false };
+	bool _selected{ false };
 	Bitmap* AssetMouseDrag = nullptr;
 	
 	/**
@@ -23,8 +23,8 @@ public:
 	AssetEditor(SDL_Renderer* renderer, SDL_Window* window, TextureManager* texManager, Game* game );
 
 	//std::vector<Bitmap*> content;
-	SDL_Renderer* p_Renderer;
-	SDL_Window* p_Window;
+	SDL_Renderer* _Renderer;
+	SDL_Window* _Window;
 
 	/**
 	Finding the file for each asset to use when mouse is pressed down to drag onto the scene.

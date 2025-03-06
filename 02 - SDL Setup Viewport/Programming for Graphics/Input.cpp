@@ -4,17 +4,17 @@
 
 bool Input::KeyIsPressed(SDL_KeyCode key)
 {
-	return _keysPressed[key];
+	return _keysDown[key];
 }
 
 void Input::EventKeyPressed(SDL_Keycode key)
 {
-	_keysPressed.insert_or_assign(key, true);// Any key that is pressed = true
+	_keysDown.insert_or_assign(key, true);// Any key that is pressed = true
 }
 
 void Input::EventKeyReleased(SDL_Keycode key)
 {
-	_keysPressed.insert_or_assign(key, false);// Any key release = true
+	_keysDown.insert_or_assign(key, false);
 }
 
 Input::Input()

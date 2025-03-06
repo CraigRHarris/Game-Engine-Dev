@@ -20,5 +20,5 @@ public:
 	~Input();
 
 private:
-	std::map<SDL_Keycode, bool> _keysPressed;
+	std::map<SDL_Keycode, bool> _keysDown;
 };

@@ -36,7 +36,7 @@ Bitmap::Bitmap(SDL_Renderer* renderer, TextureManager* texManager, std::string f
 
 		_pbitmapTexture = texManager->Load(fileName, true, renderer, m_w, m_h);
 
-		_pbitmapSurface = texManager->m_surface;
+		_pbitmapSurface = texManager->_surface;
 
 		//store the position vals
 		m_x = xpos;

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Enemy Class Reference</title>
+<title>Game Engine Dev: Enemy Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,8 +32,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Game Engine Dev<span id="projectnumber">&#160;0.0.0.1</span>
    </div>
+   <div id="projectbrief">Game Engine with Tools</div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -122,118 +123,229 @@ Inheritance diagram for Enemy:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4805bfd2ee6d9ca7df5d26f727c89594" id="r_a4805bfd2ee6d9ca7df5d26f727c89594"><td class="memItemLeft" align="right" valign="top"><a id="a4805bfd2ee6d9ca7df5d26f727c89594" name="a4805bfd2ee6d9ca7df5d26f727c89594"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Enemy</b> (SDL_Renderer *renderer, <a class="el" href="class_texture_manager.html">TextureManager</a> *texManager, std::string fileName, int xpos, int ypos, int left, int right, const std::string ObjectName, bool useTransparency=false)</td></tr>
+<tr class="memitem:a4805bfd2ee6d9ca7df5d26f727c89594" id="r_a4805bfd2ee6d9ca7df5d26f727c89594"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4805bfd2ee6d9ca7df5d26f727c89594">Enemy</a> (SDL_Renderer *renderer, <a class="el" href="class_texture_manager.html">TextureManager</a> *texManager, std::string fileName, int xpos, int ypos, int left, int right, const std::string ObjectName, bool useTransparency=false)</td></tr>
 <tr class="separator:a4805bfd2ee6d9ca7df5d26f727c89594"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9a83b4e458b77eef0ffce785164fbcd" id="r_af9a83b4e458b77eef0ffce785164fbcd"><td class="memItemLeft" align="right" valign="top"><a id="af9a83b4e458b77eef0ffce785164fbcd" name="af9a83b4e458b77eef0ffce785164fbcd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
+<tr class="memitem:af9a83b4e458b77eef0ffce785164fbcd" id="r_af9a83b4e458b77eef0ffce785164fbcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9a83b4e458b77eef0ffce785164fbcd">Update</a> ()</td></tr>
 <tr class="separator:af9a83b4e458b77eef0ffce785164fbcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e850fa2604153ddbde6df10ba4d34f7" id="r_a4e850fa2604153ddbde6df10ba4d34f7"><td class="memItemLeft" align="right" valign="top"><a id="a4e850fa2604153ddbde6df10ba4d34f7" name="a4e850fa2604153ddbde6df10ba4d34f7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>FixGroundCollision</b> (<a class="el" href="class_bitmap.html">Bitmap</a> *ground)</td></tr>
+<tr class="memitem:a4e850fa2604153ddbde6df10ba4d34f7" id="r_a4e850fa2604153ddbde6df10ba4d34f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e850fa2604153ddbde6df10ba4d34f7">FixGroundCollision</a> (<a class="el" href="class_bitmap.html">Bitmap</a> *ground)</td></tr>
 <tr class="separator:a4e850fa2604153ddbde6df10ba4d34f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab681361dfbb4152185e011d2478f2fb0" id="r_ab681361dfbb4152185e011d2478f2fb0"><td class="memItemLeft" align="right" valign="top"><a id="ab681361dfbb4152185e011d2478f2fb0" name="ab681361dfbb4152185e011d2478f2fb0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>MoveAI</b> ()</td></tr>
+<tr class="memitem:ab681361dfbb4152185e011d2478f2fb0" id="r_ab681361dfbb4152185e011d2478f2fb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab681361dfbb4152185e011d2478f2fb0">MoveAI</a> ()</td></tr>
 <tr class="separator:ab681361dfbb4152185e011d2478f2fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d17aaf18a3c752c32145b036421fd4c" id="r_a6d17aaf18a3c752c32145b036421fd4c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d17aaf18a3c752c32145b036421fd4c">GUIDraw</a> () override</td></tr>
 <tr class="separator:a6d17aaf18a3c752c32145b036421fd4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7186bff1e607d61b775fa83353ab4eb2" id="r_a7186bff1e607d61b775fa83353ab4eb2"><td class="memItemLeft" align="right" valign="top"><a id="a7186bff1e607d61b775fa83353ab4eb2" name="a7186bff1e607d61b775fa83353ab4eb2"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getLeftBound</b> ()</td></tr>
+<tr class="memitem:a7186bff1e607d61b775fa83353ab4eb2" id="r_a7186bff1e607d61b775fa83353ab4eb2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7186bff1e607d61b775fa83353ab4eb2">getLeftBound</a> ()</td></tr>
 <tr class="separator:a7186bff1e607d61b775fa83353ab4eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab841dd9e619175134119733d60a6c95e" id="r_ab841dd9e619175134119733d60a6c95e"><td class="memItemLeft" align="right" valign="top"><a id="ab841dd9e619175134119733d60a6c95e" name="ab841dd9e619175134119733d60a6c95e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getRightBound</b> ()</td></tr>
+<tr class="memitem:ab841dd9e619175134119733d60a6c95e" id="r_ab841dd9e619175134119733d60a6c95e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab841dd9e619175134119733d60a6c95e">getRightBound</a> ()</td></tr>
 <tr class="separator:ab841dd9e619175134119733d60a6c95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_bitmap"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_bitmap')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_bitmap.html">Bitmap</a></td></tr>
 <tr class="memitem:ab5d51f7486c5151291ac53fe2f756a98 inherit pub_methods_class_bitmap" id="r_ab5d51f7486c5151291ac53fe2f756a98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#ab5d51f7486c5151291ac53fe2f756a98">Bitmap</a> (SDL_Renderer *renderer, <a class="el" href="class_texture_manager.html">TextureManager</a> *texManager, std::string fileName, int xpos, int ypos, const std::string _ObjectName, bool useTransparency=false)</td></tr>
 <tr class="separator:ab5d51f7486c5151291ac53fe2f756a98 inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47c1b951356e7669a94dcca9dfb1b140 inherit pub_methods_class_bitmap" id="r_a47c1b951356e7669a94dcca9dfb1b140"><td class="memItemLeft" align="right" valign="top">
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsColliding</b> (<a class="el" href="class_bitmap.html">Bitmap</a> *Other)</td></tr>
+<tr class="memitem:a47c1b951356e7669a94dcca9dfb1b140 inherit pub_methods_class_bitmap" id="r_a47c1b951356e7669a94dcca9dfb1b140"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a47c1b951356e7669a94dcca9dfb1b140">IsColliding</a> (<a class="el" href="class_bitmap.html">Bitmap</a> *Other)</td></tr>
 <tr class="separator:a47c1b951356e7669a94dcca9dfb1b140 inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14c2435958a4ff6ceaf9e9b6e7430d60 inherit pub_methods_class_bitmap" id="r_a14c2435958a4ff6ceaf9e9b6e7430d60"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPosition</b> (float x, float y)</td></tr>
+<tr class="memitem:a14c2435958a4ff6ceaf9e9b6e7430d60 inherit pub_methods_class_bitmap" id="r_a14c2435958a4ff6ceaf9e9b6e7430d60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a14c2435958a4ff6ceaf9e9b6e7430d60">SetPosition</a> (float x, float y)</td></tr>
 <tr class="separator:a14c2435958a4ff6ceaf9e9b6e7430d60 inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a862971b2c4f83631c1da30ad999542 inherit pub_methods_class_bitmap" id="r_a0a862971b2c4f83631c1da30ad999542"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="structposition.html">position</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetPosition</b> ()</td></tr>
+<tr class="memitem:a0a862971b2c4f83631c1da30ad999542 inherit pub_methods_class_bitmap" id="r_a0a862971b2c4f83631c1da30ad999542"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structposition.html">position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a0a862971b2c4f83631c1da30ad999542">GetPosition</a> ()</td></tr>
 <tr class="separator:a0a862971b2c4f83631c1da30ad999542 inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cff56e4f7459662170faf65a383a0cc inherit pub_methods_class_bitmap" id="r_a9cff56e4f7459662170faf65a383a0cc"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateX</b> (float xDelta)</td></tr>
+<tr class="memitem:a9cff56e4f7459662170faf65a383a0cc inherit pub_methods_class_bitmap" id="r_a9cff56e4f7459662170faf65a383a0cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a9cff56e4f7459662170faf65a383a0cc">UpdateX</a> (float xDelta)</td></tr>
 <tr class="separator:a9cff56e4f7459662170faf65a383a0cc inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1912aa494b3538b455cfe2370f482c3 inherit pub_methods_class_bitmap" id="r_ac1912aa494b3538b455cfe2370f482c3"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateY</b> (float yDelta)</td></tr>
+<tr class="memitem:ac1912aa494b3538b455cfe2370f482c3 inherit pub_methods_class_bitmap" id="r_ac1912aa494b3538b455cfe2370f482c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#ac1912aa494b3538b455cfe2370f482c3">UpdateY</a> (float yDelta)</td></tr>
 <tr class="separator:ac1912aa494b3538b455cfe2370f482c3 inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28e9d13005de4211d2474e9577ad78c6 inherit pub_methods_class_bitmap" id="r_a28e9d13005de4211d2474e9577ad78c6"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>GuiDrawChildGUI</b> ()</td></tr>
+<tr class="memitem:a28e9d13005de4211d2474e9577ad78c6 inherit pub_methods_class_bitmap" id="r_a28e9d13005de4211d2474e9577ad78c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a28e9d13005de4211d2474e9577ad78c6">GuiDrawChildGUI</a> ()</td></tr>
 <tr class="separator:a28e9d13005de4211d2474e9577ad78c6 inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb9d868c1cf288531e6168a721fe2559 inherit pub_methods_class_bitmap" id="r_adb9d868c1cf288531e6168a721fe2559"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetX</b> (float x)</td></tr>
+<tr class="memitem:adb9d868c1cf288531e6168a721fe2559 inherit pub_methods_class_bitmap" id="r_adb9d868c1cf288531e6168a721fe2559"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#adb9d868c1cf288531e6168a721fe2559">SetX</a> (float x)</td></tr>
 <tr class="separator:adb9d868c1cf288531e6168a721fe2559 inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0185d155bf2701f90b3964a515873b96 inherit pub_methods_class_bitmap" id="r_a0185d155bf2701f90b3964a515873b96"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetY</b> (float y)</td></tr>
+<tr class="memitem:a0185d155bf2701f90b3964a515873b96 inherit pub_methods_class_bitmap" id="r_a0185d155bf2701f90b3964a515873b96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a0185d155bf2701f90b3964a515873b96">SetY</a> (float y)</td></tr>
 <tr class="separator:a0185d155bf2701f90b3964a515873b96 inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa55fa080fdca2f47df35d7a65359b4ad inherit pub_methods_class_bitmap" id="r_aa55fa080fdca2f47df35d7a65359b4ad"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetGrounded</b> (bool grounded)</td></tr>
+<tr class="memitem:aa55fa080fdca2f47df35d7a65359b4ad inherit pub_methods_class_bitmap" id="r_aa55fa080fdca2f47df35d7a65359b4ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#aa55fa080fdca2f47df35d7a65359b4ad">SetGrounded</a> (bool grounded)</td></tr>
 <tr class="separator:aa55fa080fdca2f47df35d7a65359b4ad inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a182cbfc283b0319960725290dad27c37 inherit pub_methods_class_bitmap" id="r_a182cbfc283b0319960725290dad27c37"><td class="memItemLeft" align="right" valign="top">
-SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><b>GetTransformRect</b> ()</td></tr>
+<tr class="memitem:a182cbfc283b0319960725290dad27c37 inherit pub_methods_class_bitmap" id="r_a182cbfc283b0319960725290dad27c37"><td class="memItemLeft" align="right" valign="top">SDL_Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a182cbfc283b0319960725290dad27c37">GetTransformRect</a> ()</td></tr>
 <tr class="separator:a182cbfc283b0319960725290dad27c37 inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69ff46a0ca29680ab41813f2a8990f93 inherit pub_methods_class_bitmap" id="r_a69ff46a0ca29680ab41813f2a8990f93"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> ()</td></tr>
+<tr class="memitem:a69ff46a0ca29680ab41813f2a8990f93 inherit pub_methods_class_bitmap" id="r_a69ff46a0ca29680ab41813f2a8990f93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a69ff46a0ca29680ab41813f2a8990f93">draw</a> ()</td></tr>
 <tr class="separator:a69ff46a0ca29680ab41813f2a8990f93 inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4631b38bd1790b3db5180c216cb58f3 inherit pub_methods_class_bitmap" id="r_af4631b38bd1790b3db5180c216cb58f3"><td class="memItemLeft" align="right" valign="top">
-SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><b>GetTextureRef</b> ()</td></tr>
+<tr class="memitem:af4631b38bd1790b3db5180c216cb58f3 inherit pub_methods_class_bitmap" id="r_af4631b38bd1790b3db5180c216cb58f3"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#af4631b38bd1790b3db5180c216cb58f3">GetTextureRef</a> ()</td></tr>
 <tr class="separator:af4631b38bd1790b3db5180c216cb58f3 inherit pub_methods_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i___scene_node"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_i___scene_node')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i___scene_node.html">I_SceneNode</a></td></tr>
-<tr class="memitem:aa3d07beacc0689673a994a65972f57b3 inherit pub_methods_class_i___scene_node" id="r_aa3d07beacc0689673a994a65972f57b3"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addchild</b> (<a class="el" href="class_i___scene_node.html">I_SceneNode</a> *childtoAdd)</td></tr>
+<tr class="memitem:aa3d07beacc0689673a994a65972f57b3 inherit pub_methods_class_i___scene_node" id="r_aa3d07beacc0689673a994a65972f57b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i___scene_node.html#aa3d07beacc0689673a994a65972f57b3">addchild</a> (<a class="el" href="class_i___scene_node.html">I_SceneNode</a> *childtoAdd)</td></tr>
 <tr class="separator:aa3d07beacc0689673a994a65972f57b3 inherit pub_methods_class_i___scene_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0fa48a867f164d7857b4c9209c3210f inherit pub_methods_class_i___scene_node" id="r_ae0fa48a867f164d7857b4c9209c3210f"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>removechild</b> (<a class="el" href="class_i___scene_node.html">I_SceneNode</a> *childtoRemove)</td></tr>
+<tr class="memitem:ae0fa48a867f164d7857b4c9209c3210f inherit pub_methods_class_i___scene_node" id="r_ae0fa48a867f164d7857b4c9209c3210f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i___scene_node.html#ae0fa48a867f164d7857b4c9209c3210f">removechild</a> (<a class="el" href="class_i___scene_node.html">I_SceneNode</a> *childtoRemove)</td></tr>
 <tr class="separator:ae0fa48a867f164d7857b4c9209c3210f inherit pub_methods_class_i___scene_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_class_bitmap"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_bitmap')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_bitmap.html">Bitmap</a></td></tr>
-<tr class="memitem:a35ab618a1c490fa797dadff4223da6c2 inherit pub_attribs_class_bitmap" id="r_a35ab618a1c490fa797dadff4223da6c2"><td class="memItemLeft" align="right" valign="top">
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isGrounded</b> = false</td></tr>
+<tr class="memitem:a35ab618a1c490fa797dadff4223da6c2 inherit pub_attribs_class_bitmap" id="r_a35ab618a1c490fa797dadff4223da6c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a35ab618a1c490fa797dadff4223da6c2">isGrounded</a> = false</td></tr>
 <tr class="separator:a35ab618a1c490fa797dadff4223da6c2 inherit pub_attribs_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10531d88f4856f274cbcbaab013af9d4 inherit pub_attribs_class_bitmap" id="r_a10531d88f4856f274cbcbaab013af9d4"><td class="memItemLeft" align="right" valign="top">
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>Object</b> = &quot;Name Object&quot;</td></tr>
+<tr class="memitem:a10531d88f4856f274cbcbaab013af9d4 inherit pub_attribs_class_bitmap" id="r_a10531d88f4856f274cbcbaab013af9d4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a10531d88f4856f274cbcbaab013af9d4">Object</a> = &quot;Name Object&quot;</td></tr>
 <tr class="separator:a10531d88f4856f274cbcbaab013af9d4 inherit pub_attribs_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00bacbc40d43c963243e5af1b6fa97dc inherit pub_attribs_class_bitmap" id="r_a00bacbc40d43c963243e5af1b6fa97dc"><td class="memItemLeft" align="right" valign="top">
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>FileName</b></td></tr>
+<tr class="memitem:a00bacbc40d43c963243e5af1b6fa97dc inherit pub_attribs_class_bitmap" id="r_a00bacbc40d43c963243e5af1b6fa97dc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a00bacbc40d43c963243e5af1b6fa97dc">FileName</a></td></tr>
 <tr class="separator:a00bacbc40d43c963243e5af1b6fa97dc inherit pub_attribs_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_i___scene_node"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_i___scene_node')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_i___scene_node.html">I_SceneNode</a></td></tr>
-<tr class="memitem:a33d98e22bf8eb9f904dd7256f62ef3c4 inherit pub_attribs_class_i___scene_node" id="r_a33d98e22bf8eb9f904dd7256f62ef3c4"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="class_i___scene_node.html">I_SceneNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>parent</b> = nullptr</td></tr>
+<tr class="memitem:a33d98e22bf8eb9f904dd7256f62ef3c4 inherit pub_attribs_class_i___scene_node" id="r_a33d98e22bf8eb9f904dd7256f62ef3c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i___scene_node.html">I_SceneNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i___scene_node.html#a33d98e22bf8eb9f904dd7256f62ef3c4">parent</a> = nullptr</td></tr>
 <tr class="separator:a33d98e22bf8eb9f904dd7256f62ef3c4 inherit pub_attribs_class_i___scene_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20b0938f77d386523299e27903fff734 inherit pub_attribs_class_i___scene_node" id="r_a20b0938f77d386523299e27903fff734"><td class="memItemLeft" align="right" valign="top">
-std::vector&lt; <a class="el" href="class_i___scene_node.html">I_SceneNode</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>children</b></td></tr>
+<tr class="memitem:a20b0938f77d386523299e27903fff734 inherit pub_attribs_class_i___scene_node" id="r_a20b0938f77d386523299e27903fff734"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_i___scene_node.html">I_SceneNode</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i___scene_node.html#a20b0938f77d386523299e27903fff734">children</a></td></tr>
 <tr class="separator:a20b0938f77d386523299e27903fff734 inherit pub_attribs_class_i___scene_node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_class_bitmap"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_attribs_class_bitmap')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="class_bitmap.html">Bitmap</a></td></tr>
-<tr class="memitem:ae6f4350204ab01bd511368781c2d6f77 inherit pub_static_attribs_class_bitmap" id="r_ae6f4350204ab01bd511368781c2d6f77"><td class="memItemLeft" align="right" valign="top">
-static int&#160;</td><td class="memItemRight" valign="bottom"><b>objectCount</b> = 0</td></tr>
+<tr class="memitem:ae6f4350204ab01bd511368781c2d6f77 inherit pub_static_attribs_class_bitmap" id="r_ae6f4350204ab01bd511368781c2d6f77"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#ae6f4350204ab01bd511368781c2d6f77">objectCount</a> = 0</td></tr>
 <tr class="separator:ae6f4350204ab01bd511368781c2d6f77 inherit pub_static_attribs_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_class_i___gui_window"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_attribs_class_i___gui_window')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="class_i___gui_window.html">I_GuiWindow</a></td></tr>
-<tr class="memitem:a2e03863b968f2461847e6c8871e9c600 inherit pub_static_attribs_class_i___gui_window" id="r_a2e03863b968f2461847e6c8871e9c600"><td class="memItemLeft" align="right" valign="top">
-static <a class="el" href="class_i___gui_window.html">I_GuiWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>SelectedObject</b> = nullptr</td></tr>
+<tr class="memitem:a2e03863b968f2461847e6c8871e9c600 inherit pub_static_attribs_class_i___gui_window" id="r_a2e03863b968f2461847e6c8871e9c600"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_i___gui_window.html">I_GuiWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i___gui_window.html#a2e03863b968f2461847e6c8871e9c600">SelectedObject</a> = nullptr</td></tr>
 <tr class="separator:a2e03863b968f2461847e6c8871e9c600 inherit pub_static_attribs_class_i___gui_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab74f67ff6a149ec0c55ff2e48351826d inherit pub_static_attribs_class_i___gui_window" id="r_ab74f67ff6a149ec0c55ff2e48351826d"><td class="memItemLeft" align="right" valign="top">
-static <a class="el" href="class_i___gui_window.html">I_GuiWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>SelectedObjectForDragging</b> = nullptr</td></tr>
+<tr class="memitem:ab74f67ff6a149ec0c55ff2e48351826d inherit pub_static_attribs_class_i___gui_window" id="r_ab74f67ff6a149ec0c55ff2e48351826d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_i___gui_window.html">I_GuiWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i___gui_window.html#ab74f67ff6a149ec0c55ff2e48351826d">SelectedObjectForDragging</a> = nullptr</td></tr>
 <tr class="separator:ab74f67ff6a149ec0c55ff2e48351826d inherit pub_static_attribs_class_i___gui_window"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_bitmap"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_bitmap')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_bitmap.html">Bitmap</a></td></tr>
-<tr class="memitem:ab3f479294af37bb648d61f77f9554aca inherit pro_attribs_class_bitmap" id="r_ab3f479294af37bb648d61f77f9554aca"><td class="memItemLeft" align="right" valign="top">
-float&#160;</td><td class="memItemRight" valign="bottom"><b>m_x</b></td></tr>
+<tr class="memitem:ab3f479294af37bb648d61f77f9554aca inherit pro_attribs_class_bitmap" id="r_ab3f479294af37bb648d61f77f9554aca"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#ab3f479294af37bb648d61f77f9554aca">m_x</a></td></tr>
 <tr class="separator:ab3f479294af37bb648d61f77f9554aca inherit pro_attribs_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad65a841d8c876b02604efcc992a485e4 inherit pro_attribs_class_bitmap" id="r_ad65a841d8c876b02604efcc992a485e4"><td class="memItemLeft" align="right" valign="top">
-float&#160;</td><td class="memItemRight" valign="bottom"><b>m_y</b></td></tr>
+<tr class="memitem:ad65a841d8c876b02604efcc992a485e4 inherit pro_attribs_class_bitmap" id="r_ad65a841d8c876b02604efcc992a485e4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#ad65a841d8c876b02604efcc992a485e4">m_y</a></td></tr>
 <tr class="separator:ad65a841d8c876b02604efcc992a485e4 inherit pro_attribs_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e5b8cf456c4c9c8cdd0b2db0aa7f47d inherit pro_attribs_class_bitmap" id="r_a9e5b8cf456c4c9c8cdd0b2db0aa7f47d"><td class="memItemLeft" align="right" valign="top">
-int&#160;</td><td class="memItemRight" valign="bottom"><b>m_h</b></td></tr>
+<tr class="memitem:a9e5b8cf456c4c9c8cdd0b2db0aa7f47d inherit pro_attribs_class_bitmap" id="r_a9e5b8cf456c4c9c8cdd0b2db0aa7f47d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a9e5b8cf456c4c9c8cdd0b2db0aa7f47d">m_h</a></td></tr>
 <tr class="separator:a9e5b8cf456c4c9c8cdd0b2db0aa7f47d inherit pro_attribs_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bf3bc4f22d7dfd239b650c256401937 inherit pro_attribs_class_bitmap" id="r_a9bf3bc4f22d7dfd239b650c256401937"><td class="memItemLeft" align="right" valign="top">
-int&#160;</td><td class="memItemRight" valign="bottom"><b>m_w</b></td></tr>
+<tr class="memitem:a9bf3bc4f22d7dfd239b650c256401937 inherit pro_attribs_class_bitmap" id="r_a9bf3bc4f22d7dfd239b650c256401937"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap.html#a9bf3bc4f22d7dfd239b650c256401937">m_w</a></td></tr>
 <tr class="separator:a9bf3bc4f22d7dfd239b650c256401937 inherit pro_attribs_class_bitmap"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="_enemy_8h_source.html#l00007">7</a> of file <a class="el" href="_enemy_8h_source.html">Enemy.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a4805bfd2ee6d9ca7df5d26f727c89594" name="a4805bfd2ee6d9ca7df5d26f727c89594"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4805bfd2ee6d9ca7df5d26f727c89594">&#9670;&#160;</a></span>Enemy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Enemy::Enemy </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *</td>          <td class="paramname"><span class="paramname"><em>renderer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_texture_manager.html">TextureManager</a> *</td>          <td class="paramname"><span class="paramname"><em>texManager</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>fileName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>xpos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ypos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>right</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string</td>          <td class="paramname"><span class="paramname"><em>ObjectName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>useTransparency</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_enemy_8h_source.html#l00010">10</a> of file <a class="el" href="_enemy_8h_source.html">Enemy.h</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4e850fa2604153ddbde6df10ba4d34f7" name="a4e850fa2604153ddbde6df10ba4d34f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e850fa2604153ddbde6df10ba4d34f7">&#9670;&#160;</a></span>FixGroundCollision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy::FixGroundCollision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_bitmap.html">Bitmap</a> *</td>          <td class="paramname"><span class="paramname"><em>ground</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_enemy_8cpp_source.html#l00025">25</a> of file <a class="el" href="_enemy_8cpp_source.html">Enemy.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7186bff1e607d61b775fa83353ab4eb2" name="a7186bff1e607d61b775fa83353ab4eb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7186bff1e607d61b775fa83353ab4eb2">&#9670;&#160;</a></span>getLeftBound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Enemy::getLeftBound </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_enemy_8h_source.html#l00034">34</a> of file <a class="el" href="_enemy_8h_source.html">Enemy.h</a>.</p>
+
+</div>
+</div>
+<a id="ab841dd9e619175134119733d60a6c95e" name="ab841dd9e619175134119733d60a6c95e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab841dd9e619175134119733d60a6c95e">&#9670;&#160;</a></span>getRightBound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Enemy::getRightBound </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_enemy_8h_source.html#l00035">35</a> of file <a class="el" href="_enemy_8h_source.html">Enemy.h</a>.</p>
+
+</div>
+</div>
 <a id="a6d17aaf18a3c752c32145b036421fd4c" name="a6d17aaf18a3c752c32145b036421fd4c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d17aaf18a3c752c32145b036421fd4c">&#9670;&#160;</a></span>GUIDraw()</h2>
 
@@ -256,14 +368,57 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>m_w</b></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Draw the ajustable paramaters for the selectable when you select it on the hierarchy </p>
 
 <p>Reimplemented from <a class="el" href="class_bitmap.html">Bitmap</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_enemy_8cpp_source.html#l00053">53</a> of file <a class="el" href="_enemy_8cpp_source.html">Enemy.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab681361dfbb4152185e011d2478f2fb0" name="ab681361dfbb4152185e011d2478f2fb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab681361dfbb4152185e011d2478f2fb0">&#9670;&#160;</a></span>MoveAI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy::MoveAI </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Setting the postitions of the AI going left and right. </p>
+
+<p class="definition">Definition at line <a class="el" href="_enemy_8cpp_source.html#l00033">33</a> of file <a class="el" href="_enemy_8cpp_source.html">Enemy.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af9a83b4e458b77eef0ffce785164fbcd" name="af9a83b4e458b77eef0ffce785164fbcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9a83b4e458b77eef0ffce785164fbcd">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Enemy::Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Setting the gravity and helps add collion to the floor. </p>
+
+<p class="definition">Definition at line <a class="el" href="_enemy_8cpp_source.html#l00004">4</a> of file <a class="el" href="_enemy_8cpp_source.html">Enemy.cpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/<a class="el" href="_enemy_8h_source.html">Enemy.h</a></li>
-<li>C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/<b>Enemy.cpp</b></li>
+<li>C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/<a class="el" href="_enemy_8cpp_source.html">Enemy.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

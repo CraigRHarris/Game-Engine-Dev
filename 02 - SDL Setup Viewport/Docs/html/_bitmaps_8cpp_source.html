@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Game Engine Dev: 02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.cpp Source File</title>
+<title>Game Engine Dev: C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -116,7 +116,8 @@ $(function(){initNavTree('_bitmaps_8cpp_source.html',''); initResizable(true); }
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keywordtype">int</span> Bitmap::objectCount = 0;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keywordtype">bool</span> Bitmap::IsColliding(<a class="code hl_class" href="class_bitmap.html">Bitmap</a>* Other)</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_bitmap.html#a47c1b951356e7669a94dcca9dfb1b140">   11</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_bitmap.html#a47c1b951356e7669a94dcca9dfb1b140">Bitmap::IsColliding</a>(<a class="code hl_function" href="class_bitmap.html#ab5d51f7486c5151291ac53fe2f756a98">Bitmap</a>* Other)</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordflow">if</span> (</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        (m_x + m_w &gt;= Other-&gt;m_x) &amp;&amp; (m_x &lt;= Other-&gt;m_x + Other-&gt;m_w) &amp;&amp;</div>
@@ -127,6 +128,7 @@ $(function(){initNavTree('_bitmaps_8cpp_source.html',''); initResizable(true); }
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
+</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
@@ -143,9 +145,9 @@ $(function(){initNavTree('_bitmaps_8cpp_source.html',''); initResizable(true); }
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="comment">//store the rander for future configuring and drawing</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        _pRenderer = renderer;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        _pbitmapTexture = texManager-&gt;Load(fileName, <span class="keyword">true</span>, renderer, m_w, m_h);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        _pbitmapTexture = texManager-&gt;<a class="code hl_function" href="class_texture_manager.html#a4e8d435a9ff52fd4e045b3d005331f99">Load</a>(fileName, <span class="keyword">true</span>, renderer, m_w, m_h);</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        _pbitmapSurface = texManager-&gt;m_surface;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        _pbitmapSurface = texManager-&gt;_surface;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="comment">//store the position vals</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        m_x = xpos;</div>
@@ -183,7 +185,8 @@ $(function(){initNavTree('_bitmaps_8cpp_source.html',''); initResizable(true); }
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    ImGui::End();</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keywordtype">void</span> Bitmap::GuiDrawChildGUI()</div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_bitmap.html#a28e9d13005de4211d2474e9577ad78c6">   76</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_bitmap.html#a28e9d13005de4211d2474e9577ad78c6">Bitmap::GuiDrawChildGUI</a>()</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>{</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    ImGuiTreeNodeFlags nodeFlags = ImGuiTreeNodeFlags_FramePadding | ImGuiTreeNodeFlags_DefaultOpen;</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
@@ -208,7 +211,7 @@ $(function(){initNavTree('_bitmaps_8cpp_source.html',''); initResizable(true); }
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        {</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <a class="code hl_function" href="class_bitmap.html#ab5d51f7486c5151291ac53fe2f756a98">Bitmap</a>* PayloadAsBitmap = <span class="keyword">static_cast&lt;</span><a class="code hl_function" href="class_bitmap.html#ab5d51f7486c5151291ac53fe2f756a98">Bitmap</a>*<span class="keyword">&gt;</span>(I_GuiWindow::SelectedObject);</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            cout &lt;&lt; PayloadAsBitmap-&gt;Object &lt;&lt; <span class="stringliteral">&quot; on top of &quot;</span> &lt;&lt; this-&gt;Object &lt;&lt; endl;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            addchild(PayloadAsBitmap);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <a class="code hl_function" href="class_i___scene_node.html#aa3d07beacc0689673a994a65972f57b3">addchild</a>(PayloadAsBitmap);</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        }</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        ImGui::EndDragDropTarget();</div>
@@ -219,7 +222,7 @@ $(function(){initNavTree('_bitmaps_8cpp_source.html',''); initResizable(true); }
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; children.size(); i++)</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        {</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <a class="code hl_function" href="class_bitmap.html#ab5d51f7486c5151291ac53fe2f756a98">Bitmap</a>* child = (<a class="code hl_function" href="class_bitmap.html#ab5d51f7486c5151291ac53fe2f756a98">Bitmap</a>*)this-&gt;children[i];</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            child-&gt;GuiDrawChildGUI();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            child-&gt;<a class="code hl_function" href="class_bitmap.html#a28e9d13005de4211d2474e9577ad78c6">GuiDrawChildGUI</a>();</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        }</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">if</span> (I_GuiWindow::SelectedObject == <span class="keyword">this</span>)</div>
@@ -229,6 +232,7 @@ $(function(){initNavTree('_bitmaps_8cpp_source.html',''); initResizable(true); }
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}</div>
+</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="keywordtype">void</span> Bitmap::draw()</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>{</div>
@@ -239,16 +243,19 @@ $(function(){initNavTree('_bitmaps_8cpp_source.html',''); initResizable(true); }
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        SDL_RenderCopy(_pRenderer, _pbitmapTexture, NULL, &amp;destRect);</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    }</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>}</div>
-<div class="ttc" id="aclass_bitmap_html"><div class="ttname"><a href="class_bitmap.html">Bitmap</a></div><div class="ttdef"><b>Definition</b> <a href="_bitmaps_8h_source.html#l00016">Bitmaps.h:17</a></div></div>
+<div class="ttc" id="aclass_bitmap_html_a28e9d13005de4211d2474e9577ad78c6"><div class="ttname"><a href="class_bitmap.html#a28e9d13005de4211d2474e9577ad78c6">Bitmap::GuiDrawChildGUI</a></div><div class="ttdeci">void GuiDrawChildGUI()</div><div class="ttdef"><b>Definition</b> <a href="#l00076">Bitmaps.cpp:76</a></div></div>
+<div class="ttc" id="aclass_bitmap_html_a47c1b951356e7669a94dcca9dfb1b140"><div class="ttname"><a href="class_bitmap.html#a47c1b951356e7669a94dcca9dfb1b140">Bitmap::IsColliding</a></div><div class="ttdeci">virtual bool IsColliding(Bitmap *Other)</div><div class="ttdef"><b>Definition</b> <a href="#l00011">Bitmaps.cpp:11</a></div></div>
 <div class="ttc" id="aclass_bitmap_html_ab5d51f7486c5151291ac53fe2f756a98"><div class="ttname"><a href="class_bitmap.html#ab5d51f7486c5151291ac53fe2f756a98">Bitmap::Bitmap</a></div><div class="ttdeci">Bitmap(SDL_Renderer *renderer, TextureManager *texManager, std::string fileName, int xpos, int ypos, const std::string _ObjectName, bool useTransparency=false)</div><div class="ttdef"><b>Definition</b> <a href="#l00025">Bitmaps.cpp:25</a></div></div>
+<div class="ttc" id="aclass_i___scene_node_html_aa3d07beacc0689673a994a65972f57b3"><div class="ttname"><a href="class_i___scene_node.html#aa3d07beacc0689673a994a65972f57b3">I_SceneNode::addchild</a></div><div class="ttdeci">void addchild(I_SceneNode *childtoAdd)</div><div class="ttdef"><b>Definition</b> <a href="_i___scene_node_8cpp_source.html#l00003">I_SceneNode.cpp:3</a></div></div>
 <div class="ttc" id="aclass_texture_manager_html"><div class="ttname"><a href="class_texture_manager.html">TextureManager</a></div><div class="ttdef"><b>Definition</b> <a href="_texture_manager_8h_source.html#l00014">TextureManager.h:15</a></div></div>
+<div class="ttc" id="aclass_texture_manager_html_a4e8d435a9ff52fd4e045b3d005331f99"><div class="ttname"><a href="class_texture_manager.html#a4e8d435a9ff52fd4e045b3d005331f99">TextureManager::Load</a></div><div class="ttdeci">SDL_Texture * Load(const std::string fileName, bool useTransparancy, SDL_Renderer *PRenderer, int &amp;width, int &amp;height)</div><div class="ttdef"><b>Definition</b> <a href="_texture_manager_8cpp_source.html#l00026">TextureManager.cpp:26</a></div></div>
 <div class="ttc" id="astructposition_html"><div class="ttname"><a href="structposition.html">position</a></div><div class="ttdef"><b>Definition</b> <a href="_bitmaps_8h_source.html#l00014">Bitmaps.h:14</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e5d19915ff6f3ef2be94ff008508d75b.html">02 - SDL Setup Viewport</a></li><li class="navelem"><a class="el" href="dir_66aedea45201f37e7f5ff485de8070e9.html">Programming for Graphics</a></li><li class="navelem"><b>Bitmaps.cpp</b></li>
+    <li class="navelem"><a class="el" href="dir_38fae16b77d92cd971ace5681c3e792a.html">Programming for Graphics</a></li><li class="navelem"><b>Bitmaps.cpp</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

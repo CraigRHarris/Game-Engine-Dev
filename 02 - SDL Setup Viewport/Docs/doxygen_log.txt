@@ -63,8 +63,6 @@ Preprocessing C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Pro
 Parsing file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Player.h...
 Preprocessing C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Plsyer.cpp...
 Parsing file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Plsyer.cpp...
-Preprocessing C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Plsyer.h...
-Parsing file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Plsyer.h...
 Preprocessing C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.cpp...
 Parsing file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.cpp...
 Preprocessing C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h...
@@ -119,8 +117,8 @@ C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for G
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Logger.h:4: warning: Compound Logger is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Pickup.h:5: warning: Compound Pickup is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Player.h:5: warning: Compound Player is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:62: warning: Compound Profile is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:82: warning: Compound Profiler is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:68: warning: Compound Profile is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:88: warning: Compound Profiler is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:17: warning: Compound ProfilerSystem is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:10: warning: Compound SampleData is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/SceneManager.h:35: warning: Compound Scene is not documented.
@@ -164,74 +162,65 @@ Generating style sheet...
 Generating search indices...
 Generating example documentation...
 Generating file sources...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/AssetEditor.cpp...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/AssetEditor.h...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.cpp...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Enemy.cpp...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Enemy.h...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Game.cpp...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Game.h...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Goal.cpp...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Goal.h...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Hierarchy.cpp...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Hierarchy.h...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/I_GuiWindow.cpp...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/I_GuiWindow.h...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.cpp...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Input.cpp...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Input.h...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Logger.cpp...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Logger.h...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Main.cpp...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Pickup.cpp...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Pickup.h...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Player.cpp...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Player.h...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Plsyer.cpp...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Plsyer.h...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.cpp...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Scene.cpp...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/Scene.h...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/SceneManager.cpp...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/SceneManager.h...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/TextureManager.cpp...
-Generating code for file 02 - SDL Setup Viewport/Programming for Graphics/TextureManager.h...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/AssetEditor.cpp...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/AssetEditor.h...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.cpp...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Enemy.cpp...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Enemy.h...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Game.cpp...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Game.h...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Goal.cpp...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Goal.h...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Hierarchy.cpp...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Hierarchy.h...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_GuiWindow.cpp...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_GuiWindow.h...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.cpp...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Input.cpp...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Input.h...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Logger.cpp...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Logger.h...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Main.cpp...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Pickup.cpp...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Pickup.h...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Player.cpp...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Player.h...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Plsyer.cpp...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.cpp...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Scene.cpp...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Scene.h...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/SceneManager.cpp...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/SceneManager.h...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/TextureManager.cpp...
+Generating code for file C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/TextureManager.h...
 Generating file documentation...
 Generating page documentation...
 Generating group documentation...
 Generating class documentation...
 Generating docs for compound AssetEditor...
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/AssetEditor.h:19: warning: Member AssetEditor(SDL_Renderer *renderer, SDL_Window *window, TextureManager *texManager, Game *game) (function) of class AssetEditor is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/AssetEditor.h:25: warning: Member Update() (function) of class AssetEditor is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/AssetEditor.h:17: warning: Member hasSelected (variable) of class AssetEditor is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/AssetEditor.h:17: warning: Member _selected (variable) of class AssetEditor is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/AssetEditor.h:18: warning: Member AssetMouseDrag (variable) of class AssetEditor is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/AssetEditor.h:22: warning: Member p_Renderer (variable) of class AssetEditor is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/AssetEditor.h:23: warning: Member p_Window (variable) of class AssetEditor is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/AssetEditor.h:26: warning: Member content (variable) of class AssetEditor is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/AssetEditor.h:27: warning: Member Dragables (variable) of class AssetEditor is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/AssetEditor.h:26: warning: Member _Renderer (variable) of class AssetEditor is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/AssetEditor.h:27: warning: Member _Window (variable) of class AssetEditor is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/AssetEditor.h:33: warning: Member content (variable) of class AssetEditor is not documented.
 Generating docs for compound Bitmap...
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:36: warning: Member Bitmap(SDL_Renderer *renderer, TextureManager *texManager, std::string fileName, int xpos, int ypos, const std::string _ObjectName, bool useTransparency=false) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:40: warning: Member IsColliding(Bitmap *Other) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:42: warning: Member SetPosition(float x, float y) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:43: warning: Member GetPosition() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:45: warning: Member UpdateX(float xDelta) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:46: warning: Member UpdateY(float yDelta) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:48: warning: Member GUIDraw() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:50: warning: Member GuiDrawChildGUI() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:52: warning: Member SetX(float x) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:53: warning: Member SetY(float y) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:56: warning: Member SetGrounded(bool grounded) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:58: warning: Member GetTransformRect() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:63: warning: Member draw() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:65: warning: Member GetTextureRef() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:11: warning: Member addchild(I_SceneNode *childtoAdd) (function) of class I_SceneNode is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:12: warning: Member removechild(I_SceneNode *childtoRemove) (function) of class I_SceneNode is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:57: warning: Member SetPosition(float x, float y) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:59: warning: Member GetPosition() (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:61: warning: Member UpdateX(float xDelta) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:62: warning: Member UpdateY(float yDelta) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:64: warning: Member GUIDraw() (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:71: warning: Member SetX(float x) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:72: warning: Member SetY(float y) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:75: warning: Member SetGrounded(bool grounded) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:77: warning: Member GetTransformRect() (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:82: warning: Member draw() (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:84: warning: Member GetTextureRef() (function) of class Bitmap is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:33: warning: Member isGrounded (variable) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:34: warning: Member ObjectName (variable) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:38: warning: Member FileName (variable) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:34: warning: Member Object (variable) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:49: warning: Member FileName (variable) of class Bitmap is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:7: warning: Member parent (variable) of class I_SceneNode is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:8: warning: Member children (variable) of class I_SceneNode is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:32: warning: Member objectCount (variable) of class Bitmap is not documented.
@@ -241,32 +230,32 @@ C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for G
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:26: warning: Member m_y (variable) of class Bitmap is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:27: warning: Member m_h (variable) of class Bitmap is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:27: warning: Member m_w (variable) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:38: warning: argument 'postion' of command @param is not found in the argument list of Bitmap::Bitmap(SDL_Renderer *renderer, TextureManager *texManager, std::string fileName, int xpos, int ypos, const std::string _ObjectName, bool useTransparency=false)
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:38: warning: argument 'object' of command @param is not found in the argument list of Bitmap::Bitmap(SDL_Renderer *renderer, TextureManager *texManager, std::string fileName, int xpos, int ypos, const std::string _ObjectName, bool useTransparency=false)
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:38: warning: argument 'transparent' of command @param is not found in the argument list of Bitmap::Bitmap(SDL_Renderer *renderer, TextureManager *texManager, std::string fileName, int xpos, int ypos, const std::string _ObjectName, bool useTransparency=false)
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:38: warning: The following parameters of Bitmap::Bitmap(SDL_Renderer *renderer, TextureManager *texManager, std::string fileName, int xpos, int ypos, const std::string _ObjectName, bool useTransparency=false) are not documented:
+  parameter 'xpos'
+  parameter 'ypos'
+  parameter '_ObjectName'
+  parameter 'useTransparency'
 Generating docs for compound Enemy...
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Enemy.h:10: warning: Member Enemy(SDL_Renderer *renderer, TextureManager *texManager, std::string fileName, int xpos, int ypos, int left, int right, const std::string ObjectName, bool useTransparency=false) (function) of class Enemy is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Enemy.h:17: warning: Member Update() (function) of class Enemy is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Enemy.h:19: warning: Member FixGroundCollision(Bitmap *ground) (function) of class Enemy is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Enemy.h:21: warning: Member MoveAI() (function) of class Enemy is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Enemy.h:23: warning: Member GUIDraw() override (function) of class Enemy is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Enemy.h:25: warning: Member getLeftBound() (function) of class Enemy is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Enemy.h:26: warning: Member getRightBound() (function) of class Enemy is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:36: warning: Member Bitmap(SDL_Renderer *renderer, TextureManager *texManager, std::string fileName, int xpos, int ypos, const std::string _ObjectName, bool useTransparency=false) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:40: warning: Member IsColliding(Bitmap *Other) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:42: warning: Member SetPosition(float x, float y) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:43: warning: Member GetPosition() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:45: warning: Member UpdateX(float xDelta) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:46: warning: Member UpdateY(float yDelta) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:50: warning: Member GuiDrawChildGUI() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:52: warning: Member SetX(float x) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:53: warning: Member SetY(float y) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:56: warning: Member SetGrounded(bool grounded) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:58: warning: Member GetTransformRect() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:63: warning: Member draw() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:65: warning: Member GetTextureRef() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:11: warning: Member addchild(I_SceneNode *childtoAdd) (function) of class I_SceneNode is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:12: warning: Member removechild(I_SceneNode *childtoRemove) (function) of class I_SceneNode is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Enemy.h:22: warning: Member FixGroundCollision(Bitmap *ground) (function) of class Enemy is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Enemy.h:34: warning: Member getLeftBound() (function) of class Enemy is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Enemy.h:35: warning: Member getRightBound() (function) of class Enemy is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:57: warning: Member SetPosition(float x, float y) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:59: warning: Member GetPosition() (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:61: warning: Member UpdateX(float xDelta) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:62: warning: Member UpdateY(float yDelta) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:71: warning: Member SetX(float x) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:72: warning: Member SetY(float y) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:75: warning: Member SetGrounded(bool grounded) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:77: warning: Member GetTransformRect() (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:82: warning: Member draw() (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:84: warning: Member GetTextureRef() (function) of class Bitmap is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:33: warning: Member isGrounded (variable) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:34: warning: Member ObjectName (variable) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:38: warning: Member FileName (variable) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:34: warning: Member Object (variable) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:49: warning: Member FileName (variable) of class Bitmap is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:7: warning: Member parent (variable) of class I_SceneNode is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:8: warning: Member children (variable) of class I_SceneNode is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:32: warning: Member objectCount (variable) of class Bitmap is not documented.
@@ -277,31 +266,30 @@ C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for G
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:27: warning: Member m_h (variable) of class Bitmap is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:27: warning: Member m_w (variable) of class Bitmap is not documented.
 Generating docs for compound Game...
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Game.h:84: warning: Member addEntity(EntityType type, const std::string &file, int x, int y, const std::string &name, bool trans, bool isNew=false, int left=0, int right=0) (function) of class Game is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Game.h:85: warning: Member Update(void) (function) of class Game is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Game.h:86: warning: Member SetDisplayColour(int r, int g, int b, int a) (function) of class Game is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Game.h:88: warning: Member isRunning() (function) of class Game is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Game.h:117: warning: Member SetDisplayColour(int r, int g, int b, int a) (function) of class Game is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Game.h:119: warning: Member isRunning() (function) of class Game is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Game.h:100: warning: argument 'positon' of command @param is not found in the argument list of Game::addEntity(EntityType type, const std::string &file, int x, int y, const std::string &name, bool trans, bool isNew=false, int left=0, int right=0)
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Game.h:100: warning: argument 'Transparency' of command @param is not found in the argument list of Game::addEntity(EntityType type, const std::string &file, int x, int y, const std::string &name, bool trans, bool isNew=false, int left=0, int right=0)
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Game.h:100: warning: The following parameters of Game::addEntity(EntityType type, const std::string &file, int x, int y, const std::string &name, bool trans, bool isNew=false, int left=0, int right=0) are not documented:
+  parameter 'x'
+  parameter 'y'
+  parameter 'trans'
 Generating docs for compound Goal...
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Goal.h:8: warning: Member Goal(SDL_Renderer *renderer, TextureManager *texManager, std::string fileName, int xpos, int ypos, const std::string ObjectName, bool useTransparency=false) (function) of class Goal is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:36: warning: Member Bitmap(SDL_Renderer *renderer, TextureManager *texManager, std::string fileName, int xpos, int ypos, const std::string _ObjectName, bool useTransparency=false) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:40: warning: Member IsColliding(Bitmap *Other) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:42: warning: Member SetPosition(float x, float y) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:43: warning: Member GetPosition() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:45: warning: Member UpdateX(float xDelta) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:46: warning: Member UpdateY(float yDelta) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:48: warning: Member GUIDraw() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:50: warning: Member GuiDrawChildGUI() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:52: warning: Member SetX(float x) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:53: warning: Member SetY(float y) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:56: warning: Member SetGrounded(bool grounded) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:58: warning: Member GetTransformRect() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:63: warning: Member draw() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:65: warning: Member GetTextureRef() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:11: warning: Member addchild(I_SceneNode *childtoAdd) (function) of class I_SceneNode is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:12: warning: Member removechild(I_SceneNode *childtoRemove) (function) of class I_SceneNode is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:57: warning: Member SetPosition(float x, float y) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:59: warning: Member GetPosition() (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:61: warning: Member UpdateX(float xDelta) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:62: warning: Member UpdateY(float yDelta) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:64: warning: Member GUIDraw() (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:71: warning: Member SetX(float x) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:72: warning: Member SetY(float y) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:75: warning: Member SetGrounded(bool grounded) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:77: warning: Member GetTransformRect() (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:82: warning: Member draw() (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:84: warning: Member GetTextureRef() (function) of class Bitmap is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:33: warning: Member isGrounded (variable) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:34: warning: Member ObjectName (variable) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:38: warning: Member FileName (variable) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:34: warning: Member Object (variable) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:49: warning: Member FileName (variable) of class Bitmap is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:7: warning: Member parent (variable) of class I_SceneNode is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:8: warning: Member children (variable) of class I_SceneNode is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:32: warning: Member objectCount (variable) of class Bitmap is not documented.
@@ -312,16 +300,15 @@ C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for G
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:27: warning: Member m_h (variable) of class Bitmap is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:27: warning: Member m_w (variable) of class Bitmap is not documented.
 Generating docs for compound Hierarchy...
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Hierarchy.h:8: warning: Member Hierarchy(I_SceneNode *_Root) (function) of class Hierarchy is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Hierarchy.h:9: warning: Member Update() (function) of class Hierarchy is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Hierarchy.h:10: warning: Member Root (variable) of class Hierarchy is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Hierarchy.h:20: warning: Member Root (variable) of class Hierarchy is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Hierarchy.h:10: warning: argument 'Root' of command @param is not found in the argument list of Hierarchy::Hierarchy(I_SceneNode *_Root)
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Hierarchy.h:10: warning: The following parameter of Hierarchy::Hierarchy(I_SceneNode *_Root) is not documented:
+  parameter '_Root'
 Generating docs for compound I_GuiWindow...
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_GuiWindow.h:11: warning: Member GUIDraw()=0 (function) of class I_GuiWindow is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_GuiWindow.h:8: warning: Member SelectedObject (variable) of class I_GuiWindow is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_GuiWindow.h:9: warning: Member SelectedObjectForDragging (variable) of class I_GuiWindow is not documented.
 Generating docs for compound I_SceneNode...
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:11: warning: Member addchild(I_SceneNode *childtoAdd) (function) of class I_SceneNode is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:12: warning: Member removechild(I_SceneNode *childtoRemove) (function) of class I_SceneNode is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:7: warning: Member parent (variable) of class I_SceneNode is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:8: warning: Member children (variable) of class I_SceneNode is not documented.
 Generating docs for compound Input...
@@ -330,30 +317,24 @@ C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for G
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Input.h:17: warning: Member EventKeyReleased(SDL_Keycode key) (function) of class Input is not documented.
 Generating docs for compound Logger...
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Logger.h:8: warning: Member Category (enumeration) of class Logger is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Logger.h:15: warning: Member Log(Logger::Category category, const std::string &buffer) (function) of class Logger is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Logger.h:16: warning: Member Info(const std::string &buffer) (function) of class Logger is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Logger.h:17: warning: Member Error(const std::string &buffer) (function) of class Logger is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Logger.h:22: warning: Member Info(const std::string &buffer) (function) of class Logger is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Logger.h:23: warning: Member Error(const std::string &buffer) (function) of class Logger is not documented.
 Generating docs for compound Pickup...
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Pickup.h:8: warning: Member Pickup(SDL_Renderer *renderer, TextureManager *texManager, std::string fileName, int xpos, int ypos, const std::string ObjectName, bool useTransparency=false) (function) of class Pickup is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Pickup.h:12: warning: Member IsColliding(Bitmap *other) override (function) of class Pickup is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:36: warning: Member Bitmap(SDL_Renderer *renderer, TextureManager *texManager, std::string fileName, int xpos, int ypos, const std::string _ObjectName, bool useTransparency=false) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:42: warning: Member SetPosition(float x, float y) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:43: warning: Member GetPosition() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:45: warning: Member UpdateX(float xDelta) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:46: warning: Member UpdateY(float yDelta) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:48: warning: Member GUIDraw() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:50: warning: Member GuiDrawChildGUI() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:52: warning: Member SetX(float x) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:53: warning: Member SetY(float y) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:56: warning: Member SetGrounded(bool grounded) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:58: warning: Member GetTransformRect() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:63: warning: Member draw() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:65: warning: Member GetTextureRef() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:11: warning: Member addchild(I_SceneNode *childtoAdd) (function) of class I_SceneNode is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:12: warning: Member removechild(I_SceneNode *childtoRemove) (function) of class I_SceneNode is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:57: warning: Member SetPosition(float x, float y) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:59: warning: Member GetPosition() (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:61: warning: Member UpdateX(float xDelta) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:62: warning: Member UpdateY(float yDelta) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:64: warning: Member GUIDraw() (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:71: warning: Member SetX(float x) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:72: warning: Member SetY(float y) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:75: warning: Member SetGrounded(bool grounded) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:77: warning: Member GetTransformRect() (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:82: warning: Member draw() (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:84: warning: Member GetTextureRef() (function) of class Bitmap is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:33: warning: Member isGrounded (variable) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:34: warning: Member ObjectName (variable) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:38: warning: Member FileName (variable) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:34: warning: Member Object (variable) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:49: warning: Member FileName (variable) of class Bitmap is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:7: warning: Member parent (variable) of class I_SceneNode is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:8: warning: Member children (variable) of class I_SceneNode is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:32: warning: Member objectCount (variable) of class Bitmap is not documented.
@@ -365,30 +346,22 @@ C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for G
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:27: warning: Member m_w (variable) of class Bitmap is not documented.
 Generating docs for compound Player...
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Player.h:10: warning: Member Player(SDL_Renderer *renderer, TextureManager *texManager, std::string fileName, int xpos, int ypos, const std::string ObjectName, bool useTransparency=false) (function) of class Player is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Player.h:14: warning: Member Update() (function) of class Player is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Player.h:16: warning: Member FixGroundCollision(Bitmap *ground) (function) of class Player is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Player.h:18: warning: Member Jump() (function) of class Player is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Player.h:20: warning: Member addKey() (function) of class Player is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Player.h:21: warning: Member getKeys() const (function) of class Player is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Player.h:23: warning: Member GUIDraw() override (function) of class Player is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:36: warning: Member Bitmap(SDL_Renderer *renderer, TextureManager *texManager, std::string fileName, int xpos, int ypos, const std::string _ObjectName, bool useTransparency=false) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:40: warning: Member IsColliding(Bitmap *Other) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:42: warning: Member SetPosition(float x, float y) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:43: warning: Member GetPosition() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:45: warning: Member UpdateX(float xDelta) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:46: warning: Member UpdateY(float yDelta) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:50: warning: Member GuiDrawChildGUI() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:52: warning: Member SetX(float x) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:53: warning: Member SetY(float y) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:56: warning: Member SetGrounded(bool grounded) (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:58: warning: Member GetTransformRect() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:63: warning: Member draw() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:65: warning: Member GetTextureRef() (function) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:11: warning: Member addchild(I_SceneNode *childtoAdd) (function) of class I_SceneNode is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:12: warning: Member removechild(I_SceneNode *childtoRemove) (function) of class I_SceneNode is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Player.h:25: warning: Member Jump() (function) of class Player is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Player.h:27: warning: Member addKey() (function) of class Player is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Player.h:28: warning: Member getKeys() const (function) of class Player is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:57: warning: Member SetPosition(float x, float y) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:59: warning: Member GetPosition() (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:61: warning: Member UpdateX(float xDelta) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:62: warning: Member UpdateY(float yDelta) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:71: warning: Member SetX(float x) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:72: warning: Member SetY(float y) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:75: warning: Member SetGrounded(bool grounded) (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:77: warning: Member GetTransformRect() (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:82: warning: Member draw() (function) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:84: warning: Member GetTextureRef() (function) of class Bitmap is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:33: warning: Member isGrounded (variable) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:34: warning: Member ObjectName (variable) of class Bitmap is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:38: warning: Member FileName (variable) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:34: warning: Member Object (variable) of class Bitmap is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:49: warning: Member FileName (variable) of class Bitmap is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:7: warning: Member parent (variable) of class I_SceneNode is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/I_SceneNode.h:8: warning: Member children (variable) of class I_SceneNode is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:32: warning: Member objectCount (variable) of class Bitmap is not documented.
@@ -398,28 +371,24 @@ C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for G
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:26: warning: Member m_y (variable) of class Bitmap is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:27: warning: Member m_h (variable) of class Bitmap is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:27: warning: Member m_w (variable) of class Bitmap is not documented.
-Generating docs for compound Plsyer...
 Generating docs for compound position...
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:14: warning: Member x (variable) of struct position is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Bitmaps.h:14: warning: Member y (variable) of struct position is not documented.
 Generating docs for compound Profile...
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:64: warning: Member Profile(const char *name) (function) of struct Profile is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:78: warning: Member _name (variable) of struct Profile is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:79: warning: Member startTime (variable) of struct Profile is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:70: warning: Member Profile(const char *name) (function) of struct Profile is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:84: warning: Member _name (variable) of struct Profile is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:85: warning: Member startTime (variable) of struct Profile is not documented.
 Generating docs for compound Profiler...
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:86: warning: Member push(float FrameTime) (function) of struct Profiler is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:87: warning: Member AverageTime() (function) of struct Profiler is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:89: warning: Member CalculateFPSValue(float averageFrameTime) (function) of struct Profiler is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:91: warning: Member Capacity (variable) of struct Profiler is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:92: warning: Member FrameTimeQueue (variable) of struct Profiler is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:101: warning: Member CalculateFPSValue(float averageFrameTime) (function) of struct Profiler is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:103: warning: Member Capacity (variable) of struct Profiler is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:104: warning: Member FrameTimeQueue (variable) of struct Profiler is not documented.
 Generating docs for compound ProfilerSystem...
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:29: warning: Member StartFrame() (function) of class ProfilerSystem is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:30: warning: Member StoreSample(const char *name, int64_t elapsedTime) (function) of class ProfilerSystem is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:31: warning: Member EndFrame() (function) of class ProfilerSystem is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:33: warning: Member GetFrameData() const (function) of class ProfilerSystem is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:38: warning: Member GetCurrentFrame() (function) of class ProfilerSystem is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:43: warning: Member GetLastFrameData() const (function) of class ProfilerSystem is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:48: warning: Member GetFrameTimes() (function) of class ProfilerSystem is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:32: warning: Member StartFrame() (function) of class ProfilerSystem is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:37: warning: Member EndFrame() (function) of class ProfilerSystem is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:39: warning: Member GetFrameData() const (function) of class ProfilerSystem is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:44: warning: Member GetCurrentFrame() (function) of class ProfilerSystem is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:49: warning: Member GetLastFrameData() const (function) of class ProfilerSystem is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:54: warning: Member GetFrameTimes() (function) of class ProfilerSystem is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:20: warning: Member Instance() (function) of class ProfilerSystem is not documented.
 Generating docs for compound SampleData...
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h:12: warning: Member frameTime (variable) of struct SampleData is not documented.
@@ -438,17 +407,21 @@ C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for G
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/SceneManager.h:31: warning: Member leftBound (variable) of struct SceneEntity is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/SceneManager.h:32: warning: Member rightBound (variable) of struct SceneEntity is not documented.
 Generating docs for compound SceneManager...
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/SceneManager.h:43: warning: Member readscene(std::string filepath) (function) of class SceneManager is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/SceneManager.h:44: warning: Member savescene(const std::string &file, const std::vector< Bitmap * > &objects) (function) of class SceneManager is not documented.
 Generating docs for compound TextureData...
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/TextureManager.h:8: warning: Member tex (variable) of struct TextureData is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/TextureManager.h:9: warning: Member width (variable) of struct TextureData is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/TextureManager.h:10: warning: Member height (variable) of struct TextureData is not documented.
 Generating docs for compound TextureManager...
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/TextureManager.h:22: warning: Member Load(const std::string fileName, bool useTransparancy, SDL_Renderer *PRenderer, int &width, int &height) (function) of class TextureManager is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/TextureManager.h:23: warning: Member Unload(const std::string fileName) (function) of class TextureManager is not documented.
 C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/TextureManager.h:17: warning: Member m_textureMap (variable) of class TextureManager is not documented.
-C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/TextureManager.h:21: warning: Member m_surface (variable) of class TextureManager is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/TextureManager.h:21: warning: Member _surface (variable) of class TextureManager is not documented.
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/TextureManager.h:24: warning: argument 'Transparancy' of command @param is not found in the argument list of TextureManager::Load(const std::string fileName, bool useTransparancy, SDL_Renderer *PRenderer, int &width, int &height)
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/TextureManager.h:24: warning: argument 'renderer' of command @param is not found in the argument list of TextureManager::Load(const std::string fileName, bool useTransparancy, SDL_Renderer *PRenderer, int &width, int &height)
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/TextureManager.h:24: warning: The following parameters of TextureManager::Load(const std::string fileName, bool useTransparancy, SDL_Renderer *PRenderer, int &width, int &height) are not documented:
+  parameter 'useTransparancy'
+  parameter 'PRenderer'
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/TextureManager.h:34: warning: argument 'filename' of command @param is not found in the argument list of TextureManager::Unload(const std::string fileName)
+C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/TextureManager.h:34: warning: The following parameter of TextureManager::Unload(const std::string fileName) is not documented:
+  parameter 'fileName'
 Generating concept documentation...
 Generating module documentation...
 Generating namespace documentation...
@@ -472,8 +445,8 @@ Generating example index...
 finalizing index lists...
 writing tag file...
 Running plantuml with JAVA...
-type lookup cache used 253/65536 hits=447 misses=286
-symbol lookup cache used 924/65536 hits=2875 misses=924
+type lookup cache used 247/65536 hits=438 misses=280
+symbol lookup cache used 871/65536 hits=2877 misses=871
 finished...
 
 *** Doxygen has finished

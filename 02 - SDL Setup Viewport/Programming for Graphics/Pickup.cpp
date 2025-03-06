@@ -7,7 +7,7 @@ bool Pickup::IsColliding(Bitmap* other)
 {
 	if (!enabled) return false;
 
-	Player* player = dynamic_cast<Player*>(other);// checks if we're colliding with the player
+	Player* player = dynamic_cast<Player*>(other);
 	if (player == nullptr)
 	{
 		return false;
@@ -17,7 +17,7 @@ bool Pickup::IsColliding(Bitmap* other)
 
 	if (playerCol)
 	{
-		player->addKey();// add a Key to the total if player is colliding
+		player->addKey();
 		enabled = false;
 		Logger::Info("Key Collected.");
 		return true;

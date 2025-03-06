@@ -33,7 +33,7 @@ void Enemy::FixGroundCollision(Bitmap* ground)
 void Enemy::MoveAI()
 {
 	position EnemyPosition = GetPosition();
-	movementSpeed = 3;
+	moveSpeed = 3;
 	
 	//Left point
 	if (EnemyPosition.x <= point_l && direction == -1)
@@ -45,7 +45,7 @@ void Enemy::MoveAI()
 	{
 		direction = -1;
 	}
-	xVelocity = movementSpeed * direction;
+	xVelocity = moveSpeed * direction;
 	UpdateX(xVelocity);
 
 }
@@ -59,6 +59,6 @@ void Enemy::GUIDraw()
 	int* TempPosAddressArry[2] = { &point_l, &point_r };
 	ImGui::InputInt2("Bounds:", *TempPosAddressArry);
 
-	ImGui::SliderFloat("Movement Speed:", &movementSpeed, 0, 10);
+	ImGui::SliderFloat("Movement Speed:", &moveSpeed, 0, 10);
 	ImGui::End();
 }

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['update_0',['Update',['../class_asset_editor.html#a9968db2419ed536bccc2767e4515fcc3',1,'AssetEditor']]]
+  ['fixgroundcollision_0',['FixGroundCollision',['../class_player.html#a36fa840b0d174215c8a912cb31ca0729',1,'Player']]]
 ];

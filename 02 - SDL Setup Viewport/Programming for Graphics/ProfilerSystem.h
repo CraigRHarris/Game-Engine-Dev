@@ -23,10 +23,16 @@ public:
 		return INSTANCE;
 	}
 
+	/**
+	Getting frame data for last and this frame into a map.
+	*/
 	ProfilerSystem();
 	~ProfilerSystem();
 
 	void StartFrame();
+	/**
+	store sample of frames over time. 
+	*/
 	void StoreSample(const char* name, int64_t elapsedTime);
 	void EndFrame();
 
@@ -83,7 +89,13 @@ struct Profiler
 {
 public:
 
+	/**
+	Push frame time queue to go though frames
+	*/
 	void push(float FrameTime);
+	/**
+	Average frame time
+	*/
 	float AverageTime();
 
 	float CalculateFPSValue(float averageFrameTime);

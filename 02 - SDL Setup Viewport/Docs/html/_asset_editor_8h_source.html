@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/AssetEditor.h Source File</title>
+<title>Game Engine Dev: C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/AssetEditor.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,8 +32,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Game Engine Dev<span id="projectnumber">&#160;0.0.0.1</span>
    </div>
+   <div id="projectbrief">Game Engine with Tools</div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -122,14 +123,14 @@ $(function(){initNavTree('_asset_editor_8h_source.html',''); initResizable(true)
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_asset_editor.html">   14</a></span><span class="keyword">class </span><a class="code hl_function" href="class_asset_editor.html#ace8223b7781cb5a0ca05e5a8b0862d9e">AssetEditor</a></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">bool</span> hasSelected{ <span class="keyword">false</span> };</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">bool</span> _selected{ <span class="keyword">false</span> };</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_class" href="class_bitmap.html">Bitmap</a>* AssetMouseDrag = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_function" href="class_asset_editor.html#ace8223b7781cb5a0ca05e5a8b0862d9e">AssetEditor</a>(SDL_Renderer* renderer, SDL_Window* window, <a class="code hl_class" href="class_texture_manager.html">TextureManager</a>* texManager, <a class="code hl_class" href="class_game.html">Game</a>* game );</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">//std::vector&lt;Bitmap*&gt; content;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    SDL_Renderer* p_Renderer;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    SDL_Window* p_Window;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    SDL_Renderer* _Renderer;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    SDL_Window* _Window;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_asset_editor.html#a9968db2419ed536bccc2767e4515fcc3">Update</a>(); </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    std::vector&lt;Bitmap*&gt; content;</div>
@@ -142,11 +143,11 @@ $(function(){initNavTree('_asset_editor_8h_source.html',''); initResizable(true)
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
 </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="ttc" id="aclass_asset_editor_html_a9968db2419ed536bccc2767e4515fcc3"><div class="ttname"><a href="class_asset_editor.html#a9968db2419ed536bccc2767e4515fcc3">AssetEditor::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition</b> AssetEditor.cpp:52</div></div>
-<div class="ttc" id="aclass_asset_editor_html_ace8223b7781cb5a0ca05e5a8b0862d9e"><div class="ttname"><a href="class_asset_editor.html#ace8223b7781cb5a0ca05e5a8b0862d9e">AssetEditor::AssetEditor</a></div><div class="ttdeci">AssetEditor(SDL_Renderer *renderer, SDL_Window *window, TextureManager *texManager, Game *game)</div><div class="ttdef"><b>Definition</b> AssetEditor.cpp:24</div></div>
-<div class="ttc" id="aclass_bitmap_html"><div class="ttname"><a href="class_bitmap.html">Bitmap</a></div><div class="ttdef"><b>Definition</b> Bitmaps.h:17</div></div>
-<div class="ttc" id="aclass_game_html"><div class="ttname"><a href="class_game.html">Game</a></div><div class="ttdef"><b>Definition</b> Game.h:28</div></div>
-<div class="ttc" id="aclass_texture_manager_html"><div class="ttname"><a href="class_texture_manager.html">TextureManager</a></div><div class="ttdef"><b>Definition</b> TextureManager.h:15</div></div>
+<div class="ttc" id="aclass_asset_editor_html_a9968db2419ed536bccc2767e4515fcc3"><div class="ttname"><a href="class_asset_editor.html#a9968db2419ed536bccc2767e4515fcc3">AssetEditor::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition</b> <a href="_asset_editor_8cpp_source.html#l00052">AssetEditor.cpp:52</a></div></div>
+<div class="ttc" id="aclass_asset_editor_html_ace8223b7781cb5a0ca05e5a8b0862d9e"><div class="ttname"><a href="class_asset_editor.html#ace8223b7781cb5a0ca05e5a8b0862d9e">AssetEditor::AssetEditor</a></div><div class="ttdeci">AssetEditor(SDL_Renderer *renderer, SDL_Window *window, TextureManager *texManager, Game *game)</div><div class="ttdef"><b>Definition</b> <a href="_asset_editor_8cpp_source.html#l00024">AssetEditor.cpp:24</a></div></div>
+<div class="ttc" id="aclass_bitmap_html"><div class="ttname"><a href="class_bitmap.html">Bitmap</a></div><div class="ttdef"><b>Definition</b> <a href="_bitmaps_8h_source.html#l00016">Bitmaps.h:17</a></div></div>
+<div class="ttc" id="aclass_game_html"><div class="ttname"><a href="class_game.html">Game</a></div><div class="ttdef"><b>Definition</b> <a href="_game_8h_source.html#l00027">Game.h:28</a></div></div>
+<div class="ttc" id="aclass_texture_manager_html"><div class="ttname"><a href="class_texture_manager.html">TextureManager</a></div><div class="ttdef"><b>Definition</b> <a href="_texture_manager_8h_source.html#l00014">TextureManager.h:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -11,8 +11,15 @@ public:
 		Logger::Info("Player");
 	}
 
+
+	/**
+	Added gravity to player with velocity.
+	*/
 	void Update();
 
+	/**
+	Added the fix ground is colliding with the player
+	*/
 	void FixGroundCollision(Bitmap* ground);
 
 	void Jump();
@@ -20,6 +27,9 @@ public:
 	void addKey() { KeysCollected++; }
 	int getKeys() const { return KeysCollected; }
 
+	/**
+	Output to check if key is collected
+	*/
 	void GUIDraw() override;
 
 private:

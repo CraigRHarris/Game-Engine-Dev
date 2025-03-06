@@ -79,8 +79,8 @@ private:
 	TextureManager* _texManager;
 	Profiler* profiler;
 
-	SDL_Window* m_Window{ nullptr }; // Tells the compiler that there will be a struct named SDL_Window defined.
-	SDL_Renderer* m_Renderer{ nullptr };
+	SDL_Window* _Window{ nullptr }; // Tells the compiler that there will be a struct named SDL_Window defined.
+	SDL_Renderer* _Renderer{ nullptr };
 	
 	void loadScene(Scene& scene);
 
@@ -92,22 +92,20 @@ private:
 
 public:
 	
-	/**
-	All of the fuctions in the game scene.
-	*/
+
 	Game();
 	~Game();
 
 	/**
 	* Going though each object to get the bitmap of that object. Sets the object, then add it to the hierarchy for each object. 
-	* @ param type
-	* @ param file
-	* @ param positon
-	* @ param name
-	* @ param Transparency
-	* @ param isNew
-	* @ param left
-	* @ param right
+	* @param type Which object is loading.
+	* @param file finding the file.
+	* @param positon where it will be in the scene.
+	* @param name object name.
+	* @param Transparency If the asset needs a background.
+	* @param isNew Is it new to the scene.
+	* @param left
+	* @param right
 	*/
 	void addEntity(EntityType type, const std::string& file, int x, int y, const std::string& name, bool trans, bool isNew = false, int left = 0, int right = 0);
 	

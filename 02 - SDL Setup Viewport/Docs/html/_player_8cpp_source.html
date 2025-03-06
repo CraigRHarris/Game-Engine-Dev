@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Game Engine Dev: 02 - SDL Setup Viewport/Programming for Graphics/Player.cpp Source File</title>
+<title>Game Engine Dev: C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/Player.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -111,7 +111,8 @@ $(function(){initNavTree('_player_8cpp_source.html',''); initResizable(true); })
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;format&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keywordtype">void</span> Player::Update() {</div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="}">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_player.html#a05b60cac1922c5be5c1be16baffa4497">    6</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#a05b60cac1922c5be5c1be16baffa4497">Player::Update</a>() {</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keywordflow">if</span> (!isGrounded)</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> gravity = 0.98;</div>
@@ -124,10 +125,12 @@ $(function(){initNavTree('_player_8cpp_source.html',''); initResizable(true); })
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        yVelocity = 0.0f;<span class="comment">// velocity is 0 if grounded</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>}</div>
+</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">void</span> Player::FixGroundCollision(<a class="code hl_class" href="class_bitmap.html">Bitmap</a>* ground)</div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_player.html#a36fa840b0d174215c8a912cb31ca0729">   20</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#a36fa840b0d174215c8a912cb31ca0729">Player::FixGroundCollision</a>(<a class="code hl_function" href="class_bitmap.html#ab5d51f7486c5151291ac53fe2f756a98">Bitmap</a>* ground)</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordflow">if</span> (IsColliding(ground))</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="class_bitmap.html#a47c1b951356e7669a94dcca9dfb1b140">IsColliding</a>(ground))</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        isGrounded = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        </div>
@@ -150,6 +153,7 @@ $(function(){initNavTree('_player_8cpp_source.html',''); initResizable(true); })
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        isGrounded = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
+</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">void</span> Player::Jump()</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
@@ -163,7 +167,8 @@ $(function(){initNavTree('_player_8cpp_source.html',''); initResizable(true); })
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">    }*/</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keywordtype">void</span> Player::GUIDraw()</div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_player.html#a16656f14c40c24b9761bef0a83612308">   58</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#a16656f14c40c24b9761bef0a83612308">Player::GUIDraw</a>()</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>{</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    Bitmap::GUIDraw();</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
@@ -174,14 +179,19 @@ $(function(){initNavTree('_player_8cpp_source.html',''); initResizable(true); })
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    ImGui::End();</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
+</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="ttc" id="aclass_bitmap_html"><div class="ttname"><a href="class_bitmap.html">Bitmap</a></div><div class="ttdef"><b>Definition</b> <a href="_bitmaps_8h_source.html#l00016">Bitmaps.h:17</a></div></div>
+<div class="ttc" id="aclass_bitmap_html_a47c1b951356e7669a94dcca9dfb1b140"><div class="ttname"><a href="class_bitmap.html#a47c1b951356e7669a94dcca9dfb1b140">Bitmap::IsColliding</a></div><div class="ttdeci">virtual bool IsColliding(Bitmap *Other)</div><div class="ttdef"><b>Definition</b> <a href="_bitmaps_8cpp_source.html#l00011">Bitmaps.cpp:11</a></div></div>
+<div class="ttc" id="aclass_bitmap_html_ab5d51f7486c5151291ac53fe2f756a98"><div class="ttname"><a href="class_bitmap.html#ab5d51f7486c5151291ac53fe2f756a98">Bitmap::Bitmap</a></div><div class="ttdeci">Bitmap(SDL_Renderer *renderer, TextureManager *texManager, std::string fileName, int xpos, int ypos, const std::string _ObjectName, bool useTransparency=false)</div><div class="ttdef"><b>Definition</b> <a href="_bitmaps_8cpp_source.html#l00025">Bitmaps.cpp:25</a></div></div>
+<div class="ttc" id="aclass_player_html_a05b60cac1922c5be5c1be16baffa4497"><div class="ttname"><a href="class_player.html#a05b60cac1922c5be5c1be16baffa4497">Player::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition</b> <a href="#l00006">Player.cpp:6</a></div></div>
+<div class="ttc" id="aclass_player_html_a16656f14c40c24b9761bef0a83612308"><div class="ttname"><a href="class_player.html#a16656f14c40c24b9761bef0a83612308">Player::GUIDraw</a></div><div class="ttdeci">void GUIDraw() override</div><div class="ttdef"><b>Definition</b> <a href="#l00058">Player.cpp:58</a></div></div>
+<div class="ttc" id="aclass_player_html_a36fa840b0d174215c8a912cb31ca0729"><div class="ttname"><a href="class_player.html#a36fa840b0d174215c8a912cb31ca0729">Player::FixGroundCollision</a></div><div class="ttdeci">void FixGroundCollision(Bitmap *ground)</div><div class="ttdef"><b>Definition</b> <a href="#l00020">Player.cpp:20</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e5d19915ff6f3ef2be94ff008508d75b.html">02 - SDL Setup Viewport</a></li><li class="navelem"><a class="el" href="dir_66aedea45201f37e7f5ff485de8070e9.html">Programming for Graphics</a></li><li class="navelem"><b>Player.cpp</b></li>
+    <li class="navelem"><a class="el" href="dir_38fae16b77d92cd971ace5681c3e792a.html">Programming for Graphics</a></li><li class="navelem"><b>Player.cpp</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

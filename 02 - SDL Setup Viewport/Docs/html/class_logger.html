@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Logger Class Reference</title>
+<title>Game Engine Dev: Logger Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,8 +32,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Game Engine Dev<span id="projectnumber">&#160;0.0.0.1</span>
    </div>
+   <div id="projectbrief">Game Engine with Tools</div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -112,7 +113,7 @@ $(function(){initNavTree('class_logger.html',''); initResizable(true); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:acf6504ca665f0a0d7a4e4ae9746f1e7d" id="r_acf6504ca665f0a0d7a4e4ae9746f1e7d"><td class="memItemLeft" align="right" valign="top"><a id="acf6504ca665f0a0d7a4e4ae9746f1e7d" name="acf6504ca665f0a0d7a4e4ae9746f1e7d"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>Category</b> { <b>Info</b>
+<tr class="memitem:acf6504ca665f0a0d7a4e4ae9746f1e7d" id="r_acf6504ca665f0a0d7a4e4ae9746f1e7d"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><b>Category</b> { <b>Info</b>
 , <b>Debug</b>
 , <b>Error</b>
 , <b>Critical</b>
@@ -121,19 +122,137 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ab9f543506e93923a0b3552b25daa920e" id="r_ab9f543506e93923a0b3552b25daa920e"><td class="memItemLeft" align="right" valign="top"><a id="ab9f543506e93923a0b3552b25daa920e" name="ab9f543506e93923a0b3552b25daa920e"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>Log</b> (Logger::Category category, const std::string &amp;buffer)</td></tr>
+<tr class="memitem:ab9f543506e93923a0b3552b25daa920e" id="r_ab9f543506e93923a0b3552b25daa920e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9f543506e93923a0b3552b25daa920e">Log</a> (Logger::Category category, const std::string &amp;buffer)</td></tr>
 <tr class="separator:ab9f543506e93923a0b3552b25daa920e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3326f6461300f103f9bbe12636381d55" id="r_a3326f6461300f103f9bbe12636381d55"><td class="memItemLeft" align="right" valign="top"><a id="a3326f6461300f103f9bbe12636381d55" name="a3326f6461300f103f9bbe12636381d55"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>Info</b> (const std::string &amp;buffer)</td></tr>
+<tr class="memitem:a3326f6461300f103f9bbe12636381d55" id="r_a3326f6461300f103f9bbe12636381d55"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3326f6461300f103f9bbe12636381d55">Info</a> (const std::string &amp;buffer)</td></tr>
 <tr class="separator:a3326f6461300f103f9bbe12636381d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b38a19d44c3c7a0e9f5c601aaaa3633" id="r_a6b38a19d44c3c7a0e9f5c601aaaa3633"><td class="memItemLeft" align="right" valign="top"><a id="a6b38a19d44c3c7a0e9f5c601aaaa3633" name="a6b38a19d44c3c7a0e9f5c601aaaa3633"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>Error</b> (const std::string &amp;buffer)</td></tr>
+<tr class="memitem:a6b38a19d44c3c7a0e9f5c601aaaa3633" id="r_a6b38a19d44c3c7a0e9f5c601aaaa3633"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b38a19d44c3c7a0e9f5c601aaaa3633">Error</a> (const std::string &amp;buffer)</td></tr>
 <tr class="separator:a6b38a19d44c3c7a0e9f5c601aaaa3633"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="_logger_8h_source.html#l00004">4</a> of file <a class="el" href="_logger_8h_source.html">Logger.h</a>.</p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="acf6504ca665f0a0d7a4e4ae9746f1e7d" name="acf6504ca665f0a0d7a4e4ae9746f1e7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf6504ca665f0a0d7a4e4ae9746f1e7d">&#9670;&#160;</a></span>Category</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class Logger::Category</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_logger_8h_source.html#l00008">8</a> of file <a class="el" href="_logger_8h_source.html">Logger.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6b38a19d44c3c7a0e9f5c601aaaa3633" name="a6b38a19d44c3c7a0e9f5c601aaaa3633"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b38a19d44c3c7a0e9f5c601aaaa3633">&#9670;&#160;</a></span>Error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::Error </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_logger_8cpp_source.html#l00033">33</a> of file <a class="el" href="_logger_8cpp_source.html">Logger.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3326f6461300f103f9bbe12636381d55" name="a3326f6461300f103f9bbe12636381d55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3326f6461300f103f9bbe12636381d55">&#9670;&#160;</a></span>Info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::Info </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_logger_8cpp_source.html#l00028">28</a> of file <a class="el" href="_logger_8cpp_source.html">Logger.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab9f543506e93923a0b3552b25daa920e" name="ab9f543506e93923a0b3552b25daa920e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9f543506e93923a0b3552b25daa920e">&#9670;&#160;</a></span>Log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logger::Log </td>
+          <td>(</td>
+          <td class="paramtype">Logger::Category</td>          <td class="paramname"><span class="paramname"><em>category</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Finding the category for logger. Then output a message that is put into the logger. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">category</td><td>The category to log. </td></tr>
+    <tr><td class="paramname">buffer</td><td>using the buffer for logging. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_logger_8cpp_source.html#l00009">9</a> of file <a class="el" href="_logger_8cpp_source.html">Logger.cpp</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/<a class="el" href="_logger_8h_source.html">Logger.h</a></li>
-<li>C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/<b>Logger.cpp</b></li>
+<li>C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/<a class="el" href="_logger_8cpp_source.html">Logger.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

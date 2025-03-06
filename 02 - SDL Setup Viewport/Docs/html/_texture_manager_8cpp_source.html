@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Game Engine Dev: 02 - SDL Setup Viewport/Programming for Graphics/TextureManager.cpp Source File</title>
+<title>Game Engine Dev: C:/Users/Games/Desktop/Game-Engine-Dev/02 - SDL Setup Viewport/Programming for Graphics/TextureManager.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -120,7 +120,8 @@ $(function(){initNavTree('_texture_manager_8cpp_source.html',''); initResizable(
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    }</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>}</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordtype">void</span> TextureManager::Unload(<span class="keyword">const</span> std::string fileName)</div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_texture_manager.html#a0b6428ac20e7495ec2e3e8a0c4c869ee">   15</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_texture_manager.html#a0b6428ac20e7495ec2e3e8a0c4c869ee">TextureManager::Unload</a>(<span class="keyword">const</span> std::string fileName)</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">auto</span> searchResult = m_textureMap.find(fileName);</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordflow">if</span> (searchResult != m_textureMap.end())</div>
@@ -130,8 +131,10 @@ $(function(){initNavTree('_texture_manager_8cpp_source.html',''); initResizable(
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        m_textureMap.erase(searchResult);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
+</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>SDL_Texture* TextureManager::Load(<span class="keyword">const</span> std::string fileName, <span class="keywordtype">bool</span> useTransparancy, SDL_Renderer* PRenderer, <span class="keywordtype">int</span>&amp; width, <span class="keywordtype">int</span>&amp; height)</div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_texture_manager.html#a4e8d435a9ff52fd4e045b3d005331f99">   26</a></span>SDL_Texture* <a class="code hl_function" href="class_texture_manager.html#a4e8d435a9ff52fd4e045b3d005331f99">TextureManager::Load</a>(<span class="keyword">const</span> std::string fileName, <span class="keywordtype">bool</span> useTransparancy, SDL_Renderer* PRenderer, <span class="keywordtype">int</span>&amp; width, <span class="keywordtype">int</span>&amp; height)</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    SDL_Texture* m_pbitmapTexture = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
@@ -139,7 +142,7 @@ $(function(){initNavTree('_texture_manager_8cpp_source.html',''); initResizable(
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">auto</span> searchresult = m_textureMap.find(fileName);</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordflow">if</span> (searchresult != m_textureMap.end())</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        TextureData texData = m_textureMap[fileName];</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_struct" href="struct_texture_data.html">TextureData</a> texData = m_textureMap[fileName];</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        width = texData.width;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        height = texData.height;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        m_pbitmapTexture = texData.tex;</div>
@@ -148,9 +151,9 @@ $(function(){initNavTree('_texture_manager_8cpp_source.html',''); initResizable(
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    {</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="comment">//if file does not exist in map</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        m_surface = SDL_LoadBMP(fileName.c_str());</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        _surface = SDL_LoadBMP(fileName.c_str());</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">if</span> (!m_surface)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">if</span> (!_surface)</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        {</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            printf(<span class="stringliteral">&quot;SURFACE for bitmap &#39;%s&#39; not loaded\n&quot;</span>, fileName.c_str());</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            printf(<span class="stringliteral">&quot;%s\n&quot;</span>, SDL_GetError());</div>
@@ -159,34 +162,38 @@ $(function(){initNavTree('_texture_manager_8cpp_source.html',''); initResizable(
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        {</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordflow">if</span> (useTransparancy)</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                Uint32 colourKey = SDL_MapRGB(m_surface-&gt;format, 255, 0, 255);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                SDL_SetColorKey(m_surface, SDL_TRUE, colourKey);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                Uint32 colourKey = SDL_MapRGB(_surface-&gt;format, 255, 0, 255);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                SDL_SetColorKey(_surface, SDL_TRUE, colourKey);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            }</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            m_pbitmapTexture = SDL_CreateTextureFromSurface(PRenderer, m_surface);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            m_pbitmapTexture = SDL_CreateTextureFromSurface(PRenderer, _surface);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keywordflow">if</span> (!m_pbitmapTexture)</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            {</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                printf(<span class="stringliteral">&quot;TEXTURE for bitmap &#39;%s&#39; not loaded!\n&quot;</span>, fileName.c_str());</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                printf(<span class="stringliteral">&quot;%s\n&quot;</span>, SDL_GetError());</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            }</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            width = m_surface-&gt;w;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            height = m_surface-&gt;h;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            width = _surface-&gt;w;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            height = _surface-&gt;h;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            SDL_FreeSurface(m_surface);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            SDL_FreeSurface(_surface);</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            TextureData texData{ m_pbitmapTexture , width, height };</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <a class="code hl_struct" href="struct_texture_data.html">TextureData</a> texData{ m_pbitmapTexture , width, height };</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            m_textureMap[fileName] = texData;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        }</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">return</span> m_pbitmapTexture;</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
+</div>
+<div class="ttc" id="aclass_texture_manager_html_a0b6428ac20e7495ec2e3e8a0c4c869ee"><div class="ttname"><a href="class_texture_manager.html#a0b6428ac20e7495ec2e3e8a0c4c869ee">TextureManager::Unload</a></div><div class="ttdeci">void Unload(const std::string fileName)</div><div class="ttdef"><b>Definition</b> <a href="#l00015">TextureManager.cpp:15</a></div></div>
+<div class="ttc" id="aclass_texture_manager_html_a4e8d435a9ff52fd4e045b3d005331f99"><div class="ttname"><a href="class_texture_manager.html#a4e8d435a9ff52fd4e045b3d005331f99">TextureManager::Load</a></div><div class="ttdeci">SDL_Texture * Load(const std::string fileName, bool useTransparancy, SDL_Renderer *PRenderer, int &amp;width, int &amp;height)</div><div class="ttdef"><b>Definition</b> <a href="#l00026">TextureManager.cpp:26</a></div></div>
+<div class="ttc" id="astruct_texture_data_html"><div class="ttname"><a href="struct_texture_data.html">TextureData</a></div><div class="ttdef"><b>Definition</b> <a href="_texture_manager_8h_source.html#l00006">TextureManager.h:7</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e5d19915ff6f3ef2be94ff008508d75b.html">02 - SDL Setup Viewport</a></li><li class="navelem"><a class="el" href="dir_66aedea45201f37e7f5ff485de8070e9.html">Programming for Graphics</a></li><li class="navelem"><b>TextureManager.cpp</b></li>
+    <li class="navelem"><a class="el" href="dir_38fae16b77d92cd971ace5681c3e792a.html">Programming for Graphics</a></li><li class="navelem"><b>TextureManager.cpp</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

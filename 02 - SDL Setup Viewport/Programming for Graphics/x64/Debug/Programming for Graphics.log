@@ -22,13 +22,18 @@ C:\Users\Games\Desktop\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for G
 C:\Users\Games\Desktop\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Game.cpp(578,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   Goal.cpp
   Hierarchy.cpp
+  I_SceneNode.cpp
+  Input.cpp
+  Logger.cpp
   Main.cpp
 C:\Users\Games\Desktop\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Game.h(21,7): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
 C:\Users\Games\Desktop\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Game.h(22,7): warning C4099: 'SDL_Renderer': type name first seen using 'struct' now seen using 'class'
   Pickup.cpp
   Player.cpp
 C:\Users\Games\Desktop\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Player.cpp(9,25): warning C4305: 'initializing': truncation from 'double' to 'float'
+  ProfilerSystem.cpp
+C:\Users\Games\Desktop\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\ProfilerSystem.cpp(5,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   SceneManager.cpp
+  TextureManager.cpp
   Generating Code...
-  LINK : C:\Users\Games\Desktop\Game-Engine-Dev\02 - SDL Setup Viewport\x64\Debug\Geme Engine.exe not found or not built by the last incremental link; performing full link
   Programming for Graphics.vcxproj -> C:\Users\Games\Desktop\Game-Engine-Dev\02 - SDL Setup Viewport\x64\Debug\Geme Engine.exe
