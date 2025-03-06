@@ -1,0 +1,51 @@
+\doxysection{Asset\+Editor Class Reference}
+\hypertarget{class_asset_editor}{}\label{class_asset_editor}\index{AssetEditor@{AssetEditor}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_asset_editor_ace8223b7781cb5a0ca05e5a8b0862d9e}{Asset\+Editor}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*}window, \mbox{\hyperlink{class_texture_manager}{Texture\+Manager}} \texorpdfstring{$\ast$}{*}tex\+Manager, \mbox{\hyperlink{class_game}{Game}} \texorpdfstring{$\ast$}{*}game)
+\item 
+void \mbox{\hyperlink{class_asset_editor_a9968db2419ed536bccc2767e4515fcc3}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_asset_editor_acee69717b6fa83182f3a0b69114bff8b}\label{class_asset_editor_acee69717b6fa83182f3a0b69114bff8b} 
+bool {\bfseries has\+Selected} \{ false \}
+\item 
+\Hypertarget{class_asset_editor_a769d55b7f90c06c4ef216357dd40fa00}\label{class_asset_editor_a769d55b7f90c06c4ef216357dd40fa00} 
+\mbox{\hyperlink{class_bitmap}{Bitmap}} \texorpdfstring{$\ast$}{*} {\bfseries Asset\+Mouse\+Drag} = nullptr
+\item 
+\Hypertarget{class_asset_editor_ab8e815f1099bc187e46f1eb7311bf3ac}\label{class_asset_editor_ab8e815f1099bc187e46f1eb7311bf3ac} 
+SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} {\bfseries p\+\_\+\+Renderer}
+\item 
+\Hypertarget{class_asset_editor_a84290404940fa8b0029358601bd9632d}\label{class_asset_editor_a84290404940fa8b0029358601bd9632d} 
+SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*} {\bfseries p\+\_\+\+Window}
+\item 
+\Hypertarget{class_asset_editor_a80c23546c966287a95e16b0e7e5e3266}\label{class_asset_editor_a80c23546c966287a95e16b0e7e5e3266} 
+std\+::vector$<$ \mbox{\hyperlink{class_bitmap}{Bitmap}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries content}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_asset_editor_ace8223b7781cb5a0ca05e5a8b0862d9e}\index{AssetEditor@{AssetEditor}!AssetEditor@{AssetEditor}}
+\index{AssetEditor@{AssetEditor}!AssetEditor@{AssetEditor}}
+\doxysubsubsection{\texorpdfstring{AssetEditor()}{AssetEditor()}}
+{\footnotesize\ttfamily \label{class_asset_editor_ace8223b7781cb5a0ca05e5a8b0862d9e} 
+Asset\+Editor\+::\+Asset\+Editor (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer}{, }\item[{SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*}}]{window}{, }\item[{\mbox{\hyperlink{class_texture_manager}{Texture\+Manager}} \texorpdfstring{$\ast$}{*}}]{tex\+Manager}{, }\item[{\mbox{\hyperlink{class_game}{Game}} \texorpdfstring{$\ast$}{*}}]{game}{}\end{DoxyParamCaption})}
+
+This is finding the assets in the files and putting them into a bitmap. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_asset_editor_a9968db2419ed536bccc2767e4515fcc3}\index{AssetEditor@{AssetEditor}!Update@{Update}}
+\index{Update@{Update}!AssetEditor@{AssetEditor}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_asset_editor_a9968db2419ed536bccc2767e4515fcc3} 
+void Asset\+Editor\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Finding the file for each asset to use when mouse is pressed down to drag onto the scene. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Games/\+Desktop/\+Game-\/\+Engine-\/\+Dev/02 -\/ SDL Setup Viewport/\+Programming for Graphics/Asset\+Editor.\+h\item 
+C\+:/\+Users/\+Games/\+Desktop/\+Game-\/\+Engine-\/\+Dev/02 -\/ SDL Setup Viewport/\+Programming for Graphics/Asset\+Editor.\+cpp\end{DoxyCompactItemize}

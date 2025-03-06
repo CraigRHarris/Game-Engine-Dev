@@ -1,0 +1,101 @@
+\doxysection{Profiler\+System.\+h}
+\hypertarget{_profiler_system_8h_source}{}\label{_profiler_system_8h_source}\index{C:/Users/Games/Desktop/Game-\/Engine-\/Dev/02 -\/ SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h@{C:/Users/Games/Desktop/Game-\/Engine-\/Dev/02 -\/ SDL Setup Viewport/Programming for Graphics/ProfilerSystem.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_sample_data}{SampleData}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ int64\_t\ frameTime;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ frameReference;}
+\DoxyCodeLine{00014\ \};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{typedef}\ std::map<const\ char*,\ std::vector<SampleData*>>\ FrameMap;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }ProfilerSystem}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{static}\ ProfilerSystem\&\ Instance()}
+\DoxyCodeLine{00021\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ ProfilerSystem\ INSTANCE;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ INSTANCE;}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ ProfilerSystem();}
+\DoxyCodeLine{00027\ \ \ \ \ \string~ProfilerSystem();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ StartFrame();}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ StoreSample(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ name,\ int64\_t\ elapsedTime);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ EndFrame();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ FrameMap\&\ GetFrameData()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00034\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *frameData;}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ GetCurrentFrame()}
+\DoxyCodeLine{00039\ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ currentFrame;}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ FrameMap\&\ GetLastFrameData()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00044\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *lastFramesFrameData;}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ std::vector<float>\&\ GetFrameTimes()}
+\DoxyCodeLine{00049\ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ totalFrameTimes;}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ currentFrame;}
+\DoxyCodeLine{00055\ \ \ \ \ FrameMap*\ frameData;}
+\DoxyCodeLine{00056\ \ \ \ \ std::vector<float>\ totalFrameTimes;}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{float}\ thisFramesTotalTime\ =\ 0;}
+\DoxyCodeLine{00058\ \ \ \ \ FrameMap*\ thisFramesFrameData;}
+\DoxyCodeLine{00059\ \ \ \ \ FrameMap*\ lastFramesFrameData;}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{struct\ }Profile}
+\DoxyCodeLine{00063\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ Profile(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ name)}
+\DoxyCodeLine{00065\ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \_name\ =\ name;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ startTime\ =\ std::clock();}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \string~Profile()}
+\DoxyCodeLine{00071\ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ std::clock\_t\ endTime\ =\ std::clock();}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ std::clock\_t\ elapsedTime\ =\ endTime\ -\/\ startTime;}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ ProfilerSystem::Instance().StoreSample(\_name,\ (1000\ *\ elapsedTime)\ /\ CLOCKS\_PER\_SEC);}
+\DoxyCodeLine{00076\ \ \ \ \ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \_name;}
+\DoxyCodeLine{00079\ \ \ \ \ std::clock\_t\ startTime;}
+\DoxyCodeLine{00080\ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_profiler}{Profiler}}}
+\DoxyCodeLine{00083\ \{}
+\DoxyCodeLine{00084\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ push(\textcolor{keywordtype}{float}\ FrameTime);}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{float}\ AverageTime();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{float}\ CalculateFPSValue(\textcolor{keywordtype}{float}\ averageFrameTime);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{int}\ Capacity\ =\ 240;}
+\DoxyCodeLine{00092\ \ \ \ \ std::vector<float>\ FrameTimeQueue;}
+\DoxyCodeLine{00093\ \};}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ PROFILE(name)\ Profile\ p(name)}}
+\DoxyCodeLine{00095\ }
+
+\end{DoxyCode}

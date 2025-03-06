@@ -1,0 +1,53 @@
+\doxysection{Scene\+Manager.\+h}
+\hypertarget{_scene_manager_8h_source}{}\label{_scene_manager_8h_source}\index{C:/Users/Games/Desktop/Game-\/Engine-\/Dev/02 -\/ SDL Setup Viewport/Programming for Graphics/SceneManager.h@{C:/Users/Games/Desktop/Game-\/Engine-\/Dev/02 -\/ SDL Setup Viewport/Programming for Graphics/SceneManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Bitmaps.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Player.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}nlohmann/json.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}SDL.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}SDL\_render.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ }json\ =\ nlohmann::json;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{using\ }ordered\_json\ =\ nlohmann::ordered\_json;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{enum\ class}\ EntityType\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ Ground,}
+\DoxyCodeLine{00017\ \ \ \ \ Player,}
+\DoxyCodeLine{00018\ \ \ \ \ Enemy,}
+\DoxyCodeLine{00019\ \ \ \ \ Pickup,}
+\DoxyCodeLine{00020\ \ \ \ \ Goal}
+\DoxyCodeLine{00021\ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_scene_entity}{SceneEntity}}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ EntityType\ type;}
+\DoxyCodeLine{00025\ \ \ \ \ std::string\ filename;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ xPos;}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ yPos;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ direction;}
+\DoxyCodeLine{00029\ \ \ \ \ std::string\ ObjectName;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ isTransparent;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ leftBound\{\ 0\ \};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ rightBound\{\ 0\ \};}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_scene}{Scene}}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{00037\ \ \ \ \ std::vector<SceneEntity>\ entities;}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_scene_manager}{SceneManager}}}
+\DoxyCodeLine{00041\ \{}
+\DoxyCodeLine{00042\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{struct_scene}{Scene}}\ readscene(std::string\ filepath);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ savescene(\textcolor{keyword}{const}\ std::string\&\ file,\ \textcolor{keyword}{const}\ std::vector<Bitmap*>\&\ objects);}
+\DoxyCodeLine{00045\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00046\ \ \ \ \ EntityType\ getEntityEnumFromString(\textcolor{keyword}{const}\ std::string\&\ type);}
+\DoxyCodeLine{00047\ \};}
+
+\end{DoxyCode}

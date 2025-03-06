@@ -14,12 +14,21 @@ public:
 		direction = -1; //start moving left
 	};
 
+	/**
+	Setting the gravity and helps add collion to the floor.
+	*/
 	void Update();
 
 	void FixGroundCollision(Bitmap* ground);
 
+	/**
+	Setting the postitions of the AI going left and right.
+	*/
 	void MoveAI();
 
+	/**
+	Draw the ajustable paramaters for the selectable when you select it on the hierarchy
+	*/
 	virtual void GUIDraw() override;
 
 	int getLeftBound() { return point_l; }

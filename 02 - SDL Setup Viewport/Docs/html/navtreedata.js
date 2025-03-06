@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "Game Engine Dev", "index.html", [
+  [ "My Project", "index.html", [
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -42,7 +42,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_asset_editor_8cpp_source.html"
+"_asset_editor_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

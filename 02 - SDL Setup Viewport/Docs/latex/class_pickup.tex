@@ -1,0 +1,111 @@
+\doxysection{Pickup Class Reference}
+\hypertarget{class_pickup}{}\label{class_pickup}\index{Pickup@{Pickup}}
+Inheritance diagram for Pickup\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_pickup}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_pickup_abb9895b77591d7f16d5095278a5896e1}\label{class_pickup_abb9895b77591d7f16d5095278a5896e1} 
+{\bfseries Pickup} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, \mbox{\hyperlink{class_texture_manager}{Texture\+Manager}} \texorpdfstring{$\ast$}{*}tex\+Manager, std\+::string file\+Name, int xpos, int ypos, const std\+::string Object\+Name, bool use\+Transparency=false)
+\item 
+bool \mbox{\hyperlink{class_pickup_acc5531c46d2094eb54fec5feaf1dbf1a}{Is\+Colliding}} (\mbox{\hyperlink{class_bitmap}{Bitmap}} \texorpdfstring{$\ast$}{*}other) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_bitmap}{Bitmap}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bitmap_ab5d51f7486c5151291ac53fe2f756a98}{Bitmap}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, \mbox{\hyperlink{class_texture_manager}{Texture\+Manager}} \texorpdfstring{$\ast$}{*}tex\+Manager, std\+::string file\+Name, int xpos, int ypos, const std\+::string \+\_\+\+Object\+Name, bool use\+Transparency=false)
+\item 
+void {\bfseries Set\+Position} (float x, float y)
+\item 
+\mbox{\hyperlink{structposition}{position}} {\bfseries Get\+Position} ()
+\item 
+void {\bfseries UpdateX} (float x\+Delta)
+\item 
+void {\bfseries UpdateY} (float y\+Delta)
+\item 
+virtual void \mbox{\hyperlink{class_bitmap_aa1e0d615bdd9eeaed5c7b5d6fd21738d}{GUIDraw}} ()
+\item 
+void {\bfseries Gui\+Draw\+Child\+GUI} ()
+\item 
+void {\bfseries SetX} (float x)
+\item 
+void {\bfseries SetY} (float y)
+\item 
+void {\bfseries Set\+Grounded} (bool grounded)
+\item 
+SDL\+\_\+\+Rect {\bfseries Get\+Transform\+Rect} ()
+\item 
+void {\bfseries draw} ()
+\item 
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} {\bfseries Get\+Texture\+Ref} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i___scene_node}{I\+\_\+\+Scene\+Node}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries addchild} (\mbox{\hyperlink{class_i___scene_node}{I\+\_\+\+Scene\+Node}} \texorpdfstring{$\ast$}{*}childto\+Add)
+\item 
+void {\bfseries removechild} (\mbox{\hyperlink{class_i___scene_node}{I\+\_\+\+Scene\+Node}} \texorpdfstring{$\ast$}{*}childto\+Remove)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_bitmap}{Bitmap}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries is\+Grounded} = false
+\item 
+std\+::string {\bfseries Object} = "{}Name Object"{}
+\item 
+std\+::string {\bfseries File\+Name}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_i___scene_node}{I\+\_\+\+Scene\+Node}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i___scene_node}{I\+\_\+\+Scene\+Node}} \texorpdfstring{$\ast$}{*} {\bfseries parent} = nullptr
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_i___scene_node}{I\+\_\+\+Scene\+Node}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries children}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_bitmap}{Bitmap}}}
+\begin{DoxyCompactItemize}
+\item 
+static int {\bfseries object\+Count} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_i___gui_window}{I\+\_\+\+Gui\+Window}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_i___gui_window}{I\+\_\+\+Gui\+Window}} \texorpdfstring{$\ast$}{*} {\bfseries Selected\+Object} = nullptr
+\item 
+static \mbox{\hyperlink{class_i___gui_window}{I\+\_\+\+Gui\+Window}} \texorpdfstring{$\ast$}{*} {\bfseries Selected\+Object\+For\+Dragging} = nullptr
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_bitmap}{Bitmap}}}
+\begin{DoxyCompactItemize}
+\item 
+float {\bfseries m\+\_\+x}
+\item 
+float {\bfseries m\+\_\+y}
+\item 
+int {\bfseries m\+\_\+h}
+\item 
+int {\bfseries m\+\_\+w}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pickup_acc5531c46d2094eb54fec5feaf1dbf1a}\index{Pickup@{Pickup}!IsColliding@{IsColliding}}
+\index{IsColliding@{IsColliding}!Pickup@{Pickup}}
+\doxysubsubsection{\texorpdfstring{IsColliding()}{IsColliding()}}
+{\footnotesize\ttfamily \label{class_pickup_acc5531c46d2094eb54fec5feaf1dbf1a} 
+bool Pickup\+::\+Is\+Colliding (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bitmap}{Bitmap}} \texorpdfstring{$\ast$}{*}}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_bitmap}{Bitmap}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Games/\+Desktop/\+Game-\/\+Engine-\/\+Dev/02 -\/ SDL Setup Viewport/\+Programming for Graphics/Pickup.\+h\item 
+C\+:/\+Users/\+Games/\+Desktop/\+Game-\/\+Engine-\/\+Dev/02 -\/ SDL Setup Viewport/\+Programming for Graphics/Pickup.\+cpp\end{DoxyCompactItemize}

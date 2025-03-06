@@ -1,0 +1,38 @@
+\doxysection{Player.\+h}
+\hypertarget{_player_8h_source}{}\label{_player_8h_source}\index{C:/Users/Games/Desktop/Game-\/Engine-\/Dev/02 -\/ SDL Setup Viewport/Programming for Graphics/Player.h@{C:/Users/Games/Desktop/Game-\/Engine-\/Dev/02 -\/ SDL Setup Viewport/Programming for Graphics/Player.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Bitmaps.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Logger.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }Player\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_bitmap_ab5d51f7486c5151291ac53fe2f756a98}{Bitmap}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \ }
+\DoxyCodeLine{00010\ \ \ \ \ Player(SDL\_Renderer*\ renderer,\ \mbox{\hyperlink{class_texture_manager}{TextureManager}}*\ texManager,\ std::string\ fileName,\ \textcolor{keywordtype}{int}\ xpos,\ \textcolor{keywordtype}{int}\ ypos,\ \textcolor{keyword}{const}\ std::string\ ObjectName,\ \textcolor{keywordtype}{bool}\ useTransparency\ =\ \textcolor{keyword}{false})\ :\ \mbox{\hyperlink{class_bitmap_ab5d51f7486c5151291ac53fe2f756a98}{Bitmap}}(renderer,\ texManager,\ fileName,\ xpos,\ ypos,ObjectName,\ useTransparency)\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ Logger::Info(\textcolor{stringliteral}{"{}Player"{}});}
+\DoxyCodeLine{00012\ \ \ \ \ \}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ Update();}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ FixGroundCollision(\mbox{\hyperlink{class_bitmap_ab5d51f7486c5151291ac53fe2f756a98}{Bitmap}}*\ ground);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ Jump();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ addKey()\ \{\ KeysCollected++;\ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ getKeys()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ KeysCollected;\ \}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ GUIDraw()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ KeysCollected\ =\ 0;}
+\DoxyCodeLine{00027\ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{float}\ yVelocity;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ jumpForce\ =\ 20.0f;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \};}
+
+\end{DoxyCode}

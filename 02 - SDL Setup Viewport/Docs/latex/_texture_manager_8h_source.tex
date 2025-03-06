@@ -1,0 +1,31 @@
+\doxysection{Texture\+Manager.\+h}
+\hypertarget{_texture_manager_8h_source}{}\label{_texture_manager_8h_source}\index{C:/Users/Games/Desktop/Game-\/Engine-\/Dev/02 -\/ SDL Setup Viewport/Programming for Graphics/TextureManager.h@{C:/Users/Games/Desktop/Game-\/Engine-\/Dev/02 -\/ SDL Setup Viewport/Programming for Graphics/TextureManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_texture_data}{TextureData}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ SDL\_Texture*\ tex;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{int}\ width;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{int}\ height;}
+\DoxyCodeLine{00011\ \};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }TextureManager}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ std::map<std::string,\ TextureData>\ m\_textureMap;}
+\DoxyCodeLine{00018\ \ \ \ \ TextureManager();}
+\DoxyCodeLine{00019\ \ \ \ \ \string~TextureManager();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ SDL\_Surface*\ m\_surface;}
+\DoxyCodeLine{00022\ \ \ \ \ SDL\_Texture*\ Load(\textcolor{keyword}{const}\ std::string\ fileName,\ \textcolor{keywordtype}{bool}\ useTransparancy,\ SDL\_Renderer*\ PRenderer,\ \textcolor{keywordtype}{int}\&\ width,\ \textcolor{keywordtype}{int}\&\ height);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ Unload(\textcolor{keyword}{const}\ std::string\ fileName);}
+\DoxyCodeLine{00024\ \};}
+\DoxyCodeLine{00025\ }
+
+\end{DoxyCode}

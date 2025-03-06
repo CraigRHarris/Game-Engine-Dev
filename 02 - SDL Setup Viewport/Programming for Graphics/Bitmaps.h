@@ -37,20 +37,25 @@ public:
 	/**
 	* storing the render of assets to configurer later on.loading the texture for asessts.param checking the surface on the asesst.
 	* Going tough each object.
-	* @ param storing the renders.
-	* @ param loading the texture for asessts.
-	* @ param checking the name on the asesst.
+	* @ param renderer storing.
+	* @ param texManager loading the texture for asessts.
+	* @ param fileName checking the name of the asesst.
 	* @ param postion of aseets.
 	* @ param object name of the asset.
-	* @ param see if it is transparent.
+	* @ param transparent to see if it neededs background.
 	*/
 	Bitmap(SDL_Renderer* renderer, TextureManager* texManager,std::string fileName, int xpos, int ypos, const std::string _ObjectName, bool useTransparency = false);
 	virtual ~Bitmap();
 	std::string FileName;
 	
-	virtual bool IsColliding(Bitmap* Other);
 
+	/**
+	Checks if an object's point is inside another's.
+	*/
+	virtual bool IsColliding(Bitmap* Other);
+	
 	void SetPosition(float x, float y);
+	
 	position GetPosition();
 
 	void UpdateX(float xDelta) { m_x += xDelta; }
@@ -58,12 +63,15 @@ public:
 
 	virtual void GUIDraw();
 
+	/**
+	Its for the Hierarchy to add the objects to a different object(parent) in the hierarchy list.
+	*/
 	void GuiDrawChildGUI();
 
 	void SetX(float x) { m_x = x; }
 	void SetY(float y) { m_y = y; }
 
-
+	
 	void SetGrounded(bool grounded) { isGrounded = grounded; }
 
 	SDL_Rect GetTransformRect()

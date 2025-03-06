@@ -1,0 +1,79 @@
+\doxysection{Bitmaps.\+h}
+\hypertarget{_bitmaps_8h_source}{}\label{_bitmaps_8h_source}\index{C:/Users/Games/Desktop/Game-\/Engine-\/Dev/02 -\/ SDL Setup Viewport/Programming for Graphics/Bitmaps.h@{C:/Users/Games/Desktop/Game-\/Engine-\/Dev/02 -\/ SDL Setup Viewport/Programming for Graphics/Bitmaps.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}SDL.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}TextureManager.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}I\_GuiWindow.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}I\_SceneNode.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{struct\ }SDL\_Surface;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{struct\ }SDL\_Texture;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{struct\ }SDL\_Renderer;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structposition}{position}}\ \{\ \textcolor{keywordtype}{float}\ x;\ \textcolor{keywordtype}{float}\ y;\ \};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bitmap_ab5d51f7486c5151291ac53fe2f756a98}{Bitmap}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i___scene_node}{I\_SceneNode}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i___gui_window}{I\_GuiWindow}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ SDL\_Surface*\ \_pbitmapSurface;}
+\DoxyCodeLine{00021\ \ \ \ \ SDL\_Texture*\ \_pbitmapTexture;}
+\DoxyCodeLine{00022\ \ \ \ \ SDL\_Renderer*\ \_pRenderer;}
+\DoxyCodeLine{00023\ \ \ \ \ SDL\_Rect\ CollisionRect;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{float}\ \ m\_x,\ m\_y;}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_h,\ m\_w;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ objectCount;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ isGrounded\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00034\ \ \ \ \ std::string\ Object\ =\ \textcolor{stringliteral}{"{}Name\ Object"{}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{class_bitmap_ab5d51f7486c5151291ac53fe2f756a98}{Bitmap}}(SDL\_Renderer*\ renderer,\ \mbox{\hyperlink{class_texture_manager}{TextureManager}}*\ texManager,std::string\ fileName,\ \textcolor{keywordtype}{int}\ xpos,\ \textcolor{keywordtype}{int}\ ypos,\ \textcolor{keyword}{const}\ std::string\ \_ObjectName,\ \textcolor{keywordtype}{bool}\ useTransparency\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_bitmap_ab5d51f7486c5151291ac53fe2f756a98}{\string~Bitmap}}();}
+\DoxyCodeLine{00049\ \ \ \ \ std::string\ FileName;}
+\DoxyCodeLine{00050\ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ IsColliding(\mbox{\hyperlink{class_bitmap_ab5d51f7486c5151291ac53fe2f756a98}{Bitmap}}*\ Other);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ SetPosition(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y);}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{structposition}{position}}\ GetPosition();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ UpdateX(\textcolor{keywordtype}{float}\ xDelta)\ \{\ m\_x\ +=\ xDelta;\ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ UpdateY(\textcolor{keywordtype}{float}\ yDelta)\ \{\ m\_y\ +=\ yDelta;\ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ GUIDraw();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ GuiDrawChildGUI();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ SetX(\textcolor{keywordtype}{float}\ x)\ \{\ m\_x\ =\ x;\ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ SetY(\textcolor{keywordtype}{float}\ y)\ \{\ m\_y\ =\ y;\ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ SetGrounded(\textcolor{keywordtype}{bool}\ grounded)\ \{\ isGrounded\ =\ grounded;\ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ SDL\_Rect\ GetTransformRect()}
+\DoxyCodeLine{00070\ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SDL\_Rect\{\ m\_w\ ,\ m\_h,\ m\_w,\ m\_h\ \};}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ draw();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ SDL\_Texture*\ GetTextureRef()}
+\DoxyCodeLine{00077\ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_pbitmapTexture;}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \ \ \ \ }
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \};}
+\DoxyCodeLine{00083\ }
+
+\end{DoxyCode}

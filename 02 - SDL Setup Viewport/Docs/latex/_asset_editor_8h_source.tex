@@ -1,0 +1,41 @@
+\doxysection{Asset\+Editor.\+h}
+\hypertarget{_asset_editor_8h_source}{}\label{_asset_editor_8h_source}\index{C:/Users/Games/Desktop/Game-\/Engine-\/Dev/02 -\/ SDL Setup Viewport/Programming for Graphics/AssetEditor.h@{C:/Users/Games/Desktop/Game-\/Engine-\/Dev/02 -\/ SDL Setup Viewport/Programming for Graphics/AssetEditor.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}imgui.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}imgui\_internal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}backends/imgui\_impl\_sdl.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}imgui\_sdl.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Bitmaps.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bitmap}{Bitmap}};}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game}{Game}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_asset_editor_ace8223b7781cb5a0ca05e5a8b0862d9e}{AssetEditor}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasSelected\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_bitmap}{Bitmap}}*\ AssetMouseDrag\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00019\ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_asset_editor_ace8223b7781cb5a0ca05e5a8b0862d9e}{AssetEditor}}(SDL\_Renderer*\ renderer,\ SDL\_Window*\ window,\ \mbox{\hyperlink{class_texture_manager}{TextureManager}}*\ texManager,\ \mbox{\hyperlink{class_game}{Game}}*\ game\ );}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//std::vector<Bitmap*>\ content;}}
+\DoxyCodeLine{00026\ \ \ \ \ SDL\_Renderer*\ p\_Renderer;}
+\DoxyCodeLine{00027\ \ \ \ \ SDL\_Window*\ p\_Window;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_asset_editor_a9968db2419ed536bccc2767e4515fcc3}{Update}}();\ }
+\DoxyCodeLine{00033\ \ \ \ \ std::vector<Bitmap*>\ content;}
+\DoxyCodeLine{00034\ \ \ \ \ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_game}{Game}}*\ \_game;}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_texture_manager}{TextureManager}}*\ \_tManager;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+
+\end{DoxyCode}
