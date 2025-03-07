@@ -1,0 +1,77 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Programming for Graphics.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  AssetEditor.cpp
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Game.h(21,7): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'AssetEditor.cpp')
+      C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Libraries\SDL2\include\SDL_video.h(95,16):
+      see declaration of 'SDL_Window'
+  
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Game.h(22,7): warning C4099: 'SDL_Renderer': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'AssetEditor.cpp')
+      C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Libraries\SDL2\include\SDL_render.h(141,8):
+      see declaration of 'SDL_Renderer'
+  
+  Bitmaps.cpp
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Bitmaps.cpp(42,9): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Bitmaps.cpp(43,9): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Bitmaps.cpp(128,25): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Bitmaps.cpp(128,25): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Bitmaps.cpp(128,30): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Bitmaps.cpp(128,30): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Enemy.cpp
+  Game.cpp
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Game.h(21,7): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'Game.cpp')
+      C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Libraries\SDL2\include\SDL_video.h(95,16):
+      see declaration of 'SDL_Window'
+  
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Game.h(22,7): warning C4099: 'SDL_Renderer': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'Game.cpp')
+      C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Libraries\SDL2\include\SDL_render.h(141,8):
+      see declaration of 'SDL_Renderer'
+  
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Game.cpp(53,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Game.cpp(54,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Game.cpp(193,10): warning C4778: 'printf' : unterminated format string '%\n'
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Game.cpp(193,59): warning C4474: 'printf' : too many arguments passed for format string
+      C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Game.cpp(193,59):
+      placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+  
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Game.cpp(508,63): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Game.cpp(515,93): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Game.cpp(578,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Goal.cpp
+  Hierarchy.cpp
+  Input.cpp
+  I_GuiWindow.cpp
+  I_SceneNode.cpp
+  imgui_impl_sdl.cpp
+  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  imgui_sdl.cpp
+  Logger.cpp
+  Main.cpp
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Game.h(21,7): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'Main.cpp')
+      C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Libraries\SDL2\include\SDL_video.h(95,16):
+      see declaration of 'SDL_Window'
+  
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Game.h(22,7): warning C4099: 'SDL_Renderer': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'Main.cpp')
+      C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Libraries\SDL2\include\SDL_render.h(141,8):
+      see declaration of 'SDL_Renderer'
+  
+  Pickup.cpp
+  Player.cpp
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\Player.cpp(9,25): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Generating Code...
+  Compiling...
+  ProfilerSystem.cpp
+C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\Programming for Graphics\ProfilerSystem.cpp(5,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Scene.cpp
+  SceneManager.cpp
+  TextureManager.cpp
+  Generating Code...
+  Programming for Graphics.vcxproj -> C:\Users\charr\Documents\GitHub\Game-Engine-Dev\02 - SDL Setup Viewport\x64\Debug\Geme Engine.exe
