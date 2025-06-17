@@ -74,7 +74,7 @@ void Game::CheckEvents()
 			input.EventKeyPressed(event.key.keysym.sym);
 		}
 		//check for key up
-		else if (event.type == SDL_KEYUP)
+		else if (event.type == SDL_KEYUP)// inputs
 		{
 			input.EventKeyReleased(event.key.keysym.sym);
 		}
@@ -375,7 +375,7 @@ void Game::Update()
 
 	for (auto enemy : enemies)   // enemies every frame
 	{
-		for (auto platform : platforms)
+		for (auto platform : platforms) //ememy update
 		{
 			enemy->FixGroundCollision(platform);
 			bool isGrounded = enemy->IsColliding(platform);
@@ -404,7 +404,7 @@ void Game::Update()
 
 	for (auto platform : platforms)  // platforms every frame
 	{
-		player->FixGroundCollision(platform);
+		player->FixGroundCollision(platform); //player
 		bool playerGrounded = player->IsColliding(platform);
 		player->SetGrounded(playerGrounded);
 		if (playerGrounded) break;
