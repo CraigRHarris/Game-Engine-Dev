@@ -11,12 +11,15 @@ public:
 
 	SDL_FRect GetCollisionRect() const { return CollisionRect; }
 
+	virtual void HandleGravity(float& Ypos);
 	void UpdatePosition(float x, float y);
-	virtual bool IsColliding(Physics* Other);
+
+	virtual bool IsColliding(SDL_FRect Other);
+	void CheckForGroundCollision(SDL_FRect Ground, float& yPos);
+
 	void SetGrounded(bool grounded) { isGrounded = grounded; }
+	bool GetGrounded() const { return isGrounded; }
 
-	void CheckForGroundCollision(Physics* Ground);
-
-	virtual void HandleGravity(float & Ypos);
+	void SetYVelocity(float newYVel) { yVelocity = newYVel; }
 };
 

@@ -383,7 +383,7 @@ void Game::Update()
 			{
 				enemy->SetGrounded(true);
 				break;
-			}
+			}// change to new system
 		}
 	}
 	if (goal->IsColliding(player))
@@ -405,10 +405,8 @@ void Game::Update()
 	for (auto platform : platforms)  // platforms every frame
 	{
 		player->FixGroundCollision(platform); //player
-		bool playerGrounded = player->IsColliding(platform);
-		player->SetGrounded(playerGrounded);
-		if (playerGrounded) break;
-	}
+		if (player->IsGrounded()) break;
+	}// new physics system
 
 	
 

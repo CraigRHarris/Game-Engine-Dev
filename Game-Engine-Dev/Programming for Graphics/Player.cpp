@@ -3,50 +3,24 @@
 #include <format>
 #include <iostream>
 
-void Player::Update() {
-	if (!isGrounded)
-	{
-		const float gravity = 0.98;
-
-		yVelocity += gravity;
-
-		m_y += yVelocity;
-	}
-	else {
-		yVelocity = 0.0f;// velocity is 0 if grounded
-	}
+void Player::Update() 
+{
+	physics->UpdatePosition(m_x, m_y);
+	physics->HandleGravity(m_y);
 }
 
 void Player::FixGroundCollision(Bitmap* ground)
 {
-	if (IsColliding(ground))
-	{
-		isGrounded = true;
-		
+	SDL_Rect groundRect = ground->GetTransformRect();
 
-		SDL_Rect groundRect = ground->GetTransformRect();
-		SDL_Rect playerRect = GetTransformRect();
-		SDL_Rect intersection;
-
-		SDL_IntersectRect(&groundRect, &playerRect, &intersection);
-
-		int yDiff = playerRect.y - groundRect.y;
-		if (yDiff < 0)
-		{
-			//m_y -= intersection.h;
-		}
-
-	}
-	else
-	{
-		isGrounded = false;
-	}
+	physics->CheckForGroundCollision(SDL_FRect{ static_cast<float>(groundRect.x), static_cast<float>(groundRect.y), 
+												static_cast<float>(groundRect.w) ,static_cast<float>(groundRect.h) }, m_y);
 }
 
 void Player::Jump()
 {
-	isGrounded = false;
-	yVelocity = -jumpForce;
+	physics->SetGrounded(false);
+	physics->SetYVelocity(-jumpForce);
 
 	/*if (isGrounded)
 	{

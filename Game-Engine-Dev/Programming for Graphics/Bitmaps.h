@@ -76,7 +76,7 @@ public:
 
 	SDL_Rect GetTransformRect()
 	{
-		return SDL_Rect{ m_w , m_h, m_w, m_h };
+		return SDL_Rect{ static_cast<int>(m_x) , static_cast<int>(m_y), m_w, m_h };
 	}
 
 	void draw();

@@ -6,27 +6,25 @@ void Physics::UpdatePosition(float x, float y)
 	CollisionRect.y = y;
 }
 
-bool Physics::IsColliding(Physics* Other)
+bool Physics::IsColliding(SDL_FRect Other)
 {
-	return SDL_HasIntersectionF(&CollisionRect, &Other->GetCollisionRect());
+	return SDL_HasIntersectionF(&CollisionRect, &Other);
 }
 
-void Physics::CheckForGroundCollision(Physics* Ground)
+void Physics::CheckForGroundCollision(SDL_FRect Ground, float& yPos)
 {
 	if (IsColliding(Ground))
 	{
 		isGrounded = true;
-
-
-		SDL_FRect groundRect = Ground->GetCollisionRect();
+;
 		SDL_FRect intersection;
 
-		SDL_IntersectFRect(&groundRect, &CollisionRect, &intersection);
+		SDL_IntersectFRect(&Ground, &CollisionRect, &intersection);
 
-		int yDiff = CollisionRect.y - groundRect.y;
+		int yDiff = CollisionRect.y - Ground.y;
 		if (yDiff < 0)
 		{
-			//m_y -= intersection.h;
+			//yPos -= intersection.h;
 		}
 	}
 	else
