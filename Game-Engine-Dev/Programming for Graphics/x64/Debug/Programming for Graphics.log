@@ -1,124 +1,12 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Programming for Graphics.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   AssetEditor.cpp
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(12,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Enemy.h(17,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   (compiling source file 'AssetEditor.cpp')
   
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(12,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Enemy.h(17,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   (compiling source file 'AssetEditor.cpp')
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(13,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'AssetEditor.cpp')
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(13,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'AssetEditor.cpp')
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Game.h(21,7): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
-  (compiling source file 'AssetEditor.cpp')
-      C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Libraries\SDL2\include\SDL_video.h(95,16):
-      see declaration of 'SDL_Window'
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Game.h(22,7): warning C4099: 'SDL_Renderer': type name first seen using 'struct' now seen using 'class'
-  (compiling source file 'AssetEditor.cpp')
-      C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Libraries\SDL2\include\SDL_render.h(141,8):
-      see declaration of 'SDL_Renderer'
-  
-  Game.cpp
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(12,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'Game.cpp')
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(12,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'Game.cpp')
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(13,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'Game.cpp')
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(13,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'Game.cpp')
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Game.h(21,7): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
-  (compiling source file 'Game.cpp')
-      C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Libraries\SDL2\include\SDL_video.h(95,16):
-      see declaration of 'SDL_Window'
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Game.h(22,7): warning C4099: 'SDL_Renderer': type name first seen using 'struct' now seen using 'class'
-  (compiling source file 'Game.cpp')
-      C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Libraries\SDL2\include\SDL_render.h(141,8):
-      see declaration of 'SDL_Renderer'
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Game.cpp(53,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Game.cpp(54,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Game.cpp(193,10): warning C4778: 'printf' : unterminated format string '%\n'
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Game.cpp(193,59): warning C4474: 'printf' : too many arguments passed for format string
-      C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Game.cpp(193,59):
-      placeholders and their parameters expect 0 variadic arguments, but 1 were provided
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Game.cpp(506,63): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Game.cpp(513,93): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Game.cpp(576,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  Main.cpp
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(12,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'Main.cpp')
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(12,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'Main.cpp')
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(13,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'Main.cpp')
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(13,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'Main.cpp')
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Game.h(21,7): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
-  (compiling source file 'Main.cpp')
-      C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Libraries\SDL2\include\SDL_video.h(95,16):
-      see declaration of 'SDL_Window'
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Game.h(22,7): warning C4099: 'SDL_Renderer': type name first seen using 'struct' now seen using 'class'
-  (compiling source file 'Main.cpp')
-      C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Libraries\SDL2\include\SDL_render.h(141,8):
-      see declaration of 'SDL_Renderer'
   
   Phyics.cpp
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Phyics.cpp(24,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Phyics.cpp(40,25): warning C4305: 'initializing': truncation from 'double' to 'float'
-  Pickup.cpp
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(12,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'Pickup.cpp')
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(12,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'Pickup.cpp')
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(13,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'Pickup.cpp')
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(13,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'Pickup.cpp')
-  
-  Player.cpp
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(12,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'Player.cpp')
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(12,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'Player.cpp')
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(13,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'Player.cpp')
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(13,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'Player.cpp')
-  
-  SceneManager.cpp
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(12,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'SceneManager.cpp')
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(12,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'SceneManager.cpp')
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(13,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'SceneManager.cpp')
-  
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(13,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'SceneManager.cpp')
-  
+C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Phyics.cpp(56,25): warning C4305: 'initializing': truncation from 'double' to 'float'
   Generating Code...
   Programming for Graphics.vcxproj -> C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\x64\Debug\Geme Engine.exe

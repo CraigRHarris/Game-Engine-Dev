@@ -54,7 +54,7 @@ void AssetEditor::Update()
 
 	if (ImGui::IsMouseReleased(ImGuiMouseButton_Left) && AssetMouseDrag != nullptr)
 	{
-		cout << "Test" << endl;
+		cout << "Added Pickup" << endl;
 		_selected = false;
 		int x, y;
 		SDL_GetMouseState(&x, &y);
@@ -67,7 +67,7 @@ void AssetEditor::Update()
 		{
 			_game->addEntity(EntityType::Enemy, AssetMouseDrag->FileName, x, y, "enemy", true, true, x, y + 100);
 		}
-		else if (AssetMouseDrag->FileName == "assets\\key.bmp")
+		else if (AssetMouseDrag->FileName == "assets\\Key.bmp")
 		{
 			_game->addEntity(EntityType::Pickup, AssetMouseDrag->FileName, x, y, "key", true, true);
 		}

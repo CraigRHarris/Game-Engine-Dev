@@ -8,6 +8,7 @@
 #include "Hierarchy.h"
 #include "ProfilerSystem.h"
 #include "Goal.h"
+#include "Player.h"
 
 #include <SDL.h>
 #include <stdio.h>
@@ -177,7 +178,7 @@ Game::Game()
 	{
 		printf("WINDOW initialistion failed: %s\n", SDL_GetError());
 		printf("Press any key to continue\n");
-		getchar();
+		int c = getchar();
 		return;
 	}
 
@@ -192,7 +193,7 @@ Game::Game()
 	{
 		printf("ENDERER initialistion failed: %\n", SDL_GetError());
 		printf("Press any key to cintinue\n");
-		getchar();
+		int c = getchar();
 
 		return;
 	}
@@ -202,8 +203,6 @@ Game::Game()
 	hierarchy = new Hierarchy(Root);
 
 	profiler = new Profiler();
-
-	
 
 	newScene = _sceneManager.readscene("assets/Level1.json");
 	loadScene(newScene);
@@ -373,19 +372,6 @@ void Game::Update()
 
 	profiler->push(io.DeltaTime * 1000);
 
-	for (auto enemy : enemies)   // enemies every frame
-	{
-		for (auto platform : platforms) //ememy update
-		{
-			enemy->FixGroundCollision(platform);
-			bool isGrounded = enemy->IsColliding(platform);
-			if (isGrounded)
-			{
-				enemy->SetGrounded(true);
-				break;
-			}// change to new system
-		}
-	}
 	if (goal->IsColliding(player))
 	{
 		Root = new I_SceneNode();
@@ -402,30 +388,6 @@ void Game::Update()
 		}
 	}
 
-	for (auto platform : platforms)  // platforms every frame
-	{
-		player->FixGroundCollision(platform); //player
-		if (player->IsGrounded()) break;
-	}// new physics system
-
-	
-
-	if (input.KeyIsPressed(SDLK_a) || input.KeyIsPressed(SDLK_LEFT))
-	{
-		player->UpdateX(-4);// if key A is pressed, player will move left
-		//Logger::Info("Left");
-	}
-	if (input.KeyIsPressed(SDLK_d) || input.KeyIsPressed(SDLK_RIGHT))
-	{
-		player->UpdateX(4);
-		//Logger::Info("Right");
-	}
-	if (input.KeyIsPressed(SDLK_SPACE))
-	{
-		player->Jump();
-		//Logger::Info("Jump");
-	}
-
 
 	char char_array[] = "Big White";
 	//UpdateText(char_array, 50, 140, m_pBigFont, { 255, 255, 255});
@@ -435,21 +397,11 @@ void Game::Update()
 	testString += to_string(testNumber);
 	//UpdateText(testString, 50, 210, m_pBigFont, { 255, 255, 255 });
 
-
-	player->Update();
+	player->HandleInput(input);
+	player->Update(platforms, pickups);
 
 	for (auto enemy : enemies) {
-		enemy->Update();
-		enemy->MoveAI();
-	}
-
-	for (auto pickup : pickups) {
-		//Check if current pickup is colliding with player
-		//If so, remove from pickups and destroy
-		if (pickup->IsColliding(player))
-		{
-			pickups.erase(find(pickups.begin(), pickups.end(), pickup));
-		}
+		enemy->Update(platforms);
 	}
 
 	for (auto platform : platforms) {
@@ -477,7 +429,6 @@ void Game::Update()
 	{
 		static_cast<Bitmap*>(I_GuiWindow::SelectedObject)->GUIDraw();
 	}
-
 
 	{
 		PROFILE("Flame Graph");
@@ -597,9 +548,6 @@ void Game::Update()
 		drawlist->PopClipRect();
 
 		ImGui::End();
-
-
-
 	}
 
 	{
@@ -615,8 +563,6 @@ void Game::Update()
 		ImGui::Text(buffer2);
 		ImGui::End();
 	}
-
-
 
 	assetEditor->Update();
 	hierarchy->Update();

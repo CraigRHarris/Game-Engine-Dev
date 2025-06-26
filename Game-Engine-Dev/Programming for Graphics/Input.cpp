@@ -2,9 +2,13 @@
 #include <SDL.h>
 #include <stdio.h>
 
-bool Input::KeyIsPressed(SDL_KeyCode key)
+
+
+bool Input::KeyIsPressed(SDL_KeyCode key) const
 {
-	return _keysDown[key];
+	if (!_keysDown.contains(key)) return false;
+
+	return _keysDown.at(key);
 }
 
 void Input::EventKeyPressed(SDL_Keycode key)

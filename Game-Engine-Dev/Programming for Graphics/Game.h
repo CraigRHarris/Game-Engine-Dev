@@ -7,7 +7,6 @@
 #include <cstdint>
 
 #include "AssetEditor.h"
-#include "Player.h"
 #include "Input.h"
 #include "TextureManager.h"
 #include "Pickup.h"
@@ -15,14 +14,14 @@
 #include "ProfilerSystem.h"
 #include "Goal.h"
 
-
 using namespace std;
 
-class SDL_Window;
-class SDL_Renderer;
+struct SDL_Window;
+struct SDL_Renderer;
 class AssetEditor;
 class Enemy;
 class Hierarchy;
+class Player;// can change the includes to this but needed to include in the game.ccp
 
 class Game
 {
@@ -44,8 +43,8 @@ private:
 	std::vector<Bitmap*> platforms;
 	std::vector<Pickup*> pickups;
 	std::vector<Goal*> goals;
-	Hierarchy* hierarchy;
-	I_SceneNode* Root;
+	Hierarchy* hierarchy{ nullptr };
+	I_SceneNode* Root{ nullptr };
 
 	Player* player = nullptr;
 	Enemy* enemy = nullptr;
@@ -76,8 +75,8 @@ private:
 	Input input;
 	bool _isRunning{ true };
 
-	TextureManager* _texManager;
-	Profiler* profiler;
+	TextureManager* _texManager{ nullptr };
+	Profiler* profiler{ nullptr };
 
 	SDL_Window* _Window{ nullptr }; // Tells the compiler that there will be a struct named SDL_Window defined.
 	SDL_Renderer* _Renderer{ nullptr };

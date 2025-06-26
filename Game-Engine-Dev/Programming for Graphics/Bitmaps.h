@@ -19,18 +19,17 @@ private:
 
 	SDL_Surface* _pbitmapSurface;
 	SDL_Texture* _pbitmapTexture;
-	SDL_Renderer* _pRenderer;
 	SDL_Rect CollisionRect;
 
 protected:
 	float  m_x, m_y;
 	int m_h, m_w;
-
+	SDL_Renderer* _pRenderer;
 
 public:
 	
 	static int objectCount;
-	bool isGrounded = false;
+	//bool isGrounded = false;
 	std::string Object = "Name Object";
 
 
@@ -71,21 +70,16 @@ public:
 	void SetX(float x) { m_x = x; }
 	void SetY(float y) { m_y = y; }
 
-	
-	void SetGrounded(bool grounded) { isGrounded = grounded; }
-
 	SDL_Rect GetTransformRect()
 	{
 		return SDL_Rect{ static_cast<int>(m_x) , static_cast<int>(m_y), m_w, m_h };
 	}
 
-	void draw();
+	virtual void draw();
 
 	SDL_Texture* GetTextureRef()
 	{
 		return _pbitmapTexture;
 	}
-	
-
 };
 

@@ -11,10 +11,11 @@ enum KEYS_PRESSED_LIST
 class Input
 {
 public:
-	bool KeyIsPressed(SDL_KeyCode key);
+	bool KeyIsPressed(SDL_KeyCode key) const;
 
 	void EventKeyPressed(SDL_Keycode key);
 	void EventKeyReleased(SDL_Keycode key);
+	void SetIput(); //might need to use for inputs
 
 	Input();
 	~Input();

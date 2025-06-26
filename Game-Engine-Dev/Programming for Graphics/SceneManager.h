@@ -1,13 +1,12 @@
 #pragma once
-#include "Bitmaps.h"
-#include "Player.h"
-
 #include "nlohmann/json.hpp"
 #include <iostream>
 #include <vector>
 #include <string>
 #include "SDL.h"
 #include "SDL_render.h"
+
+class Bitmap;
 
 using json = nlohmann::json;
 using ordered_json = nlohmann::ordered_json;

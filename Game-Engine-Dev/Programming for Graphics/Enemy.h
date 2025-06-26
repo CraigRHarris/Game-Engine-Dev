@@ -3,6 +3,7 @@
 
 #include "Bitmaps.h"
 #include "Logger.h"
+#include "Phyics.h"
 
 class Enemy : public Bitmap
 {
@@ -12,19 +13,18 @@ public:
 		point_l = left;
 		point_r = right;
 		direction = -1; //start moving left
+		physics = new Physics(static_cast<float>(m_w), static_cast<float>(m_h));
+		physics->UpdatePosition(xpos, ypos);
 	};
 
 	/**
 	Setting the gravity and helps add collion to the floor.
 	*/
-	void Update();
+	void Update(const std::vector<Bitmap*>& platforms);
 
 	void FixGroundCollision(Bitmap* ground);
 
-	/**
-	Setting the postitions of the AI going left and right.
-	*/
-	void MoveAI();
+	bool IsGrounded() const { return physics->GetGrounded(); }
 
 	/**
 	Draw the ajustable paramaters for the selectable when you select it on the hierarchy
@@ -36,9 +36,10 @@ public:
 
 private:
 	float moveSpeed{ 3.0f };
-	float yVelocity;
-	float xVelocity;
-	float direction;
-	int point_l, point_r;
+	float yVelocity{ 0.0f };
+	float xVelocity{ 0.0f };
+	float direction{ 1.0f };
+	int point_l{ 1 }, point_r{ 1 };
+	Physics* physics;
 };
 
