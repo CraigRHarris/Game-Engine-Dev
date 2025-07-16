@@ -398,7 +398,7 @@ void Game::Update()
 	//UpdateText(testString, 50, 210, m_pBigFont, { 255, 255, 255 });
 
 	player->HandleInput(input);
-	player->Update(platforms, pickups);
+	player->Update(platforms, pickups, enemies);
 
 	for (auto enemy : enemies) {
 		enemy->Update(platforms);

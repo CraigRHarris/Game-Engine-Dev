@@ -2,7 +2,7 @@
 #include "Bitmaps.h"
 #include "Input.h"
 #include "Pickup.h"
-
+#include "Enemy.h"
 #include <format>
 #include <iostream>
 
@@ -22,7 +22,7 @@ void Player::draw()
 	SDL_SetRenderDrawColor(_pRenderer, 255, 255, 255, 255);
 }
 
-void Player::Update(const std::vector<Bitmap*>& platforms, std::vector<Pickup*>& pickups)
+void Player::Update(const std::vector<Bitmap*>& platforms, std::vector<Pickup*>& pickups, std::vector<Enemy*>& enemys)
 {
 	if (!jumpedThisFrame) {
 		for (const auto& platform : platforms) {
@@ -37,6 +37,21 @@ void Player::Update(const std::vector<Bitmap*>& platforms, std::vector<Pickup*>&
 			pickups.erase(find(pickups.begin(), pickups.end(), pickup));
 			break;
 		}
+	}
+
+	for (auto enemy : enemys) 
+	{
+		if (physics->IsColliding(enemy->GetTransformRect())) //trying to get the enemy to collid with player
+		{
+			// need simeler to FixGroundCollision but with x value
+			// add a jump feture when colliding
+			_health--;
+			break;
+		}
+	}
+
+	if (_health <= 0) {
+		// handle dead
 	}
 
 	physics->UpdatePosition(m_x, m_y);

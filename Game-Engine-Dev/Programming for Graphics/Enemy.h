@@ -17,6 +17,7 @@ public:
 		physics->UpdatePosition(xpos, ypos);
 	};
 
+	void draw() override;
 	/**
 	Setting the gravity and helps add collion to the floor.
 	*/

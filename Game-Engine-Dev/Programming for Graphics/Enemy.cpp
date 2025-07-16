@@ -1,6 +1,17 @@
 #include "Enemy.h"
 
 
+void Enemy::draw()
+{
+	Bitmap::draw();
+
+	auto collisionRect = physics->GetCollisionRect();
+
+	SDL_SetRenderDrawColor(_pRenderer, 0, 255, 0, 255);//green
+	SDL_RenderDrawRectF(_pRenderer, &collisionRect);
+	SDL_SetRenderDrawColor(_pRenderer, 255, 255, 255, 255);
+}
+
 void Enemy::Update(const std::vector<Bitmap*>& platforms)
 {
 	for (const auto& platform : platforms) {

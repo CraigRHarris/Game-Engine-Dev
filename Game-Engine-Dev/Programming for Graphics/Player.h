@@ -5,6 +5,7 @@
 
 class Input;
 class Pickup;
+class Enemy;
 
 class Player : public Bitmap
 {
@@ -22,14 +23,14 @@ public:
 	/**
 	Added gravity to player with velocity.
 	*/
-	void Update(const std::vector<Bitmap*>& platforms, std::vector<Pickup*>& pickups);
+	void Update(const std::vector<Bitmap*>& platforms, std::vector<Pickup*>& pickups, std::vector<Enemy*>& enemys);
 	void HandleInput(const Input& input);
 
-	//add collicion for player to emeny and damange if needed (use key collider code bellow)
-	//physics->IsColliding(pickup->GetTransformRect())
+	//add collicion for player to emeny and damange if needed (use key collider code ) (not needed for a grade pass)
+
 
 	int GetScore() const { return _score; }// score for when key is pickup
-
+	int GetDamage() const { return _health; }
 	/**
 	Added the fix ground is colliding with the player
 	*/
@@ -54,6 +55,7 @@ private:
 	Physics* physics;
 
 	int _score{ 0 };
+	int _health{ 10 };
 	bool jumpedThisFrame{ false };
 
 };

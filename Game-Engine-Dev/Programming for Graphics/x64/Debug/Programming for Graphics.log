@@ -1,12 +1,59 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Programming for Graphics.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  AssetEditor.cpp
+  Game.cpp
 C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Enemy.h(17,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'AssetEditor.cpp')
+  (compiling source file 'Game.cpp')
   
 C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Enemy.h(17,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  (compiling source file 'AssetEditor.cpp')
+  (compiling source file 'Game.cpp')
   
-  Phyics.cpp
-C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Phyics.cpp(56,25): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(18,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'Game.cpp')
+  
+C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(18,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'Game.cpp')
+  
+C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Game.cpp(54,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Game.cpp(55,24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Game.cpp(194,10): warning C4778: 'printf' : unterminated format string '%\n'
+C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Game.cpp(194,59): warning C4474: 'printf' : too many arguments passed for format string
+      C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Game.cpp(194,59):
+      placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+  
+C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Game.cpp(457,63): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Game.cpp(464,93): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Game.cpp(527,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Pickup.cpp
+C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(18,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'Pickup.cpp')
+  
+C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(18,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'Pickup.cpp')
+  
+  Player.cpp
+C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(18,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'Player.cpp')
+  
+C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(18,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'Player.cpp')
+  
+C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Enemy.h(17,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'Player.cpp')
+  
+C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Enemy.h(17,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'Player.cpp')
+  
+  SceneManager.cpp
+C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Enemy.h(17,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'SceneManager.cpp')
+  
+C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Enemy.h(17,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'SceneManager.cpp')
+  
+C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(18,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'SceneManager.cpp')
+  
+C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\Programming for Graphics\Player.h(18,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'SceneManager.cpp')
+  
   Generating Code...
   Programming for Graphics.vcxproj -> C:\Users\games\Documents\Github\Game-Engine-Dev\Game-Engine-Dev\x64\Debug\Geme Engine.exe
