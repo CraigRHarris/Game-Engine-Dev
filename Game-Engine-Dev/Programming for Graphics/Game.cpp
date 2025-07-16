@@ -69,7 +69,7 @@ void Game::CheckEvents()
 		{
 			if (event.key.keysym.sym == SDLK_RETURN)
 			{
-				_sceneManager.savescene("assets\\level1.json", AllObjects);
+				_sceneManager.savescene("assets\\level1.json", player->GetPosition(), goal, enemies, platforms, pickups);
 			}
 
 			input.EventKeyPressed(event.key.keysym.sym);
@@ -255,58 +255,56 @@ void Game::loadScene(Scene& scene)
 {
 	clearExistingObjects();
 
-	for (auto ent : scene.entities)// go through each entity in scene, and pushing back each entity
-	{
-		addEntity(ent.type, ent.filename, ent.xPos, ent.yPos, ent.ObjectName, ent.isTransparent, false, ent.leftBound, ent.rightBound);
+	addPlayer(scene.playerPosition);
+
+	addGoal(scene.goal.pos, scene.goal.spriteFile);
+
+	for (auto enemy : scene.enemies) {
+		addEnemy(enemy.pos.x, enemy.pos.y, enemy.spriteFile, enemy.patrolData.x, enemy.patrolData.y);
+	}
+
+	for (auto platform : scene.platforms) {
+		addGround(platform.pos.x, platform.pos.y, platform.spriteFile);
+	}
+
+	for (auto pickup : scene.pickups) {
+		addPickup(pickup.pos.x, pickup.pos.y, pickup.spriteFile);
 	}
 }
 
-void Game::addEntity(EntityType type, const std::string& file, int x, int y, const std::string& name, bool trans, bool isNew, int left, int right)
+void Game::addPlayer(const position& pos)
 {
-	switch (type)
-	{
-	case EntityType::Ground:
-		platforms.push_back(new Bitmap(_Renderer, _texManager, file, x, y, name, trans));
-		if (isNew)
-		{
-			platforms[platforms.size() - 1]->Object += std::to_string(platforms.size());
-		}
-		AllObjects.push_back(platforms[platforms.size() - 1]);
-		Root->addchild(platforms[platforms.size() - 1]);
-		break;
-	case EntityType::Player:
-		player = new Player(_Renderer, _texManager, file, x, y, name, trans);
-		AllObjects.push_back(player);
-		Root->addchild(player);
-		break;
-	case EntityType::Enemy:
-		enemies.push_back(new Enemy(_Renderer, _texManager, file, x, y, left, right, name, trans));
-		if (isNew)
-		{
-			enemies[enemies.size() - 1]->Object += std::to_string(enemies.size());
-		}
-		AllObjects.push_back(enemies[enemies.size() - 1]);
-		Root->addchild(enemies[enemies.size() - 1]);
-		break;
-	case EntityType::Pickup:
-		pickups.push_back(new Pickup(_Renderer, _texManager, file, x, y, name, trans));
-		if (isNew)
-		{
-			pickups[pickups.size() - 1]->Object += std::to_string(pickups.size());
-		}
-		AllObjects.push_back(pickups[pickups.size() - 1]);
-		Root->addchild(pickups[pickups.size() - 1]);
-		break;
-	case EntityType::Goal:
-		goal = (new Goal(_Renderer, _texManager, file, x, y, name, trans));
-		if (isNew)
-		{
-			platforms[platforms.size() - 1]->Object += std::to_string(platforms.size());
-		}
-		AllObjects.push_back(platforms[platforms.size() - 1]);
-		Root->addchild(platforms[platforms.size() - 1]);
-		break;
-	}
+	player = new Player(_Renderer, _texManager, "assets//monstertrans.bmp", pos.x, pos.y, "player", true);
+	AllObjects.push_back(player);
+	Root->addchild(player);
+}
+
+void Game::addGoal(const position& pos, const std::string& file)
+{
+	goal = new Goal(_Renderer, _texManager, file, pos.x, pos.y, "goal", false);
+	AllObjects.push_back(goal);
+	Root->addchild(goal);
+}
+
+void Game::addGround(int x, int y, const std::string& file)
+{
+	platforms.push_back(new Bitmap(_Renderer, _texManager, file, x, y, "ground", false));
+	AllObjects.push_back(platforms[platforms.size() - 1]);
+	Root->addchild(platforms[platforms.size() - 1]);
+}
+
+void Game::addEnemy(int x, int y, const std::string& file, int leftBound, int rightBound)
+{
+	enemies.push_back(new Enemy(_Renderer, _texManager, file, x, y, leftBound, rightBound, "enemy", true));
+	AllObjects.push_back(enemies[enemies.size() - 1]);
+	Root->addchild(enemies[enemies.size() - 1]);
+}
+
+void Game::addPickup(int x, int y, const std::string& file)
+{
+	pickups.push_back(new Pickup(_Renderer, _texManager, file, x, y, "key", false));
+	AllObjects.push_back(pickups[pickups.size() - 1]);
+	Root->addchild(pickups[pickups.size() - 1]);
 }
 
 void Game::clearExistingObjects()

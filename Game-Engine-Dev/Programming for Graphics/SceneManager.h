@@ -5,35 +5,38 @@
 #include <string>
 #include "SDL.h"
 #include "SDL_render.h"
+#include "Bitmaps.h"
 
+class Goal;
+class Enemy;
 class Bitmap;
+class Pickup;
 
 using json = nlohmann::json;
 using ordered_json = nlohmann::ordered_json;
 
-enum class EntityType {
-	Ground,
-	Player,
-	Enemy,
-	Pickup,
-	Goal
+struct baseObject {
+	position pos;
+	std::string spriteFile;
 };
 
-struct SceneEntity {
-	EntityType type;
-	std::string filename;
-	int xPos;
-	int yPos;
-	int direction;
-	std::string ObjectName;
-	bool isTransparent;
-	int leftBound{ 0 };
-	int rightBound{ 0 };
+struct groundObject : baseObject { };
+
+struct enemyObject : baseObject{
+	position patrolData;
 };
+
+struct goalObject : baseObject {};
+
+struct pickupObject : baseObject {};
 
 struct Scene {
 	std::string name;
-	std::vector<SceneEntity> entities;
+	position playerPosition;
+	goalObject goal;
+	std::vector<enemyObject> enemies;
+	std::vector<groundObject> platforms;
+	std::vector<pickupObject> pickups;
 };
 
 class SceneManager
@@ -48,11 +51,8 @@ public:
 	* @param file The file of the asset.
 	* @param objects The object in the scene.
 	*/
-	void savescene(const std::string& file, const std::vector<Bitmap*>& objects);
-private:
-	/**
-	* Choosing the different items from the entities.
-	* @param type
-	*/
-	EntityType getEntityEnumFromString(const std::string& type);
+
+	void savescene(const std::string& file, const position& playerPos, const Goal* goal, 
+											const std::vector<Enemy*>& enemies, const std::vector<Bitmap*>& platforms,
+											const std::vector<Pickup*>& pickups);
 };

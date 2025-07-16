@@ -52,7 +52,7 @@ void Bitmap::SetPosition(float x, float y)
 	m_x = x;
 	m_y = y;
 }
-position Bitmap::GetPosition()
+position Bitmap::GetPosition() const
 {
 	return { m_x, m_y };
 }

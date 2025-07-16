@@ -24,14 +24,14 @@ void Physics::CheckForGroundCollision(SDL_FRect Ground, float& yPos)
 	float startX = CollisionRect.x;
 	float startY = CollisionRect.y + CollisionRect.h;
 	float endX = startX;
-	float endY = startY + 5.0f;
+	float endY = startY + 3.0f;
 	auto leftRayCheck = SDL_IntersectFRectAndLine(&Ground, &startX, &startY, &endX, &endY);
 
 	// add the side collision on the right for obects to drip of the side
 	startX = CollisionRect.x + CollisionRect.w;
 	startY = CollisionRect.y + CollisionRect.h;
 	endX = startX;
-	endY = startY + 5.0f;
+	endY = startY + 3.0f;
 	auto rightRayCheck = SDL_IntersectFRectAndLine(&Ground, &startX, &startY, &endX, &endY);
 
 	if (leftRayCheck || rightRayCheck)// checking the if object is interacting with rays

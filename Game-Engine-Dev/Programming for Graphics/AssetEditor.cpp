@@ -59,7 +59,7 @@ void AssetEditor::Update()
 		int x, y;
 		SDL_GetMouseState(&x, &y);
 		
-		if (AssetMouseDrag->FileName == "assets\\monstertrans.bmp")
+		/*if (AssetMouseDrag->FileName == "assets\\monstertrans.bmp")
 		{
 			_game->addEntity(EntityType::Player, AssetMouseDrag->FileName, x, y, "monster", true, true);
 		}
@@ -77,7 +77,7 @@ void AssetEditor::Update()
 		}
 		else {
 			_game->addEntity(EntityType::Ground, AssetMouseDrag->FileName, x, y, "ground", true, true);
-		}
+		}*/
 		AssetMouseDrag = nullptr;
 	}
 

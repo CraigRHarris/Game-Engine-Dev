@@ -22,13 +22,17 @@ void Player::draw()
 	SDL_SetRenderDrawColor(_pRenderer, 255, 255, 255, 255);
 }
 
-void Player::Update(const std::vector<Bitmap*>& platforms, std::vector<Pickup*>& pickups, std::vector<Enemy*>& enemys)
+void Player::Update(const std::vector<Bitmap*>& platforms, std::vector<Pickup*>& pickups, std::vector<Enemy*>& enemies)
 {
 	if (!jumpedThisFrame) {
 		for (const auto& platform : platforms) {
 			FixGroundCollision(platform);
 			if (physics->GetGrounded()) break;
 		}
+	}
+
+	if (physics->GetGrounded() && isStunned) {
+		isStunned = false;
 	}
 
 	for (auto pickup : pickups) { // player colliding with key
@@ -39,14 +43,24 @@ void Player::Update(const std::vector<Bitmap*>& platforms, std::vector<Pickup*>&
 		}
 	}
 
-	for (auto enemy : enemys) 
-	{
-		if (physics->IsColliding(enemy->GetTransformRect())) //trying to get the enemy to collid with player
+	if (!isStunned) {
+		for (auto enemy : enemies)
 		{
-			// need simeler to FixGroundCollision but with x value
-			// add a jump feture when colliding
-			_health--;
-			break;
+			if (physics->IsColliding(enemy->GetTransformRect())) //trying to get the enemy to collid with player
+			{
+				auto enemyxPos = enemy->GetPosition().x;
+				float diff = enemyxPos - m_x;
+
+				if ((diff < 0 && stunForce < 0.0f) || (diff > 0 && stunForce > 0.0f)) {
+					stunForce *= -1.0f;
+				}
+
+				isStunned = true;
+				Jump();
+
+				_health--;
+				break;
+			}
 		}
 	}
 
@@ -54,14 +68,21 @@ void Player::Update(const std::vector<Bitmap*>& platforms, std::vector<Pickup*>&
 		// handle dead
 	}
 
-	physics->UpdatePosition(m_x, m_y);
+	if (isStunned) {
+		m_x += stunForce;
+	}
+
 	physics->HandleGravity(m_y);
+	physics->UpdatePosition(m_x, m_y);
+	
 
 	jumpedThisFrame = false;
 }
 
 void Player::HandleInput(const Input& input)
 {
+	if (isStunned) return;
+
 	if (input.KeyIsPressed(SDLK_a) || input.KeyIsPressed(SDLK_LEFT))
 	{
 		UpdateX(-4);// if key A is pressed, player will move left
@@ -107,7 +128,7 @@ void Player::GUIDraw()
 	ImGui::Begin("Selection");
 
 	ImGui::InputInt("Keys:", &KeysCollected);
-
+	ImGui::InputInt("Health", &_health);
 
 	ImGui::End();
 }

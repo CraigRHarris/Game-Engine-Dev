@@ -23,18 +23,20 @@ public:
 	/**
 	Added gravity to player with velocity.
 	*/
-	void Update(const std::vector<Bitmap*>& platforms, std::vector<Pickup*>& pickups, std::vector<Enemy*>& enemys);
+	void Update(const std::vector<Bitmap*>& platforms, std::vector<Pickup*>& pickups, std::vector<Enemy*>& enemies);
 	void HandleInput(const Input& input);
 
 	//add collicion for player to emeny and damange if needed (use key collider code ) (not needed for a grade pass)
 
 
 	int GetScore() const { return _score; }// score for when key is pickup
-	int GetDamage() const { return _health; }
+	int GetHealth() const { return _health; }
 	/**
 	Added the fix ground is colliding with the player
 	*/
 	void FixGroundCollision(Bitmap* ground);
+
+	void IsEnemyColliding(Bitmap* enemy);
 
 	bool IsGrounded() const { return physics->GetGrounded(); }
 
@@ -53,6 +55,9 @@ private:
 
 	const float jumpForce = 20.0f;
 	Physics* physics;
+
+	float stunForce{ 5.0f };
+	bool isStunned{ false };
 
 	int _score{ 0 };
 	int _health{ 10 };

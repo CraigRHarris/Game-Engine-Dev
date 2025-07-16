@@ -55,7 +55,7 @@ public:
 	
 	void SetPosition(float x, float y);
 	
-	position GetPosition();
+	position GetPosition() const;
 
 	void UpdateX(float xDelta) { m_x += xDelta; }
 	void UpdateY(float yDelta) { m_y += yDelta; }
@@ -70,14 +70,14 @@ public:
 	void SetX(float x) { m_x = x; }
 	void SetY(float y) { m_y = y; }
 
-	SDL_Rect GetTransformRect()
+	SDL_Rect GetTransformRect() const
 	{
 		return SDL_Rect{ static_cast<int>(m_x) , static_cast<int>(m_y), m_w, m_h };
 	}
 
 	virtual void draw();
 
-	SDL_Texture* GetTextureRef()
+	SDL_Texture* GetTextureRef() const
 	{
 		return _pbitmapTexture;
 	}

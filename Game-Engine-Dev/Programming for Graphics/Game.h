@@ -42,7 +42,7 @@ private:
 	std::vector<Enemy*> enemies;
 	std::vector<Bitmap*> platforms;
 	std::vector<Pickup*> pickups;
-	std::vector<Goal*> goals;
+
 	Hierarchy* hierarchy{ nullptr };
 	I_SceneNode* Root{ nullptr };
 
@@ -95,19 +95,13 @@ public:
 	Game();
 	~Game();
 
-	/**
-	* Going though each object to get the bitmap of that object. Sets the object, then add it to the hierarchy for each object. 
-	* @param type Which object is loading.
-	* @param file finding the file.
-	* @param positon where it will be in the scene.
-	* @param name object name.
-	* @param Transparency If the asset needs a background.
-	* @param isNew Is it new to the scene.
-	* @param left
-	* @param right
-	*/
-	void addEntity(EntityType type, const std::string& file, int x, int y, const std::string& name, bool trans, bool isNew = false, int left = 0, int right = 0);
-	
+	void addPlayer(const position& pos);
+	void addGoal(const position& pos, const std::string& file);
+	void addGround(int x, int y, const std::string& file);
+	void addEnemy(int x, int y, const std::string& file, int leftBound, int rightBound);
+	void addPickup(int x, int y, const std::string& file);
+
+
 	/**
 	Updating fuctions every frame in this fuction.
 	*/
