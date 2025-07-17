@@ -9,11 +9,19 @@ private:
 	float yVelocity;
 
 public:
+
+	//
 	Physics(float W, float H) : CollisionRect{ 0.0f, 0.0f, W, H }, isGrounded{ false }, yVelocity{ 0.0f }, _intersection{ 0.0f, 0.0f, W, H } {}
 
+	/**
+	* Drewing box around player
+	*/
 	SDL_FRect GetCollisionRect() const { return CollisionRect; }
+	
+	/**
+	* Drewing box when collision with ground
+	*/
 	SDL_FRect GetIntersectionRect() const { return _intersection; }
-
 
 	virtual void HandleGravity(float& Ypos);
 	void UpdatePosition(float x, float y);

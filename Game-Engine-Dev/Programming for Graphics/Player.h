@@ -36,8 +36,6 @@ public:
 	*/
 	void FixGroundCollision(Bitmap* ground);
 
-	void IsEnemyColliding(Bitmap* enemy);
-
 	bool IsGrounded() const { return physics->GetGrounded(); }
 
 	void Jump();

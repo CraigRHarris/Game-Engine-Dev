@@ -46,12 +46,16 @@ public:
 	Reading the different json files for different scenes(levels).
 	*/
 	Scene readscene(std::string filepath);
+	
 	/**
 	* Saving the objects in the json file for the different levels to save.
-	* @param file The file of the asset.
-	* @param objects The object in the scene.
+	* @param file of the asset.
+	* @param A position for object and player postion in the scene.
+	* @param Goal in scene.
+	* @param Vector for enemy for being in scene.
+	* @param Vector for platforms for being in scene.
+	* @param Vector for pickups for being in scene.
 	*/
-
 	void savescene(const std::string& file, const position& playerPos, const Goal* goal, 
 											const std::vector<Enemy*>& enemies, const std::vector<Bitmap*>& platforms,
 											const std::vector<Pickup*>& pickups);

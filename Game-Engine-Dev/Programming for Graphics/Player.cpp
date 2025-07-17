@@ -100,6 +100,7 @@ void Player::HandleInput(const Input& input)
 	}
 }
 
+// getting the collision for the ground
 void Player::FixGroundCollision(Bitmap* ground)
 {
 	SDL_Rect groundRect = ground->GetTransformRect();

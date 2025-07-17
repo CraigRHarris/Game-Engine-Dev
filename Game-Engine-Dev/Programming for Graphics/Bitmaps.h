@@ -70,6 +70,7 @@ public:
 	void SetX(float x) { m_x = x; }
 	void SetY(float y) { m_y = y; }
 
+
 	SDL_Rect GetTransformRect() const
 	{
 		return SDL_Rect{ static_cast<int>(m_x) , static_cast<int>(m_y), m_w, m_h };
