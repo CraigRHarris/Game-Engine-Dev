@@ -36,7 +36,7 @@ void Game::startDragObject()
 	SDL_GetMouseState(&mouseX, &mouseY);
 	for (auto object : AllObjects)
 	{
-		SDL_Rect RectBounds = object->GetTransformRect();
+		SDL_Rect RectBounds = object->GetTransformRect();// look at asset drag on brightspace in tools
 		if (mouseX > RectBounds.x && mouseX < RectBounds.x + RectBounds.w && mouseY > RectBounds.y && mouseY < RectBounds.y + RectBounds.h)
 		{
 			SelectedObject = object;
@@ -53,7 +53,9 @@ void Game::endDragObject()
 	{
 		SelectedObject->SetX(mouseX);
 		SelectedObject->SetY(mouseY);
+		platforms.push_back(SelectedObject);
 		SelectedObject = nullptr;
+		
 	}
 }
 
@@ -64,6 +66,7 @@ void Game::CheckEvents()
 	//loop throuh all the events in the event list
 	while (SDL_PollEvent(&event) != NULL)
 	{
+		ImGui_ImplSDL2_ProcessEvent(&event);
 		// Check for keydown
 		if (event.type == SDL_KEYDOWN)
 		{
@@ -412,9 +415,7 @@ void Game::Update()
 		pickup->draw();
 	}
 
-	for (auto enemy : enemies) {
-		enemy->draw();
-	}
+	
 
 	goal->draw();
 
@@ -576,7 +577,10 @@ void Game::Update()
 		startDragObject();
 	}
 
-	if (!isMouseDown && SelectedObject != nullptr)
+
+	std::cout << "isMouseDown : " << isMouseDown << '\n';
+	std::cout << "SelectedObject : " << (SelectedObject != nullptr) << '\n';
+	if (isMouseDown && SelectedObject != nullptr)
 	{
 		endDragObject();
 	}
