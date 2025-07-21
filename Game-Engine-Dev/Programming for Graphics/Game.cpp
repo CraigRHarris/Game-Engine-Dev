@@ -30,19 +30,53 @@ bool Game::checkMouseJustPressed()
 
 void Game::startDragObject()
 {
-	if (!checkMouseJustPressed() || assetEditor->_selected || assetEditor->AssetMouseDrag != nullptr) return;
-
-	int mouseX, mouseY;
-	SDL_GetMouseState(&mouseX, &mouseY);
-	for (auto object : AllObjects)
+	ImGui::Begin("Editor");
+	ImGui::BeginChild("content Window", ImVec2(), true);
+	for (int i = 0; i < Content.size(); i++)
 	{
-		SDL_Rect RectBounds = object->GetTransformRect();// look at asset drag on brightspace in tools
-		if (mouseX > RectBounds.x && mouseX < RectBounds.x + RectBounds.w && mouseY > RectBounds.y && mouseY < RectBounds.y + RectBounds.h)
+		ImGui::PushID(i);
+
+		//ImGui::ImageButton((ImTextureID)Content[i]->GetTxtureRef(), { 100,100 });
+
+		//for drag
+		if (ImGui::BeginDragDropSource())
 		{
-			SelectedObject = object;
-			break;
+			assetEditor = Content[i];
+			ImGui::Image((ImTextureID)Content[i]->GetTextureRef(), { 100,100 });
+			ImGui::EndDragDropSource();
 		}
+		ImGui::PopID();
+		ImGui::SameLine;
 	}
+	
+	if (ImGui::IsMouseReleased(ImGuiMouseButton_Left) && assetEditor != nullptr)
+	{
+		cout << "Test" << endl;
+		int x, y;
+		SDL_GetMouseState(&x, &y);
+		AllObjects.push_back( new Bitmap(_Renderer,_texManager, assetEditor->FileName, x, y, assetEditor->ObjectName, true));
+		//s->Transfrom.ParentSet(GameWindow::Instance().GetHirarcy());
+		//add it to the scene manager
+		//Root.Children.push_back(&s->M_Transform);
+
+		assetEditor = nullptr;
+	}
+	ImGui::EndChild();
+	ImGui::End();
+
+	//if (!checkMouseJustPressed() || assetEditor->_selected || assetEditor->AssetMouseDrag != nullptr) return;
+
+	//int mouseX, mouseY;
+	//SDL_GetMouseState(&mouseX, &mouseY);
+	//for (auto object : AllObjects)
+	//{
+	//	SDL_Rect RectBounds = object->GetTransformRect();// look at asset drag on brightspace in tools
+	//	if (mouseX > RectBounds.x && mouseX < RectBounds.x + RectBounds.w && mouseY > RectBounds.y && mouseY < RectBounds.y + RectBounds.h)
+	//	{
+	//		SelectedObject = object;
+	//		break;
+	//	}
+	//}
 }
 
 void Game::endDragObject()
@@ -217,7 +251,7 @@ Game::Game()
 	m_pSmallFont = TTF_OpenFont("assets/DejaVuSans.ttf", 15); // font size
 	m_pBigFont = TTF_OpenFont("assets/DejaVuSans.ttf", 50);
 	
-	assetEditor = new AssetEditor(_Renderer, _Window, _texManager, this);
+	//assetEditor = new Bitmap(_Renderer, _Window, _texManager, this); //nick said to change to bitmap
 
 	// inGUI Setup
 	IMGUI_CHECKVERSION();
@@ -231,6 +265,18 @@ Game::Game()
 	ImGui::StyleColorsDark();
 
 	ImGui_ImplSDL2_InitForOpenGL(_Window, SDL_GL_GetCurrentContext());
+
+
+	std::string path = "assets";
+	for (const auto& entry : std::filesystem::directory_iterator(path))
+	{
+		//Content.push_back(new bitmap);
+		cout << entry.path().extension() << endl;
+		if (entry.path().extension() == ".bmp") 
+		{
+			Content.push_back(new Bitmap(_Renderer, _texManager, entry.path().string(), 0, 0, "Bitmap name", true));
+		}
+	}
 };
 
 Game::~Game() //destoy with the symbol ~ in front of fuction
@@ -563,7 +609,7 @@ void Game::Update()
 		ImGui::End();
 	}
 
-	assetEditor->Update();
+	//assetEditor->Update();
 	hierarchy->Update();
 
 	ImGui::Render();

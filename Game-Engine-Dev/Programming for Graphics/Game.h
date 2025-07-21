@@ -27,6 +27,8 @@ class Game
 {
 private:
 
+	std::vector<Bitmap*> Content;
+
 	int mouseDownCount{ 0 };
 	bool checkMouseJustPressed();
 
@@ -71,7 +73,7 @@ private:
 	*/
 	void UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour);
 	
-	AssetEditor* assetEditor{ nullptr };
+	Bitmap* assetEditor{ nullptr };
 	Input input;
 	bool _isRunning{ true };
 

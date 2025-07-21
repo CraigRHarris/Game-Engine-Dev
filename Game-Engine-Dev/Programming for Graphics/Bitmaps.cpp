@@ -25,10 +25,10 @@ bool Bitmap::IsColliding(Bitmap* Other)
 Bitmap::Bitmap(SDL_Renderer* renderer, TextureManager* texManager, std::string fileName, int xpos, int ypos, const string _ObjectName, bool useTransparency)
 {
 	FileName = fileName;
-	Object = _ObjectName;
-	if (Object == "")
+	ObjectName = _ObjectName;
+	if (ObjectName == "")
 	{
-		Object = "Object " + std::to_string(objectCount);
+		ObjectName = "Object " + std::to_string(objectCount);
 		objectCount++;
 	}
 		//store the rander for future configuring and drawing
@@ -64,7 +64,7 @@ Bitmap::~Bitmap()
 void Bitmap::GUIDraw()
 {
 	ImGui::Begin("Selection");
-	ImGui::Text(this->Object.c_str());
+	ImGui::Text(this->ObjectName.c_str());
 
 	float* TempPosAddressArry[2] = { &m_x, &m_y };
 	ImGui::InputFloat2("Position:", *TempPosAddressArry);
@@ -77,12 +77,12 @@ void Bitmap::GuiDrawChildGUI()
 {
 	ImGuiTreeNodeFlags nodeFlags = ImGuiTreeNodeFlags_FramePadding | ImGuiTreeNodeFlags_DefaultOpen;
 
-	bool isNodeOpen = ImGui::TreeNodeEx(this->Object.c_str(), nodeFlags, this->Object.c_str());
+	bool isNodeOpen = ImGui::TreeNodeEx(this->ObjectName.c_str(), nodeFlags, this->ObjectName.c_str());
 
 	if (ImGui::IsItemClicked())
 	{
 		I_GuiWindow::SelectedObject = this;
-		cout << "selected object is " << static_cast<Bitmap*>(I_GuiWindow::SelectedObject)->Object << endl;
+		cout << "selected object is " << static_cast<Bitmap*>(I_GuiWindow::SelectedObject)->ObjectName << endl;
 	}
 
 	if (I_GuiWindow::SelectedObject == this && ImGui::BeginDragDropSource())
@@ -97,7 +97,7 @@ void Bitmap::GuiDrawChildGUI()
 		if (const ImGuiPayload* payload = ImGui::AcceptDragDropPayload("_TREENODE"))
 		{
 			Bitmap* PayloadAsBitmap = static_cast<Bitmap*>(I_GuiWindow::SelectedObject);
-			cout << PayloadAsBitmap->Object << " on top of " << this->Object << endl;
+			cout << PayloadAsBitmap->ObjectName << " on top of " << this->ObjectName << endl;
 			addchild(PayloadAsBitmap);
 		}
 

@@ -30,7 +30,7 @@ public:
 	
 	static int objectCount;
 	//bool isGrounded = false;
-	std::string Object = "Name Object";
+	std::string ObjectName = "Name Object";
 
 
 	/**
