@@ -1,6 +1,7 @@
 #pragma once
 #include "Bitmaps.h"
 #include "Logger.h"
+#include "Phyics.h"
 
 class Pickup : public Bitmap
 {
@@ -9,7 +10,6 @@ public:
 		Logger::Info("Pickup ");
 	}
 
-
 	/**
 	Checks if colliding with player and add key to total if player is colliding.
 	*/
@@ -17,6 +17,5 @@ public:
 
 private:
 	bool enabled{ true };
-
 };
 

@@ -72,7 +72,7 @@ void Player::Update(const std::vector<Bitmap*>& platforms, std::vector<Pickup*>&
 		m_x += stunForce;
 	}
 
-	physics->HandleGravity(m_y);
+	physics->HandleGravity(this);
 	physics->UpdatePosition(m_x, m_y);
 	
 

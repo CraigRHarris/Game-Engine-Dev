@@ -19,7 +19,7 @@ public:
 
 	void draw() override;
 	/**
-	Setting the gravity and helps add collion to the floor.
+	Setting the gravity and the moving of the enemy.
 	*/
 	void Update(const std::vector<Bitmap*>& platforms);
 
@@ -28,11 +28,17 @@ public:
 	bool IsGrounded() const { return physics->GetGrounded(); }
 
 	/**
-	Draw the ajustable paramaters for the selectable when you select it on the hierarchy
+	Draw the enemy when needed.
 	*/
 	virtual void GUIDraw() override;
 
+	/**
+	The point of the enemy that it will move to the left.
+	*/
 	int getLeftBound() { return point_l; }
+	/**
+	The point of the enemy that it will move to the right.
+	*/
 	int getRightBound() { return point_r; }
 
 private:

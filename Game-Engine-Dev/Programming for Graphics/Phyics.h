@@ -1,5 +1,8 @@
 #pragma once
 #include "SDL.h"
+
+class Bitmap;
+
 class Physics
 {
 private:
@@ -10,7 +13,11 @@ private:
 
 public:
 
-	//
+	/**
+	* Using all of the fuctions in Phyics.h to make a basic physics system.
+	* @param Width.
+	* @param Hieght.
+	*/
 	Physics(float W, float H) : CollisionRect{ 0.0f, 0.0f, W, H }, isGrounded{ false }, yVelocity{ 0.0f }, _intersection{ 0.0f, 0.0f, W, H } {}
 
 	/**
@@ -23,7 +30,7 @@ public:
 	*/
 	SDL_FRect GetIntersectionRect() const { return _intersection; }
 
-	virtual void HandleGravity(float& Ypos);
+	virtual void HandleGravity(Bitmap* object);
 	void UpdatePosition(float x, float y);
 
 	virtual bool IsColliding(SDL_FRect Other);

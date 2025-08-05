@@ -1,52 +1,35 @@
 {
-    "entities": [
-        {
-            "direction": -1,
-            "objectname": "monster",
-            "sprite": "assets/monstertrans.bmp",
-            "transparent": true,
-            "type": "player",
-            "xpos": 250,
-            "ypos": 450
-        },
-        {
-            "direction": -1,
-            "left": 100,
-            "objectname": "enemy",
-            "right": 300,
-            "sprite": "assets/Alian.bmp",
-            "transparent": true,
-            "type": "enemy",
-            "xpos": 200,
-            "ypos": 590
-        },
-        {
-            "direction": -1,
-            "objectname": "ground",
-            "sprite": "assets/ground.bmp",
-            "transparent": true,
-            "type": "ground",
-            "xpos": -100,
-            "ypos": 600
-        },
-        {
-            "direction": -1,
-            "objectname": "key",
-            "sprite": "assets/Key.bmp",
-            "transparent": true,
-            "type": "key",
-            "xpos": 650,
-            "ypos": 550
-        },
-        {
-          "direction": -1,
-          "objectname": "goal",
-          "sprite": "assets\\door.bmp",
-          "transparent": true,
-          "type": "goal",
-          "xpos": 750,
-          "ypos": 514
-        }
-    ],
-    "name": "Level 2"
+  "name": "level 2",
+  "player": {
+    "x": 150,
+    "y": 450
+  },
+  "goal": {
+    "x": 900,
+    "y": 520,
+    "sprite": "assets\\door.bmp"
+  },
+  "enemies": [
+    {
+      "x": 600,
+      "y": 590,
+      "leftPatrol": 100,
+      "rightPatrol": 300,
+      "sprite": "assets/Alian.bmp"
+    }
+  ],
+  "platforms": [
+    {
+      "sprite": "assets/ground.bmp",
+      "x": -100,
+      "y": 600
+    }
+  ],
+  "pickups": [
+    {
+      "sprite": "assets/Key.bmp",
+      "x": 350,
+      "y": 550
+    }
+  ]
 }

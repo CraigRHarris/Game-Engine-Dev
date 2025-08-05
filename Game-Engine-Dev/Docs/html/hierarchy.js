@@ -1,6 +1,12 @@
 var hierarchy =
 [
     [ "AssetEditor", "class_asset_editor.html", null ],
+    [ "baseObject", "structbase_object.html", [
+      [ "enemyObject", "structenemy_object.html", null ],
+      [ "goalObject", "structgoal_object.html", null ],
+      [ "groundObject", "structground_object.html", null ],
+      [ "pickupObject", "structpickup_object.html", null ]
+    ] ],
     [ "Game", "class_game.html", null ],
     [ "Hierarchy", "class_hierarchy.html", null ],
     [ "I_GuiWindow", "class_i___gui_window.html", [
@@ -16,13 +22,13 @@ var hierarchy =
     ] ],
     [ "Input", "class_input.html", null ],
     [ "Logger", "class_logger.html", null ],
+    [ "Physics", "class_physics.html", null ],
     [ "position", "structposition.html", null ],
     [ "Profile", "struct_profile.html", null ],
     [ "Profiler", "struct_profiler.html", null ],
     [ "ProfilerSystem", "class_profiler_system.html", null ],
     [ "SampleData", "struct_sample_data.html", null ],
     [ "Scene", "struct_scene.html", null ],
-    [ "SceneEntity", "struct_scene_entity.html", null ],
     [ "SceneManager", "class_scene_manager.html", null ],
     [ "TextureData", "struct_texture_data.html", null ],
     [ "TextureManager", "class_texture_manager.html", null ]

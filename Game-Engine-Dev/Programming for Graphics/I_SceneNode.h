@@ -8,7 +8,7 @@ public:
 	std::vector<I_SceneNode*> children;
 
 	/**
-	*Parent added to child then remove parent from orignal child. Then stay connected to child that is parented.
+	*Parent added to child then remove child from orignal parent. Then stay connected to child when connected to parented.
 	* @param childtoAdd
 	*/
 	void addchild(I_SceneNode* childtoAdd);

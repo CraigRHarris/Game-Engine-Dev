@@ -73,7 +73,9 @@ private:
 	*/
 	void UpdateText(string msg, int x, int y, TTF_Font* font, SDL_Color colour);
 	
-	Bitmap* assetEditor{ nullptr };
+	Bitmap* currentAsset;
+
+	AssetEditor* assetEditor{ nullptr };
 	Input input;
 	bool _isRunning{ true };
 

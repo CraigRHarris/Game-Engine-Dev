@@ -1,5 +1,6 @@
 #include "Pickup.h"
 #include "Player.h"
+#include "Phyics.h"
 
 #include <iostream>
 

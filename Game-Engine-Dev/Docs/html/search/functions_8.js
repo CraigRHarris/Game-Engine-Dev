@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['profilersystem_0',['ProfilerSystem',['../class_profiler_system.html#aa7e3ea767c34204f9ff3c700388cfa45',1,'ProfilerSystem']]],
-  ['push_1',['push',['../struct_profiler.html#afdd406317fab2e4d1f5a308b37592c3b',1,'Profiler']]]
+  ['readscene_0',['readscene',['../class_scene_manager.html#a85a785d10da94b849b7af70ddb4277d6',1,'SceneManager']]],
+  ['removechild_1',['removechild',['../class_i___scene_node.html#ae0fa48a867f164d7857b4c9209c3210f',1,'I_SceneNode']]]
 ];

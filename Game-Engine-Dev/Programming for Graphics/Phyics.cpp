@@ -1,4 +1,5 @@
 #include "Phyics.h"
+#include "Bitmaps.h"
 
 void Physics::UpdatePosition(float x, float y)
 {
@@ -49,7 +50,7 @@ void Physics::CheckForGroundCollision(SDL_FRect Ground, float& yPos)
 
 }
 
-void Physics::HandleGravity(float& Ypos)
+void Physics::HandleGravity(Bitmap* object)
 {
 	if (!isGrounded)
 	{
@@ -57,7 +58,7 @@ void Physics::HandleGravity(float& Ypos)
 
 		yVelocity += gravity;
 
-		Ypos += yVelocity;
+		object->UpdateY(yVelocity);
 	}
 	else {
 		yVelocity = 0.0f;// velocity is 0 if grounded

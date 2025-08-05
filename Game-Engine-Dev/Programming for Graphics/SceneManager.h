@@ -50,7 +50,7 @@ public:
 	/**
 	* Saving the objects in the json file for the different levels to save.
 	* @param file of the asset.
-	* @param A position for object and player postion in the scene.
+	* @param Postition for objects and player postion in the scene.
 	* @param Goal in scene.
 	* @param Vector for enemy for being in scene.
 	* @param Vector for platforms for being in scene.

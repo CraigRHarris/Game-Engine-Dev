@@ -57,13 +57,26 @@ public:
 	
 	position GetPosition() const;
 
-	void UpdateX(float xDelta) { m_x += xDelta; }
-	void UpdateY(float yDelta) { m_y += yDelta; }
+	void UpdateX(float xDelta) { 
+		m_x += xDelta;
+		for (auto& child : children)// to move the child with the parent 
+		{
+			Bitmap* childBitmap = static_cast<Bitmap*>(child);
+			childBitmap->UpdateX(xDelta);
+		}
+	}
+	void UpdateY(float yDelta) { 
+		m_y += yDelta; 
+		for (auto& child : children) {
+			Bitmap* childBitmap = static_cast<Bitmap*>(child);
+			childBitmap->UpdateY(yDelta);
+		}
+	}
 
 	virtual void GUIDraw();
 
 	/**
-	Its for the Hierarchy to add the objects to a different object(parent) in the hierarchy list.
+	For the Hierarchy to add the objects to a different object(parent) in the hierarchy list.
 	*/
 	void GuiDrawChildGUI();
 

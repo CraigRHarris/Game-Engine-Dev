@@ -12,6 +12,17 @@ void Hierarchy::Update()
 {
 	ImGui::Begin("Scene Hierarchy", 0);
 
+	ImVec2 pos = ImGui::GetCursorPos();
+	ImGui::Dummy(ImGui::GetContentRegionAvail());// dummy is random object that you can't see / this is to move the child out of the parent
+	if (ImGui::BeginDragDropTarget())
+	{
+		ImGui::AcceptDragDropPayload("_TREENODE");
+		Bitmap* PayloadAsBitmap = static_cast<Bitmap*>(I_GuiWindow::SelectedObject);
+		Root->addchild(PayloadAsBitmap);
+		ImGui::EndDragDropTarget();
+	}
+	ImGui::SetCursorPos(pos);
+
 	ImGuiTreeNodeFlags nodeFlags = ImGuiTreeNodeFlags_FramePadding | ImGuiTreeNodeFlags_DefaultOpen;
 	bool isNodeOpen = ImGui::TreeNodeEx("Scene", nodeFlags, "Scene");
 	if (isNodeOpen)

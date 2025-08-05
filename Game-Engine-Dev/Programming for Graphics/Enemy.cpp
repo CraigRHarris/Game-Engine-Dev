@@ -20,7 +20,7 @@ void Enemy::Update(const std::vector<Bitmap*>& platforms)
 	}
 
 	physics->UpdatePosition(m_x, m_y);
-	physics->HandleGravity(m_y);
+	physics->HandleGravity(this);
 
 	position EnemyPosition = GetPosition();
 	moveSpeed = 3;

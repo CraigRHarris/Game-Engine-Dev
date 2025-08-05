@@ -13,7 +13,7 @@ public:
 	Hierarchy(I_SceneNode* _Root);
 	
 	/**
-	Making the hierarchy with Treenodes using the children for the hierarchy.
+	Making the hierarchy with Treenodes using the parent and children for the hierarchy.
 	*/
 	void Update();
 

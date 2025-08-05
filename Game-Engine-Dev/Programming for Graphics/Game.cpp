@@ -41,7 +41,7 @@ void Game::startDragObject()
 		//for drag
 		if (ImGui::BeginDragDropSource())
 		{
-			assetEditor = Content[i];
+			currentAsset = Content[i];
 			ImGui::Image((ImTextureID)Content[i]->GetTextureRef(), { 100,100 });
 			ImGui::EndDragDropSource();
 		}
@@ -49,34 +49,17 @@ void Game::startDragObject()
 		ImGui::SameLine;
 	}
 	
-	if (ImGui::IsMouseReleased(ImGuiMouseButton_Left) && assetEditor != nullptr)
+	if (ImGui::IsMouseReleased(ImGuiMouseButton_Left) && currentAsset != nullptr)
 	{
 		cout << "Test" << endl;
 		int x, y;
 		SDL_GetMouseState(&x, &y);
-		AllObjects.push_back( new Bitmap(_Renderer,_texManager, assetEditor->FileName, x, y, assetEditor->ObjectName, true));
-		//s->Transfrom.ParentSet(GameWindow::Instance().GetHirarcy());
-		//add it to the scene manager
-		//Root.Children.push_back(&s->M_Transform);
-
+		AllObjects.push_back( new Bitmap(_Renderer,_texManager, currentAsset->FileName, x, y, currentAsset->ObjectName, true));
+		
 		assetEditor = nullptr;
 	}
 	ImGui::EndChild();
 	ImGui::End();
-
-	//if (!checkMouseJustPressed() || assetEditor->_selected || assetEditor->AssetMouseDrag != nullptr) return;
-
-	//int mouseX, mouseY;
-	//SDL_GetMouseState(&mouseX, &mouseY);
-	//for (auto object : AllObjects)
-	//{
-	//	SDL_Rect RectBounds = object->GetTransformRect();// look at asset drag on brightspace in tools
-	//	if (mouseX > RectBounds.x && mouseX < RectBounds.x + RectBounds.w && mouseY > RectBounds.y && mouseY < RectBounds.y + RectBounds.h)
-	//	{
-	//		SelectedObject = object;
-	//		break;
-	//	}
-	//}
 }
 
 void Game::endDragObject()
@@ -89,7 +72,6 @@ void Game::endDragObject()
 		SelectedObject->SetY(mouseY);
 		platforms.push_back(SelectedObject);
 		SelectedObject = nullptr;
-		
 	}
 }
 
@@ -251,7 +233,7 @@ Game::Game()
 	m_pSmallFont = TTF_OpenFont("assets/DejaVuSans.ttf", 15); // font size
 	m_pBigFont = TTF_OpenFont("assets/DejaVuSans.ttf", 50);
 	
-	//assetEditor = new Bitmap(_Renderer, _Window, _texManager, this); //nick said to change to bitmap
+	assetEditor = new AssetEditor(_Renderer, _Window, _texManager, this); //nick said to change to bitmap
 
 	// inGUI Setup
 	IMGUI_CHECKVERSION();
@@ -323,6 +305,12 @@ void Game::loadScene(Scene& scene)
 
 void Game::addPlayer(const position& pos)
 {
+	if (player) {
+		AllObjects.erase(std::remove(AllObjects.begin(), AllObjects.end(), player));
+		Root->removechild(player);
+		delete player;
+	}
+
 	player = new Player(_Renderer, _texManager, "assets//monstertrans.bmp", pos.x, pos.y, "player", true);
 	AllObjects.push_back(player);
 	Root->addchild(player);
@@ -453,6 +441,10 @@ void Game::Update()
 
 	for (auto platform : platforms) {
 		platform->draw();
+	}
+
+	for (auto enemy : enemies) {
+		enemy->draw();
 	}
 
 	player->draw();
@@ -609,27 +601,27 @@ void Game::Update()
 		ImGui::End();
 	}
 
-	//assetEditor->Update();
+	assetEditor->Update();
 	hierarchy->Update();
 
-	ImGui::Render();
-	ImGuiSDL::Render(ImGui::GetDrawData());
-
-	if (isMouseDown)
+	/*if (isMouseDown)
 	{
 		mouseDownCount++;
 
 		std::cout << "mouseDownCount: " << mouseDownCount << '\n';
 		startDragObject();
-	}
+	}*/
+
+	ImGui::Render();
+	ImGuiSDL::Render(ImGui::GetDrawData());
 
 
-	std::cout << "isMouseDown : " << isMouseDown << '\n';
-	std::cout << "SelectedObject : " << (SelectedObject != nullptr) << '\n';
-	if (isMouseDown && SelectedObject != nullptr)
-	{
-		endDragObject();
-	}
+	//std::cout << "isMouseDown : " << isMouseDown << '\n';
+	//std::cout << "SelectedObject : " << (SelectedObject != nullptr) << '\n';
+	//if (isMouseDown && SelectedObject != nullptr)
+	//{
+	//	endDragObject();
+	//}
 	//show what we've drawn
 	SDL_RenderPresent(_Renderer);
 

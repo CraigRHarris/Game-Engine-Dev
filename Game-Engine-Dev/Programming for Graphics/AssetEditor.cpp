@@ -40,13 +40,7 @@ AssetEditor::AssetEditor(SDL_Renderer* renderer, SDL_Window* window, TextureMana
 		{
 			cout << "dir " << entry << std::endl;
 		}
-		//debug
-		cout << entry.path() << std::endl;
 	}
-
-	//debug
-	//std::cout << entry.path() << std::endl;
-
 }
 
 void AssetEditor::Update()
@@ -54,30 +48,38 @@ void AssetEditor::Update()
 
 	if (ImGui::IsMouseReleased(ImGuiMouseButton_Left) && AssetMouseDrag != nullptr)
 	{
-		cout << "Added Pickup" << endl;
 		_selected = false;
 		int x, y;
 		SDL_GetMouseState(&x, &y);
 		
-		/*if (AssetMouseDrag->FileName == "assets\\monstertrans.bmp")
+		// adding the asset into the scene
+		if (AssetMouseDrag->FileName == "assets\\monstertrans.bmp")
 		{
-			_game->addEntity(EntityType::Player, AssetMouseDrag->FileName, x, y, "monster", true, true);
+			position pos;
+			pos.x = x;
+			pos.y = y;
+			_game->addPlayer(pos);
 		}
 		else if (AssetMouseDrag->FileName == "assets\\Alian.bmp")
 		{
-			_game->addEntity(EntityType::Enemy, AssetMouseDrag->FileName, x, y, "enemy", true, true, x, y + 100);
+			int left = x - 25;
+			int right = y + 25;
+			_game->addEnemy(x, y, AssetMouseDrag->FileName, left, right);// adding the movment of the allian to the parent
 		}
 		else if (AssetMouseDrag->FileName == "assets\\Key.bmp")
 		{
-			_game->addEntity(EntityType::Pickup, AssetMouseDrag->FileName, x, y, "key", true, true);
+			_game->addPickup(x, y, AssetMouseDrag->FileName);
 		}
 		else if (AssetMouseDrag->FileName == "assets\\door.bmp")
 		{
-			_game->addEntity(EntityType::Goal, AssetMouseDrag->FileName, x, y, "goal", true, true);
+			position pos;
+			pos.x = x;
+			pos.y = y;
+			_game->addGoal(pos, AssetMouseDrag->FileName);
 		}
 		else {
-			_game->addEntity(EntityType::Ground, AssetMouseDrag->FileName, x, y, "ground", true, true);
-		}*/
+			_game->addGround(x, y, AssetMouseDrag->FileName);
+		}
 		AssetMouseDrag = nullptr;
 	}
 
@@ -96,7 +98,6 @@ void AssetEditor::Update()
 		if (ImGui::BeginDragDropSource())
 		{
 			_selected = true;
-			std::cout << "BeginDragDropSource\n";
 			AssetMouseDrag = content[i];
 			ImGui::Image((ImTextureID)content[i]->GetTextureRef(), { 100,100 });
 			ImGui::EndDragDropSource();
