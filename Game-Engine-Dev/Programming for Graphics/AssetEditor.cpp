@@ -45,12 +45,12 @@ AssetEditor::AssetEditor(SDL_Renderer* renderer, SDL_Window* window, TextureMana
 
 void AssetEditor::Update()
 {
-
+	
 	if (ImGui::IsMouseReleased(ImGuiMouseButton_Left) && AssetMouseDrag != nullptr)
 	{
 		_selected = false;
 		int x, y;
-		SDL_GetMouseState(&x, &y);
+		SDL_GetMouseState(&x, &y);// where the mouses position is 
 		
 		// adding the asset into the scene
 		if (AssetMouseDrag->FileName == "assets\\monstertrans.bmp")

@@ -50,7 +50,7 @@ void Physics::CheckForGroundCollision(SDL_FRect Ground, float& yPos)
 
 }
 
-void Physics::HandleGravity(Bitmap* object)
+void Physics::HandleGravity(Bitmap* object)//making the gravity
 {
 	if (!isGrounded)
 	{

@@ -23,7 +23,7 @@ float Profiler::AverageTime()
 	return average / FrameTimeQueue.size();
 }
 
-float Profiler::CalculateFPSValue(float averageFrameTime)
+float Profiler::CalculateFPSValue(float averageFrameTime)//FPS Value
 {
 	return 1000 / averageFrameTime;
 }
@@ -45,7 +45,7 @@ void ProfilerSystem::StartFrame()
 	thisFramesTotalTime = 0;
 }
 
-void ProfilerSystem::StoreSample(const char* name, int64_t elapsedTime)
+void ProfilerSystem::StoreSample(const char* name, int64_t elapsedTime)// store of the frames for profiler
 {
 	SampleData* sample = new SampleData();
 	sample->frameReference = currentFrame;

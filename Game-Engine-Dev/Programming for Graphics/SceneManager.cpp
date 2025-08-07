@@ -6,7 +6,7 @@
 
 #include <fstream>
 
-Scene SceneManager::readscene(std::string filepath)
+Scene SceneManager::readscene(std::string filepath)// reading the scene to add the object to the scene
 {
 	std::ifstream input(filepath.c_str());
 	if (!input)
@@ -69,12 +69,14 @@ void SceneManager::savescene(const std::string& file, const position& playerPos,
 	const std::vector<Enemy*>& enemies, const std::vector<Bitmap*>& platforms,
 	const std::vector<Pickup*>& pickups)
 {
+	//adding the objects into arrys for the json to use
 	nlohmann::json sceneJson;
 	sceneJson["name"] = "Level 1";
 	sceneJson["enemies"] = json::array();
 	sceneJson["platforms"] = json::array();
 	sceneJson["pickups"] = json::array();
 
+	//adding the objects details for the json to use
 	json player;
 	player["x"] = playerPos.x;
 	player["y"] = playerPos.y;
@@ -115,34 +117,6 @@ void SceneManager::savescene(const std::string& file, const position& playerPos,
 
 		sceneJson["pickups"].push_back(pu);
 	}
-
-	//for (auto object : objects)
-	//{
-	//	json entity;
-
-	//	entity["type"] = object->Object;
-	//	entity["objectname"] = object->Object;
-	//	entity["sprite"] = object->FileName;
-	//	SDL_Rect rect = object->GetTransformRect();
-	//	entity["xpos"] = rect.x;
-	//	entity["ypos"] = rect.y;
-	//	entity["direction"] = -1;
-	//	entity["transparent"] = true;
-
-	//	/*Player* player = dynamic_cast<Player*>(object);
-	//	if (player) {
-	//		entity["type"] = "player";
-	//	}
-
-	//	Enemy* monster = dynamic_cast<Enemy*>(object);
-	//	if (monster)
-	//	{
-	//		entity["left"] = monster->getLeftBound();
-	//		entity["right"] = monster->getRightBound();
-	//	}*/
-
-	//	sceneJson["entities"].push_back(entity);
-	//}
 
 	std::ofstream outfile{ file };
 

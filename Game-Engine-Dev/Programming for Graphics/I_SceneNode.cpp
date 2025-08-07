@@ -1,6 +1,6 @@
 #include "I_SceneNode.h"
 
-void I_SceneNode::addchild(I_SceneNode* childtoAdd)
+void I_SceneNode::addchild(I_SceneNode* childtoAdd)//adding the child to the parent to add the objects
 {
 	if (childtoAdd->parent != nullptr)
 	{
@@ -11,7 +11,7 @@ void I_SceneNode::addchild(I_SceneNode* childtoAdd)
 	children.push_back(childtoAdd);
 }
 
-void I_SceneNode::removechild(I_SceneNode* childtoRemove)
+void I_SceneNode::removechild(I_SceneNode* childtoRemove)//remove child from the parent
 {
 	children.erase(std::remove(children.begin(), children.end(), childtoRemove), children.end());
 }

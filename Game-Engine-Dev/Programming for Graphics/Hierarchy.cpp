@@ -16,6 +16,7 @@ void Hierarchy::Update()
 	ImGui::Dummy(ImGui::GetContentRegionAvail());// dummy is random object that you can't see / this is to move the child out of the parent
 	if (ImGui::BeginDragDropTarget())
 	{
+		//dragging object then placing it where the mouse is 
 		ImGui::AcceptDragDropPayload("_TREENODE");
 		Bitmap* PayloadAsBitmap = static_cast<Bitmap*>(I_GuiWindow::SelectedObject);
 		Root->addchild(PayloadAsBitmap);

@@ -49,7 +49,7 @@ void Game::startDragObject()
 		ImGui::SameLine;
 	}
 	
-	if (ImGui::IsMouseReleased(ImGuiMouseButton_Left) && currentAsset != nullptr)
+	if (ImGui::IsMouseReleased(ImGuiMouseButton_Left) && currentAsset != nullptr)//for releasing button from the mouse
 	{
 		cout << "Test" << endl;
 		int x, y;
@@ -62,7 +62,7 @@ void Game::startDragObject()
 	ImGui::End();
 }
 
-void Game::endDragObject()
+void Game::endDragObject()// position of the mouse when drag has ended
 {
 	int mouseX, mouseY;
 	SDL_GetMouseState(&mouseX, &mouseY);
@@ -102,6 +102,7 @@ void Game::CheckEvents()
 		{
 			_isRunning = false;
 		}
+		//mouse button pressed or released
 		else if (event.type == SDL_MOUSEBUTTONDOWN)
 		{
 			if (!isMouseDown)
@@ -117,7 +118,7 @@ void Game::CheckEvents()
 		}
 	}
 
-	if (input.KeyIsPressed(SDLK_ESCAPE))
+	if (input.KeyIsPressed(SDLK_ESCAPE))// escape for quiting game
 	{
 		_isRunning = false;
 	}
@@ -233,9 +234,9 @@ Game::Game()
 	m_pSmallFont = TTF_OpenFont("assets/DejaVuSans.ttf", 15); // font size
 	m_pBigFont = TTF_OpenFont("assets/DejaVuSans.ttf", 50);
 	
-	assetEditor = new AssetEditor(_Renderer, _Window, _texManager, this); //nick said to change to bitmap
+	assetEditor = new AssetEditor(_Renderer, _Window, _texManager, this); 
 
-	// inGUI Setup
+	// imGUI Setup
 	IMGUI_CHECKVERSION();
 	ImGui::CreateContext();
 	SDL_DisplayMode DisplayMode;
@@ -282,7 +283,7 @@ Game::~Game() //destoy with the symbol ~ in front of fuction
 
 }
 
-void Game::loadScene(Scene& scene)
+void Game::loadScene(Scene& scene)// using the object from json adding them into the scene
 {
 	clearExistingObjects();
 
@@ -303,7 +304,7 @@ void Game::loadScene(Scene& scene)
 	}
 }
 
-void Game::addPlayer(const position& pos)
+void Game::addPlayer(const position& pos)//adding the player into the scene
 {
 	if (player) {
 		AllObjects.erase(std::remove(AllObjects.begin(), AllObjects.end(), player));
@@ -316,35 +317,35 @@ void Game::addPlayer(const position& pos)
 	Root->addchild(player);
 }
 
-void Game::addGoal(const position& pos, const std::string& file)
+void Game::addGoal(const position& pos, const std::string& file)//adding the goal into the scene
 {
 	goal = new Goal(_Renderer, _texManager, file, pos.x, pos.y, "goal", false);
 	AllObjects.push_back(goal);
 	Root->addchild(goal);
 }
 
-void Game::addGround(int x, int y, const std::string& file)
+void Game::addGround(int x, int y, const std::string& file)//adding the ground into the scene
 {
 	platforms.push_back(new Bitmap(_Renderer, _texManager, file, x, y, "ground", false));
 	AllObjects.push_back(platforms[platforms.size() - 1]);
 	Root->addchild(platforms[platforms.size() - 1]);
 }
 
-void Game::addEnemy(int x, int y, const std::string& file, int leftBound, int rightBound)
+void Game::addEnemy(int x, int y, const std::string& file, int leftBound, int rightBound)//adding the enemy into the scene
 {
 	enemies.push_back(new Enemy(_Renderer, _texManager, file, x, y, leftBound, rightBound, "enemy", true));
 	AllObjects.push_back(enemies[enemies.size() - 1]);
 	Root->addchild(enemies[enemies.size() - 1]);
 }
 
-void Game::addPickup(int x, int y, const std::string& file)
+void Game::addPickup(int x, int y, const std::string& file)//adding the pickup(key) into the scene
 {
 	pickups.push_back(new Pickup(_Renderer, _texManager, file, x, y, "key", false));
 	AllObjects.push_back(pickups[pickups.size() - 1]);
 	Root->addchild(pickups[pickups.size() - 1]);
 }
 
-void Game::clearExistingObjects()
+void Game::clearExistingObjects()//clearing the old object that where in the scene before
 {
 	SelectedObject = nullptr;
 	if (player)
@@ -407,7 +408,7 @@ void Game::Update()
 
 	profiler->push(io.DeltaTime * 1000);
 
-	if (goal->IsColliding(player))
+	if (goal->IsColliding(player))// when goal collids with player it loads the next level
 	{
 		Root = new I_SceneNode();
 		currentLV++;
@@ -416,7 +417,7 @@ void Game::Update()
 		newScene = _sceneManager.readscene(levels[currentLV]);
 
 		loadScene(newScene);
-		//Recreate hierarchy when loading a new scene (how?)
+		
 		if (Root)
 		{
 			hierarchy = new Hierarchy(Root);
@@ -435,6 +436,7 @@ void Game::Update()
 	player->HandleInput(input);
 	player->Update(platforms, pickups, enemies);
 
+	//drawing objects
 	for (auto enemy : enemies) {
 		enemy->Update(platforms);
 	}
@@ -452,8 +454,6 @@ void Game::Update()
 	for (auto pickup : pickups) {
 		pickup->draw();
 	}
-
-	
 
 	goal->draw();
 
@@ -604,24 +604,9 @@ void Game::Update()
 	assetEditor->Update();
 	hierarchy->Update();
 
-	/*if (isMouseDown)
-	{
-		mouseDownCount++;
-
-		std::cout << "mouseDownCount: " << mouseDownCount << '\n';
-		startDragObject();
-	}*/
-
 	ImGui::Render();
 	ImGuiSDL::Render(ImGui::GetDrawData());
 
-
-	//std::cout << "isMouseDown : " << isMouseDown << '\n';
-	//std::cout << "SelectedObject : " << (SelectedObject != nullptr) << '\n';
-	//if (isMouseDown && SelectedObject != nullptr)
-	//{
-	//	endDragObject();
-	//}
 	//show what we've drawn
 	SDL_RenderPresent(_Renderer);
 

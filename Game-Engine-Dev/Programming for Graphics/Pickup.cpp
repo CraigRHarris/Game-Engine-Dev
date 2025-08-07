@@ -4,7 +4,7 @@
 
 #include <iostream>
 
-bool Pickup::IsColliding(Bitmap* other)
+bool Pickup::IsColliding(Bitmap* other)// is player colliding with object
 {
 	if (!enabled) return false;
 
@@ -16,7 +16,7 @@ bool Pickup::IsColliding(Bitmap* other)
 
 	bool playerCol = Bitmap::IsColliding(other);
 
-	if (playerCol)
+	if (playerCol) //collecting the key
 	{
 		player->addKey();
 		enabled = false;

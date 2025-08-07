@@ -10,10 +10,10 @@ void Player::draw()
 {
 	Bitmap::draw();
 
-	auto intersectionRect = physics->GetIntersectionRect();// the red box that corllides with groung
+	auto intersectionRect = physics->GetIntersectionRect();// the red box that corllides with ground
 	auto collisionRect = physics->GetCollisionRect();// player collision box
 
-	SDL_SetRenderDrawColor(_pRenderer, 255, 0, 255, 255);
+	SDL_SetRenderDrawColor(_pRenderer, 255, 0, 255, 255);//colours for the boxs
 	SDL_RenderDrawRectF(_pRenderer, &collisionRect);
 	SDL_SetRenderDrawColor(_pRenderer, 255, 255, 255, 255);
 
@@ -31,7 +31,7 @@ void Player::Update(const std::vector<Bitmap*>& platforms, std::vector<Pickup*>&
 		}
 	}
 
-	if (physics->GetGrounded() && isStunned) {
+	if (physics->GetGrounded() && isStunned) { //stunning the player when pushed by enemy
 		isStunned = false;
 	}
 
@@ -51,7 +51,7 @@ void Player::Update(const std::vector<Bitmap*>& platforms, std::vector<Pickup*>&
 				auto enemyxPos = enemy->GetPosition().x;
 				float diff = enemyxPos - m_x;
 
-				if ((diff < 0 && stunForce < 0.0f) || (diff > 0 && stunForce > 0.0f)) {
+				if ((diff < 0 && stunForce < 0.0f) || (diff > 0 && stunForce > 0.0f)) { //pushing player away from enemy
 					stunForce *= -1.0f;
 				}
 
@@ -79,7 +79,7 @@ void Player::Update(const std::vector<Bitmap*>& platforms, std::vector<Pickup*>&
 	jumpedThisFrame = false;
 }
 
-void Player::HandleInput(const Input& input)
+void Player::HandleInput(const Input& input)//input keys for the player
 {
 	if (isStunned) return;
 
@@ -128,8 +128,8 @@ void Player::GUIDraw()
 
 	ImGui::Begin("Selection");
 
-	ImGui::InputInt("Keys:", &KeysCollected);
-	ImGui::InputInt("Health", &_health);
+	ImGui::InputInt("Keys:", &KeysCollected);//how many keys collected in UI tool
+	ImGui::InputInt("Health", &_health);//health with a number in UI tool
 
 	ImGui::End();
 }

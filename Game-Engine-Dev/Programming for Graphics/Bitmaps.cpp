@@ -92,7 +92,7 @@ void Bitmap::GuiDrawChildGUI()
 		ImGui::EndDragDropSource();
 	}
 
-	if (ImGui::BeginDragDropTarget())
+	if (ImGui::BeginDragDropTarget())//when mouse is dragging object it will show
 	{
 		if (const ImGuiPayload* payload = ImGui::AcceptDragDropPayload("_TREENODE"))
 		{
@@ -104,7 +104,7 @@ void Bitmap::GuiDrawChildGUI()
 		ImGui::EndDragDropTarget();
 	}
 
-	if (isNodeOpen)
+	if (isNodeOpen)// add the object to the hierarchy
 	{
 		for (int i = 0; i < children.size(); i++)
 		{

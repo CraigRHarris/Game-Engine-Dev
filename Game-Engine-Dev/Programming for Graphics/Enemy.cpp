@@ -5,7 +5,7 @@ void Enemy::draw()
 {
 	Bitmap::draw();
 
-	auto collisionRect = physics->GetCollisionRect();
+	auto collisionRect = physics->GetCollisionRect();//drawing the box around the enemy to show collction hit boxs
 
 	SDL_SetRenderDrawColor(_pRenderer, 0, 255, 0, 255);//green
 	SDL_RenderDrawRectF(_pRenderer, &collisionRect);
@@ -14,16 +14,17 @@ void Enemy::draw()
 
 void Enemy::Update(const std::vector<Bitmap*>& platforms)
 {
-	for (const auto& platform : platforms) {
+	for (const auto& platform : platforms) //making the enemy and ground collid
+	{
 		FixGroundCollision(platform);
 		if (physics->GetGrounded()) break;
 	}
 
 	physics->UpdatePosition(m_x, m_y);
-	physics->HandleGravity(this);
+	physics->HandleGravity(this);//gravity
 
-	position EnemyPosition = GetPosition();
-	moveSpeed = 3;
+	position EnemyPosition = GetPosition();//point of the enemy movment
+	moveSpeed = 3;//speed of enemy
 
 	//Left point
 	if (EnemyPosition.x <= point_l && direction == -1)
@@ -39,7 +40,7 @@ void Enemy::Update(const std::vector<Bitmap*>& platforms)
 	UpdateX(xVelocity);
 }
 
-void Enemy::FixGroundCollision(Bitmap* ground)
+void Enemy::FixGroundCollision(Bitmap* ground)//making sure that the ground is colliding correctly
 {
 	SDL_Rect groundRect = ground->GetTransformRect();
 
@@ -54,9 +55,9 @@ void Enemy::GUIDraw()
 
 	ImGui::Begin("Selection");
 
-	int* TempPosAddressArry[2] = { &point_l, &point_r };
+	int* TempPosAddressArry[2] = { &point_l, &point_r };//for position of enemy in hierarchy tools
 	ImGui::InputInt2("Bounds:", *TempPosAddressArry);
 
-	ImGui::SliderFloat("Movement Speed:", &moveSpeed, 0, 10);
+	ImGui::SliderFloat("Movement Speed:", &moveSpeed, 0, 10);//for movement of enemy in hierarchy tools
 	ImGui::End();
 }

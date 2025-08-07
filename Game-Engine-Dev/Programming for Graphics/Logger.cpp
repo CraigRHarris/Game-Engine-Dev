@@ -6,7 +6,7 @@
 #include <chrono>
 #include <format>
 
-void Logger::Log(Logger::Category category, const std::string& buffer) // file pointer. Attempt to open file and append flag
+void Logger::Log(Logger::Category category, const std::string& buffer) // file pointer - Attempt to open file and append flag
 {
     auto now = std::chrono::system_clock::now();
 
